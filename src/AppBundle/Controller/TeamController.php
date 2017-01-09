@@ -27,11 +27,13 @@ class TeamController extends Controller
 
         $player = new Player($user);
 
+        $players = $user->getPlayers();
+
         $form = $this->get('form.factory')->create('AppBundle\Form\PlayerType', $player);
 
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
+        if ($form->isValid() && count($user->getPlayers()) < $this->container->getParameter('participants')) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($player);
 
