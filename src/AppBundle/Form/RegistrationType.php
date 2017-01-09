@@ -47,6 +47,7 @@ class RegistrationType extends  AbstractType
                 [
                     'label' => 'Télephone'
                 ])
+            ->remove('username')
             ;
     }
 
