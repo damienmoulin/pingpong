@@ -1,0 +1,67 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: damien
+ * Date: 09/01/17
+ * Time: 15:29
+ */
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Class Player
+ * @package AppBundle\Entity
+ * @ORM\Entity
+ * @ORM\Table(name="player")
+ */
+class Player
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(name="email", type="string", length=45, nullable=false)
+     */
+    protected $email;
+
+    /**
+     * @ORM\Column(name="firstname", type="string", length=45, nullable=false)
+     */
+    private $firstname;
+
+    /**
+     * @ORM\Column(name="lastname", type="string", length=45, nullable=false)
+     */
+    private $lastname;
+
+    /**
+     * @ORM\Column(name="structure", type="string", length=45, nullable=false)
+     */
+    private $structure;
+
+    /**
+     * @var $status
+     * @ORM\Column(name="status", type="bool", nullable=false)
+     */
+    private $status;
+
+    /**
+     * @var $step
+     * @ORM\Column(name="step", type="integer", nullable=false)
+     */
+    private $step;
+
+    /**
+     * @var $user
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="User")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+}
