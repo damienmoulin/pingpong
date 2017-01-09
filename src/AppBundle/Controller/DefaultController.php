@@ -15,13 +15,7 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $user = new User();
-
-        $register = $this->get('form.factory')->create('AppBundle\Form\RegistrationType', $user);
-
-        dump($register);
         return $this->render('default/index.html.twig', [
-            'register' => $register->createView()
         ]);
     }
 }
