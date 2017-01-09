@@ -1,2 +1,7 @@
 pingpong
 ========
+
+
+##Installation
+
+composer install
