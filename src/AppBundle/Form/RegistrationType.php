@@ -23,27 +23,31 @@ class RegistrationType extends  AbstractType
             ->add('email', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\EmailType'),
                 [
                     'label' => 'Email',
-                    'translation_domain' => 'FOSUserBundle'
+                    'translation_domain' => 'FOSUserBundle',
+                    'attr' => [ 'placeholder' => 'Email' ]
                 ])
             ->add('plainPassword', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\RepeatedType'),
                 [
                     'type' => LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\PasswordType'),
                     'options' => array('translation_domain' => 'FOSUserBundle'),
-                    'first_options' => array('label' => 'Mot de passe'),
-                    'second_options' => array('label' => 'Mot de passe (confirmation)'),
-                    'invalid_message' => 'fos_user.password.mismatch',
+                    'first_options' => array('label' => 'Mot de passe','attr' => [ 'placeholder' => 'Mot de passe' ]),
+                    'second_options' => array('label' => 'Mot de passe (confirmation)','attr' => [ 'placeholder' => 'Mot de passe' ]),
+                    'invalid_message' => 'fos_user.password.mismatch'
                 ])
             ->add('firstname',TextType::class,
                 [
-                    'label' => 'Prénom'
+                    'label' => 'Prénom',
+                    'attr' => [ 'placeholder' => 'Prénom' ]
                 ])
             ->add('lastname',TextType::class,
                 [
-                    'label' => 'Nom'
+                    'label' => 'Nom',
+                    'attr' => [ 'placeholder' => 'Nom' ]
                 ])
             ->add('structurename',TextType::class,
                 [
-                    'label' => 'Structure'
+                    'label' => 'Structure',
+                    'attr' => [ 'placeholder' => 'Structure' ]
                 ])
             ->add('structuretype',ChoiceType::class,
                 [
@@ -56,11 +60,13 @@ class RegistrationType extends  AbstractType
                 ])
             ->add('teamname', TextType::class,
                 [
-                    'label' => 'Team'
+                    'label' => 'Team',
+                    'attr' => [ 'placeholder' => 'Nom du team' ]
                 ])
             ->add('phonenumber', TextType::class,
                 [
-                    'label' => 'Télephone'
+                    'label' => 'Téléphone',
+                    'attr' => [ 'placeholder' => 'Téléphone' ]
                 ])
             ->remove('username')
             ;
