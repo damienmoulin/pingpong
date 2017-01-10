@@ -21,10 +21,21 @@
       color: #3d3d3d;
       cursor: pointer;
 
-      &:hover, .is-active {
+      &:hover, &.is-active {
         background-color: $color2;
         color: #fff;
       }
     }
   }
+}
+
+
+.bosup .main{
+  margin-top: 28px;
+
+  &.open {
+    display: block;
+  }
+
+  display: none;
 }

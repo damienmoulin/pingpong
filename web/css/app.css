@@ -5781,13 +5781,18 @@ button.switch-month:hover {
       transition: background .4s ease;
       color: #3d3d3d;
       cursor: pointer; }
-      .Navigation ul li:hover, .Navigation ul li .is-active {
+      .Navigation ul li:hover, .Navigation ul li.is-active {
         background-color: #ff8764;
         color: #fff; }
 
+.bosup .main {
+  margin-top: 28px;
+  display: none; }
+  .bosup .main.open {
+    display: block; }
+
 .Board-list {
   display: flex;
-  margin-top: 28px;
   margin-bottom: 23px;
   justify-content: space-between; }
   .Board-list div {
