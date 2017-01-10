@@ -5654,7 +5654,6 @@ body {
 
 .Menu-bosup {
   background-color: #fff;
-  height: 96px;
   top: 0px;
   left: 0px;
   width: 100vw;
@@ -5670,7 +5669,8 @@ body {
     margin-left: 20px;
     font-size: 2rem; }
   .Menu-bosup--content {
-    justify-content: space-between; }
+    justify-content: space-between;
+    height: 96px; }
 
 .calendar, .calendar_weekdays, .calendar_content {
   width: 90%; }
@@ -5725,9 +5725,9 @@ body {
 .calendar_content div.today {
   font-weight: bold;
   font-size: 14px;
-  color: #3c3c3c;
+  color: #fff;
   border-radius: 100%;
-  background-color: #d2c1dd; }
+  background-color: #e84961; }
 
 .calendar_content div.selected {
   background-color: #f0f0f0; }
@@ -5761,12 +5761,18 @@ button.switch-month:hover {
   color: #87b633; }
 
 .Navigation {
-  margin-top: 96px;
   border-bottom: 1px solid #bababa;
   background-color: #fff; }
+  .Navigation-container {
+    justify-content: flex-end;
+    border-top: 1px solid #bababa; }
+    .Navigation-container .messagerie {
+      color: #e84961; }
   .Navigation ul {
     padding: 0px;
-    height: 80px; }
+    height: 80px;
+    width: 74%;
+    margin-left: 26%; }
     .Navigation ul li {
       list-style: none;
       border-radius: 25px;
@@ -5805,25 +5811,33 @@ button.switch-month:hover {
       font-size: 2.8rem;
       font-weight: bold;
       text-transform: uppercase;
-      top: 35px;
-      right: 0px;
+      top: 30px;
+      right: 11px;
       color: #e84961;
       font-family: "Anton", sans-serif; }
     .Board-list div span {
       font-size: 4rem;
       color: #3d3d3d;
       position: absolute;
-      left: 98px;
-      top: 49px;
-      font-weight: 200; }
-    .Board-list div:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 33%;
-      height: 100%;
-      top: 0px;
-      left: 0px; }
+      right: 11px;
+      top: 55px;
+      font-weight: 300; }
+    .Board-list div:first-child {
+      background-image: url("../img/structures.png");
+      background-repeat: no-repeat;
+      background-position: 67%; }
+    .Board-list div:nth-child(2) {
+      background-image: url("../img/participant.png");
+      background-repeat: no-repeat;
+      background-position: 67%; }
+    .Board-list div:nth-child(3) {
+      background-image: url("../img/equipe.png");
+      background-repeat: no-repeat;
+      background-position: 67%; }
+    .Board-list div:nth-child(4) {
+      background-image: url("../img/tournois.png");
+      background-repeat: no-repeat;
+      background-position: 67%; }
 
 .Tab {
   background-color: #fff; }
@@ -5835,6 +5849,15 @@ button.switch-month:hover {
     .Tab-title h3 {
       padding: 0px;
       margin: 0px; }
+    .Tab-title a {
+      color: #e84961;
+      text-decoration: underline;
+      margin-right: 17px; }
+      .Tab-title a i {
+        font-size: 2rem;
+        position: relative;
+        right: -10px;
+        bottom: -2px; }
   .Tab-content {
     padding: 0px;
     margin: 0px;
@@ -5856,6 +5879,8 @@ button.switch-month:hover {
     width: 155px; }
   .Tab-select {
     width: 167px; }
+    .Tab-select .finish {
+      color: #5fd383; }
 
 aside {
   vertical-align: top; }

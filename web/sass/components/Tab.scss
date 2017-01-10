@@ -11,6 +11,19 @@
       padding: 0px;
       margin: 0px;
     }
+    
+    a {
+      color: $color2;
+      text-decoration: underline;
+      margin-right: 17px;
+
+      i {
+        font-size: 2rem;
+        position: relative;
+        right: -10px;
+        bottom: -2px;
+      }
+    }
   }
 
   &-content {
@@ -45,5 +58,9 @@
 
   &-select {
     width: 167px;
+    
+    .finish {
+      color: $color3;
+    }
   }
 }

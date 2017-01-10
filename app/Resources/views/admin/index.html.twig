@@ -14,17 +14,19 @@
                     <i class="zmdi zmdi-chevron-down"></i>
                 </div>
             </div>
+
+            <section class="Navigation">
+                <ul class="Navigation-container flex-align-vertical">
+                    <li data-tab="tabBord" class="is-active">Tableau de bord</li>
+                    <li data-tab="listeParticipants">Liste des participants</li>
+                    <li data-tab="gestionChampions">Gestion des champions</li>
+                    <li data-tab="messagerie" class="messagerie">Messagerie</li>
+                </ul>
+            </section>
         </div>
     </head>
 
-    <section class="Navigation">
-        <ul class="Navigation-container block-01 flex-align-vertical">
-            <li data-tab="tabBord" class="is-active">Tableau de bord</li>
-            <li data-tab="listeParticipants">Liste des participants</li>
-            <li data-tab="gestionChampions">Gestion des champions</li>
-            <li data-tab="messagerie">Messagerie</li>
-        </ul>
-    </section>
+
 
     <section class="main open" data-uri="tabBord">
         <section class="Board">
@@ -52,7 +54,7 @@
             <article class="Tab block-02">
                 <div class="Tab-title flex-align-vertical">
                     <h3>Les structures</h3>
-                    <a href="">Toutes les structures <i></i></a>
+                    <a href="">Toutes les structures <i class="zmdi zmdi-caret-right"></i></a>
                 </div>
                 <ul class="Tab-content">
                     {% for structure in structures %}

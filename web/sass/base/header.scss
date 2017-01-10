@@ -2,7 +2,7 @@
 
   &-bosup {
     background-color: #fff;
-    height: 96px;
+    //height: 96px;
     //position: fixed;
     top: 0px;
     left: 0px;
@@ -27,6 +27,7 @@
 
     &--content {
       justify-content: space-between;
+      height: 96px;
     }
 
   }

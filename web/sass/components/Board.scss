@@ -17,8 +17,8 @@
           font-size: 2.8rem;
           font-weight: bold;
           text-transform: uppercase;
-          top: 35px;
-          right: 0px;
+          top: 30px;
+          right:11px;
           color: #e84961;
           font-family: $font2;
         }
@@ -27,31 +27,34 @@
           font-size: 4rem;
           color: #3d3d3d;
           position: absolute;
-          left: 98px;
-          top: 49px;
-          font-weight: 200;
+          right: 11px;
+          top: 55px;
+          font-weight: 300;
         }
 
-        &:after {
-          content: '';
-          display: block;
-          position: absolute;
-          width: 33%;
-          height: 100%;
-          top: 0px;
-          left: 0px;
-        }
 
         &:first-child {
+          background-image: url('../img/structures.png');
+          background-repeat: no-repeat;
+          background-position: 67%;
         }
 
         &:nth-child(2) {
+          background-image: url('../img/participant.png');
+          background-repeat: no-repeat;
+          background-position: 67%;
         }
 
         &:nth-child(3) {
+          background-image: url('../img/equipe.png');
+          background-repeat: no-repeat;
+          background-position: 67%;
         }
 
         &:nth-child(4) {
+          background-image: url('../img/tournois.png');
+          background-repeat: no-repeat;
+          background-position: 67%;
         }
 
       }
