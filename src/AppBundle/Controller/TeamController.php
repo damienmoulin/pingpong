@@ -64,7 +64,7 @@ class TeamController extends Controller
 
         $message = 'Vous avez déja refusé l\'invitation , vous ne pouvez plus accepté de participer';
 
-        if (($player != null) && ($player->getStatus() != 0)) {
+        if (($player != null) && ($player->getStatus() != 0) && ($player->getUser()->getTournament() == null)) {
             $player->accept();
             $this->flush($player);
 
@@ -90,7 +90,7 @@ class TeamController extends Controller
 
         $message = 'Vous avez déja accepter l\'invitation , vous ne pouvez plus refuser de participer';
 
-        if (($player != null) && ($player->getStatus() != 1)) {
+        if (($player != null) && ($player->getStatus() != 1) && ($player->getUser()->getTournament() == null)) {
             $player->decline();
             $this->flush($player);
             $message = 'Vous avez refusé de participer au tournoi';

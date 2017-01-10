@@ -70,7 +70,12 @@ class User extends BaseUser
     private $players;
 
     /**
-     * Constructor
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Tournament", cascade={"persist"})
+     */
+    private $tournament;
+
+    /**
+     * User Constructor
      */
     public function __construct()
     {
@@ -261,5 +266,29 @@ class User extends BaseUser
     public function getPlayers()
     {
         return $this->players;
+    }
+
+    /**
+     * Set tournament
+     *
+     * @param \AppBundle\Entity\Tournament $tournament
+     *
+     * @return User
+     */
+    public function setTournament(\AppBundle\Entity\Tournament $tournament = null)
+    {
+        $this->tournament = $tournament;
+
+        return $this;
+    }
+
+    /**
+     * Get tournament
+     *
+     * @return \AppBundle\Entity\Tournament
+     */
+    public function getTournament()
+    {
+        return $this->tournament;
     }
 }
