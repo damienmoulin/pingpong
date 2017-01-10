@@ -66,9 +66,15 @@ class Player
     private $user;
 
     /**
-     * @ORM\Column(name="key", type="string", length=255, nullable=false)
+     * @ORM\Column(name="privatekey", type="string", length=255, nullable=false)
      */
     private $privatekey;
+
+    /**
+     * @var $userstructure
+     * @ORM\Column(name="userstructure", type="string", length=45, nullable=false)
+     */
+    private $userstructure;
 
     public function __construct(User $user)
     {
@@ -255,4 +261,48 @@ class Player
         return $this->user;
     }
     
+
+    /**
+     * Set privatekey
+     *
+     * @param string $privatekey
+     *
+     * @return Player
+     */
+    public function setPrivatekey($privatekey)
+    {
+        $this->privatekey = $privatekey;
+
+        return $this;
+    }
+
+    /**
+     * Get privatekey
+     *
+     * @return string
+     */
+    public function getPrivatekey()
+    {
+        return $this->privatekey;
+    }
+
+    /**
+     * @return $this
+     */
+    public function accept()
+    {
+        $this->setStatus(1);
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function decline()
+    {
+        $this->setStatus(0);
+
+        return $this;
+    }
 }

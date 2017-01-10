@@ -22,8 +22,27 @@ class AdminController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('admin/index.html.twig',[
+        $users = $this->getDoctrine()->getRepository('AppBundle:User')->findAll();
+        $players = $this->getDoctrine()->getRepository('AppBundle:Player')->findAll();
+        $resultStructures = $this->getDoctrine()->getRepository('AppBundle:User')->findAllByStructure();
 
+        $structures = [];
+        foreach ($resultStructures as $resultStructure) {
+            $structure = [];
+            $numberOfUserByStructure = count($this->getDoctrine()->getRepository('AppBundle:User')->findBy(['structurename' => $resultStructure['userstructure']]));
+            $structure['players'] = $resultStructure[1];
+            $structure['name'] = $resultStructure['userstructure'];
+            $structure['teams'] = $numberOfUserByStructure;
+
+            array_push($structures, $structure);
+        }
+
+        dump($structures);
+
+        return $this->render('admin/index.html.twig',[
+            'players' => $players,
+            'structures' => $structures,
+            'users' => $users
         ]);
     }
 }
