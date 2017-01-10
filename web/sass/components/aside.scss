@@ -1,42 +1,86 @@
 aside {
   vertical-align: top;
-}
 
-.Management {
-  height: 250px;
-  width: 100%;
-  background-color: $color5;
-  color: #fff;
-  position: relative;
-  box-sizing: border-box;
-  padding: 26px;
-
-  span {
-    font-size: 3.2rem;
-    text-transform: uppercase;
-    font-weight: 200;
-    display: block;
-  }
-
-  strong {
-    font-size: 2.4rem;
-    text-transform: uppercase;
-  }
-
-  a {
+  .Management {
+    height: 250px;
+    width: 100%;
+    background-color: $color5;
     color: #fff;
-    position: absolute;
-    bottom: 17px;
-    right: 16px;
-    font-size: 1.6rem;
-  }
-}
+    position: relative;
+    box-sizing: border-box;
+    padding: 26px;
 
-.Calendar {
-  background-color: #fff;
-  height: 256px;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    span {
+      font-size: 3.2rem;
+      text-transform: uppercase;
+      font-weight: 200;
+      display: block;
+    }
+
+    strong {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: #fff;
+      position: absolute;
+      bottom: 17px;
+      right: 16px;
+      font-size: 1.6rem;
+    }
+  }
+
+  .Calendar {
+    background-color: #fff;
+    height: 256px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aside-small {
+    height: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 40px;
+    padding-left: 34px;
+    box-sizing: border-box;
+    transition: .3s ease;
+    border: 1px solid red;
+
+    i {
+      padding-right: 20px;
+    }
+
+    &:hover {
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  .Send {
+    background-color: #6dc7be;
+
+    border: 1px solid #6dc7be;
+
+    &:hover {
+      background-color: transparent;
+      color: #6dc7be;
+    }
+  }
+
+  .Planning {
+    background-color: #b198dc;
+
+    border: 1px solid #b198dc;
+
+    &:hover {
+      background-color: transparent;
+      color: #b198dc;
+    }
+  }
 }
