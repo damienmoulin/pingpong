@@ -16,7 +16,6 @@
                 <th>Nom</th>
                 <th>Structure</th>
                 <th>Email</th>
-                <th>Key</th>
                 <th>Status</th>
             </tr>
         </thead>
@@ -27,7 +26,6 @@
                     <td> {{ player.lastname }}</td>
                     <td>{{ player.structure }}</td>
                     <td>{{ player.email }}</td>
-                    <td>{{ player.privatekey }}</td>
                     <td>
                         {% if player.status  == 1%}
                             Activé
