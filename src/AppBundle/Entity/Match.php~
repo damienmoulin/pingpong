@@ -1,0 +1,67 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: damien
+ * Date: 10/01/17
+ * Time: 19:39
+ */
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation\Timestampable;
+
+/**
+ * Class Match
+ * @package AppBundle\Entity
+ * @ORM\Entity
+ * @ORM\Table(name="match")
+ */
+class Match
+{
+    use \Gedmo\Timestampable\Traits\Timestampable;
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var $status
+     * @ORM\Column(name="status", type="integer", nullable=false)
+     */
+    private $status;
+
+    /**
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Player")
+     */
+    private $winner;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Player")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $playerone;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Player")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $playertwo;
+
+    /**
+     * @var $round
+     * @ORM\Column(name="round", type="integer", nullable=false)
+     */
+    private $round;
+
+    /**
+     * @var $tournament
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Tournament", inversedBy="matchs")
+     * @ORM\JoinColumn(name="tournament_id", referencedColumnName="id")
+     */
+    private $tournament;
+}
