@@ -1,12 +1,49 @@
 
 
 //color
-$color1: #fff;
-$color2: #fbfbfb;
-$color3: #f5f5f5;
+$color1: #623f88;
+$color2: #ff8764;
+$color3: #6dc7be;
+$color4: #b198dc;
+$color5: #56bde0;
 
 //font
-$font1: "Arial";
-$font2: "Helvetica"
+$font1: 'Open Sans', sans-serif;
+$font2: "Helvetica";
+
+html {
+  font-size: 62.5%; /* Generally results in 1rem -> 10px */
+  font-family: $font1;
+}
+
+body {
+  font-family: $font1;
+}
+
+.block-01 {
+  width: 1072px;
+  margin: 0 auto;
+  display: block;
+}
+
+.block-02 {
+  width: 795px;
+  display: inline-block;
+  margin-right: 22px;
+}
+
+.block-03 {
+  width: 250px;
+  display: inline-block;
+}
 
 
+.flex-align-vertical {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.bosup {
+  background-color: #efefef;
+}
