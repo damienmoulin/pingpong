@@ -1,0 +1,21 @@
+.Filter {
+  width: 338px;
+  margin-bottom: 22px;
+  position: relative;
+
+  select {
+    height: 55px;
+    border: none;
+    border-radius: 0px;
+    -webkit-appearance: none;
+  }
+
+  span {
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    font-size: 1.6rem;
+    color: #555569;
+
+  }
+}

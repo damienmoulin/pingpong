@@ -5658,7 +5658,8 @@ body {
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100vw; }
+  width: 100vw;
+  z-index: 5; }
   .Menu-bosup a, .Menu-bosup span, .Menu-bosup strong, .Menu-bosup .zmdi {
     color: #fff;
     font-size: 1.8rem; }
@@ -5940,5 +5941,21 @@ aside {
     aside .Planning:hover {
       background-color: transparent;
       color: #b198dc; }
+
+.Filter {
+  width: 338px;
+  margin-bottom: 22px;
+  position: relative; }
+  .Filter select {
+    height: 55px;
+    border: none;
+    border-radius: 0px;
+    -webkit-appearance: none; }
+  .Filter span {
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    font-size: 1.6rem;
+    color: #555569; }
 
 /*# sourceMappingURL=app.css.map */
