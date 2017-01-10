@@ -12,16 +12,6 @@ class UserRepository extends EntityRepository
 {
     public function findAllByStructure()
     {
-        /**
-        $result = $this->getEntityManager()
-            ->createQueryBuilder('u')
-            ->select('COUNT(u)' ,'u.structurename', 'u')
-            ->groupBy('u.structurename')
-            ->from('AppBundle:User', 'u')
-            ->getQuery()
-            ->getResult();
-
-        */
         $result = $this->getEntityManager()
             ->createQueryBuilder('p')
             ->select('COUNT(p)', 'p.userstructure')
