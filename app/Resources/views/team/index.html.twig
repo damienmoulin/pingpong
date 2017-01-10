@@ -2,6 +2,12 @@
 
 {% block body %}
     <h1>Team</h1>
+    {% if user.players|length > 4 and user.players|length %2 == 0  %}
+        <button>Lancer le Tournoi</button>
+    {% endif %}
+    {% if user.players|length == 16 %}
+        <p>Vous avez atteint la limite de 16 joueurs</p>
+    {% endif %}
     {% if user.players is not empty %}
     <table>
         <thead>
@@ -10,6 +16,7 @@
                 <th>Nom</th>
                 <th>Structure</th>
                 <th>Email</th>
+                <th>Key</th>
                 <th>Status</th>
             </tr>
         </thead>
@@ -20,6 +27,7 @@
                     <td> {{ player.lastname }}</td>
                     <td>{{ player.structure }}</td>
                     <td>{{ player.email }}</td>
+                    <td>{{ player.privatekey }}</td>
                     <td>
                         {% if player.status  == 1%}
                             Activé
