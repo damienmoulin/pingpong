@@ -32,8 +32,22 @@ class ContestController extends Controller
         //Penser a supprimer les joueurs qui n'ont pas accepté de jouer de la base de donnée
 
         if ($user->getTournament() == null) {
-            
+
             $em = $this->getDoctrine()->getManager();
+
+            $noConfirmedPlayers = $this->getDoctrine()->getRepository('AppBundle:Player')->findBy(
+                [
+                    'user' => $user,
+                    'status' => [0,2]
+                ]
+            );
+
+            if (count($noConfirmedPlayers) > 0) {
+                foreach ($noConfirmedPlayers as $noConfirmedPlayer) {
+                    $em->remove($noConfirmedPlayer);
+                }
+                $em->flush();
+            }
 
             $tournament = new Tournament($user);
             $em->persist($tournament);

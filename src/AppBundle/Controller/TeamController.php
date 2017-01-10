@@ -28,6 +28,8 @@ class TeamController extends Controller
 
         $player = new Player($user);
 
+        $acceptedPlayers = $this->getAcceptedPlayersAction($player->getUser());
+
         $form = $this->get('form.factory')->create('AppBundle\Form\PlayerType', $player);
 
         $form->handleRequest($request);
@@ -46,7 +48,8 @@ class TeamController extends Controller
 
         return $this->render('team/index.html.twig', [
             'form' => $form->createView(),
-            'user' => $user
+            'user' => $user,
+            'acceptedPlayers' => $acceptedPlayers
         ]);
     }
 
@@ -62,9 +65,11 @@ class TeamController extends Controller
                 'privatekey' => $key
             ]);
 
-        $message = 'Vous avez déja refusé l\'invitation , vous ne pouvez plus accepté de participer';
+        $acceptedPlayers = $this->getAcceptedPlayersAction($player->getUser());
 
-        if (($player != null) && ($player->getStatus() != 0) && ($player->getUser()->getTournament() == null)) {
+        $message = 'Vous avez déja refusé l\'invitation , vous ne pouvez plus accepter de participer';
+
+        if (($player != null) && ($player->getStatus() != 0) && ($player->getUser()->getTournament() == null) && ( count($acceptedPlayers) < $this->container->getParameter('participants'))) {
             $player->accept();
             $this->flush($player);
 
@@ -109,5 +114,19 @@ class TeamController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->persist($entity);
         $em->flush();
+    }
+
+    /**
+     * @param $user
+     * @return \AppBundle\Entity\Player[]|array
+     */
+    public function getAcceptedPlayersAction($user)
+    {
+        $acceptedPlayers = $this->getDoctrine()->getRepository('AppBundle:Player')->findBy([
+            'user' => $user,
+            'status' => 1
+        ]);
+
+        return $acceptedPlayers;
     }
 }
