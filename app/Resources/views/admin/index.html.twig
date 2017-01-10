@@ -1,7 +1,185 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base.html.twig' %}
 
 {% block body %}
-    <h1>Admin</h1>
+
+
+
+    <head class="Menu">
+        <div class="Menu-bosup">
+            <div class="block-01 flex-align-vertical Menu-bosup--content">
+                <div class="Menu-bosup--logo">
+                    <a href="">Digital village logo</a>
+                </div>
+                <div class="Menu-bosup--infos">
+                    <i class="zmdi zmdi-account"></i>
+                    <span><strong>Bonjour</strong> Romain</span>
+                    <i class="zmdi zmdi-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </head>
+
+    <section class="Navigation">
+        <ul class="Navigation-container block-01 flex-align-vertical">
+            <li data-tab="tabBord">Tableau de bord</li>
+            <li data-tab="listeParticipants">Liste des participants</li>
+            <li data-tab="gestionChampions">Gestion des champions</li>
+            <li data-tab="messagerie">Messagerie</li>
+        </ul>
+    </section>
+
+    <section class="Board">
+        <article class="Board-list block-01">
+            <div>
+                <strong>Les structures</strong>
+                <span>58</span>
+            </div>
+            <div>
+                <strong>Participants</strong>
+                <span>207</span>
+            </div>
+            <div>
+                <strong>Équipes crées</strong>
+                <span>67</span>
+            </div>
+            <div>
+                <strong>Les tournois</strong>
+                <span>345</span>
+            </div>
+        </article>
+    </section>
+
+    <section class="block-01">
+        <article class="Tab block-02">
+            <div class="Tab-title flex-align-vertical">
+                <h3>Les structures</h3>
+                <a href="">Toutes les structures <i></i></a>
+            </div>
+
+            <ul class="Tab-content">
+                <li>
+                    <strong class="Tab-company">Digital Village</strong>
+                    <span class="Tab-participants">28 participants</span>
+                    <span class="Tab-team">2 équipes</span>
+                    <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
+                </li>
+
+                <li>
+                    <strong class="Tab-company">Hetic</strong>
+                    <span class="Tab-participants">280 participants</span>
+                    <span class="Tab-team">2 équipes</span>
+                    <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
+                </li>
+                <li>
+                    <strong class="Tab-company">Auxiliaris</strong>
+                    <span class="Tab-participants">28 participants</span>
+                    <span class="Tab-team">2 équipes</span>
+                    <span class="Tab-select">Sélection des champions <strong class="wait">Terminé</strong></span>
+                </li>
+                <li>
+                    <strong class="Tab-company">Digital Village</strong>
+                    <span class="Tab-participants">28 participants</span>
+                    <span class="Tab-team">2 équipes</span>
+                    <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
+                </li>
+                <li>
+                    <strong class="Tab-company">Digital Village</strong>
+                    <span class="Tab-participants">28 participants</span>
+                    <span class="Tab-team">2 équipes</span>
+                    <span class="Tab-select">Sélection des champions <strong class="wait">Terminé</strong></span>
+                </li>
+                <li>
+                    <strong class="Tab-company">Digital Village</strong>
+                    <span class="Tab-participants">28 participants</span>
+                    <span class="Tab-team">2 équipes</span>
+                    <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
+                </li>
+                <li>
+                    <strong class="Tab-company">Digital Village</strong>
+                    <span class="Tab-participants">28 participants</span>
+                    <span class="Tab-team">2 équipes</span>
+                    <span class="Tab-select">Sélection des champions <strong class="wait">Terminé</strong></span>
+                </li>
+            </ul>
+        </article>
+
+
+        <aside class="block-03">
+            <section class="Management">
+                <span>Gestion</span>
+                <strong>des champions</strong>
+                <a href="">Gérer <i></i></a>
+            </section>
+
+            <section class="Calendar">
+                <div class="calendar calendar-first" id="calendar_first">
+                    <div class="calendar_header">
+                        <button class="switch-month switch-left"><i class="zmdi zmdi-chevron-left"></i></button>
+                        <h2>Janvier 2017</h2>
+                        <button class="switch-month switch-right"><i class="zmdi zmdi-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar_weekdays">
+                        <div>L</div>
+                        <div>Ma</div>
+                        <div>Me</div>
+                        <div>J</div>
+                        <div>V</div>
+                        <div>S</div>
+                        <div>D</div>
+                    </div>
+                    <div class="calendar_content">
+                        <div class="past-date">1</div>
+                        <div class="past-date">2</div>
+                        <div class="past-date">3</div>
+                        <div class="past-date">4</div>
+                        <div class="past-date">5</div>
+                        <div class="past-date">6</div>
+                        <div class="past-date">7</div>
+                        <div class="past-date">8</div>
+                        <div class="today">9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                        <div>16</div>
+                        <div>17</div>
+                        <div>18</div>
+                        <div>19</div>
+                        <div>20</div>
+                        <div>21</div>
+                        <div>22</div>
+                        <div>23</div>
+                        <div>24</div>
+                        <div>25</div>
+                        <div>26</div>
+                        <div>27</div>
+                        <div>28</div>
+                        <div>29</div>
+                        <div>30</div>
+                        <div>31</div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                        <div class="blank"></div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+    </section>
+
+
+
+
 {% endblock %}
 {% block stylesheets %}
 

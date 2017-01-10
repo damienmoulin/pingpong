@@ -1,3 +1,42 @@
-.Management {
+aside {
+  vertical-align: top;
+}
 
+.Management {
+  height: 250px;
+  width: 100%;
+  background-color: $color5;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  padding: 26px;
+
+  span {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    display: block;
+  }
+
+  strong {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: #fff;
+    position: absolute;
+    bottom: 17px;
+    right: 16px;
+    font-size: 1.6rem;
+  }
+}
+
+.Calendar {
+  background-color: #fff;
+  height: 256px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

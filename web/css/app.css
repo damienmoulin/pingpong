@@ -5674,26 +5674,39 @@ body {
     justify-content: space-between; }
 
 .calendar, .calendar_weekdays, .calendar_content {
-  max-width: 300px; }
+  width: 90%; }
 
 .calendar {
-  font-weight: 400; }
+  font-weight: 400;
+  height: 170px; }
 
 .calendar_content, .calendar_weekdays, .calendar_header {
   position: relative;
   overflow: hidden; }
+
+.calendar_weekdays {
+  margin-left: 9px;
+  width: 100%; }
 
 .calendar_weekdays div {
   display: inline-block;
   vertical-align: top; }
 
 .calendar_weekdays div, .calendar_content div {
-  width: 14.28571%;
+  width: 26px;
+  height: 26px;
+  max-width: 26px;
   overflow: hidden;
   text-align: center;
   background-color: transparent;
   color: #6f6f6f;
-  font-size: 14px; }
+  font-size: 1.3rem; }
+
+.calendar_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%; }
 
 .calendar_content div {
   border: 1px solid transparent;
@@ -5713,22 +5726,24 @@ body {
 .calendar_content div.today {
   font-weight: bold;
   font-size: 14px;
-  color: #87b633;
-  border: 1px solid #dcdcdc; }
+  color: #3c3c3c;
+  border-radius: 100%;
+  background-color: #d2c1dd; }
 
 .calendar_content div.selected {
   background-color: #f0f0f0; }
 
 .calendar_header {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: 15px; }
 
 .calendar_header h2 {
   padding: 0 10px;
-  font-family: 'Muli', sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  color: #87b633;
+  font-size: 1.3rem;
+  color: #000;
   float: left;
   width: 70%;
   margin: 0 0 10px; }
@@ -5776,7 +5791,7 @@ button.switch-month:hover {
   margin-bottom: 23px;
   justify-content: space-between; }
   .Board-list div {
-    width: 257px;
+    width: 250px;
     height: 133px;
     border: 1px solid red;
     position: relative;
@@ -5860,5 +5875,39 @@ button.switch-month:hover {
     width: 155px; }
   .Tab-select {
     width: 167px; }
+
+aside {
+  vertical-align: top; }
+
+.Management {
+  height: 250px;
+  width: 100%;
+  background-color: #56bde0;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  padding: 26px; }
+  .Management span {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    display: block; }
+  .Management strong {
+    font-size: 2.4rem;
+    text-transform: uppercase; }
+  .Management a {
+    color: #fff;
+    position: absolute;
+    bottom: 17px;
+    right: 16px;
+    font-size: 1.6rem; }
+
+.Calendar {
+  background-color: #fff;
+  height: 256px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 /*# sourceMappingURL=app.css.map */
