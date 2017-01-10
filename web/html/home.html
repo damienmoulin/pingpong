@@ -1,80 +1,143 @@
 <!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-
-    <link rel="stylesheet" href="../css/app.css">
+  <meta charset="UTF-8">
+  <title>Ping pong</title>
+  <!-- LIB -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../css/app.css">
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 </head>
-<body class="">
+<body class="page-home">
 
- <!--  <nav>
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      Inscription
+<!-- ******* HEADER ******* -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <!-- NAVIGATION -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">Brand</a> -->
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- INSCRIPTION -->
+    <button type="button" class="btn inscription" data-toggle="modal" data-target="#myModal">
+      <i class="material-icons face">face</i>
     </button>
 
+    <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+           
           </div>
-
           <div class="modal-body">
+
+            <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active">
-                <a href="#inscription" aria-controls="inscription" role="tab" data-toggle="tab">Inscription</a>
-              </li>
-              <li role="presentation">
-                <a href="#connexion" aria-controls="connexion" role="tab" data-toggle="tab">Connexion</a>
-              </li>
+              <li role="presentation" class="active"><a href="#connexion" aria-controls="connexion" role="tab" data-toggle="tab">Connexion</a></li>
+              <li role="presentation"><a href="#inscription" aria-controls="inscription" role="tab" data-toggle="tab">Inscription</a></li>
             </ul>
+
+            <!-- Tab panes -->
             <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="inscription">...</div>
-              <div role="tabpanel" class="tab-pane" id="connexion">...</div>
+
+              <!-- CONNEXION -->
+              <div role="tabpanel" class="tab-pane active" id="connexion">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptas, repellat a reprehenderit ea, magni ab recusandae illum ratione nisi. Doloribus quidem veniam molestiae rerum eius repudiandae odio quas, et
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae est blanditiis iusto voluptate deleniti inventore ipsum quidem quo facilis pariatur expedita recusandae iste nobis ullam impedit voluptates veritatis, fugit corporis?
+              </div>
+
+              <!-- INSCRIPTION -->
+              <div role="tabpanel" class="tab-pane" id="inscription">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus officia magnam ex accusamus, ullam rem ratione numquam quod fugiat provident. Ea adipisci sint laboriosam, recusandae dolor aliquam voluptates eum nulla!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ea doloremque eveniet neque dicta repellendus pariatur ipsa possimus, qui excepturi ad, reiciendis amet itaque quos perferendis soluta consequatur in sapiente.
+              </div>
+
+              <div class="clearfix"></div>
             </div>
+            
           </div>
-
-        </div>
-      </div>
-    </div>
-  </nav> -->
-
-
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Launch demo modal
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
   </div>
+</nav>
+
+<!-- TOP PAGE -->
+<div class="top-page">
+  <div class="headband-pink"></div>
+  <div class="content">
+    <h1 class="h1">PING PONG</h1>
+    <h2 class="h2">startup <span>cup</span></h2>
+    <a href="#" class="participate">Je participe</a>
+
+    <div class="date">
+      <div class="start">DéBUT TOURNOIS</div>
+      <div class="number">25.03</div>
+      <div class="year">2017</div>
+    </div>
+  </div>
+</div>
+
+<!-- MIDDLE PAGE -->
+<div class="middle-page">
+  <h3 class="h3">COMMENT DEVENIR CHAMPION ?</h3>
+</div>
 
 
-<script type="text/javascript" href="../js/jquery.min.js"></script>
-<script type="text/javascript" href="../js/bootstrap.min.js"></script>
-<script type="text/javascript" href="../js/app.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
 
 
 </body>

@@ -1,0 +1,228 @@
+
+.no-gutter{
+	padding: 0;
+}
+
+.center{
+	text-align: center;
+	margin: 0 auto;
+}
+
+// GENERALE
+
+.page-home{
+	font-family: 'Open Sans', sans-serif;
+
+	position: relative;
+
+	// NAVBAR
+	.navbar-default{
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+
+		// NAV
+		.navbar-header {
+		  float: none;
+      display: inline-block;
+			.navbar-toggle {
+			  display: block;
+	      float: left;
+        border: none;
+        .icon-bar{
+        	background-color: $pink;
+    	    height: 4px;
+			    width: 35px;
+			    margin: 6px;
+        }
+
+        &:hover,
+        &:focus,
+        &:visited{
+        	background-color: transparent;
+        }
+ 
+         &:hover .icon-bar{
+        	background-color: $blue;;
+        }
+			}
+		}
+		.navbar-collapse.collapse {
+		  display: none!important;
+			.navbar-nav {
+			  float: none!important;
+			}
+			li {
+			  float: none;
+			}
+			&.in{
+			  display:block !important;
+			}
+		}
+
+		// INSCRIPTION
+		.btn.inscription{
+			background-color: transparent;
+			border-radius: 0;
+			border: none;
+			background-image: none;
+			display: inline-block;
+    	float: right;
+    	border: 3px solid $pink;
+      padding: 15px;
+    	margin-top: -2px;
+    	padding-top: 15px;
+    	outline: none;
+
+    	i.face{
+    		color: $pink;
+    		font-size: 4rem;
+    	}
+
+    	&:hover {
+    		border: 3px solid $blue;
+    	}
+
+    	&:hover i.face{ 
+    		color: $blue;
+    	}
+		}
+
+		// MODAL
+		.modal-dialog {
+	    width: 100%;
+	    height: 100%;
+	    margin: 0;
+
+	    .modal-content{
+	    	border-radius: 0;
+		    box-shadow: none;
+	  		border: none;
+
+				.modal-header{
+					border: none;
+					.close {
+			    	margin-top: -12px;
+			    	font-size: 3rem;
+					}
+				}
+
+				.modal-body{
+					ul.nav.nav-tabs{
+				    text-align: center;
+				    font-size: 1.6rem;
+		        border-bottom: 1px solid $black;
+				    width: 900px;
+				    margin: 0 auto;
+						li {
+					    float: none;
+					    display: inline-block;
+			        margin: 0 35px;
+					    &.active{
+					    	border-bottom: 5px solid $blue;
+			    	    font-weight: 600;
+					    }
+					    a{
+					    	border: none;
+					    	text-decoration: none;
+					    	color: $black;
+					    	text-transform: uppercase;
+					    	&:hover{
+					    		background-color: transparent;
+					    		color: $blue;
+					    	}
+					    }
+						}
+					}
+				}
+	    }
+		}
+	}
+
+	.top-page{
+		.headband-pink{
+			position: absolute;
+			background-color: $pink;
+			width: 300px;
+			height: 800px;
+			top: 0;
+			margin-left: 60%;
+		}
+
+		.content{
+    	text-transform: uppercase;
+	    position: absolute;
+ 	    top: 150px;
+	    left: 20%;
+
+			.h1{
+				font-size: 19.3rem;
+				color: $blue;
+				font-family: 'Anton', sans-serif;
+			}
+
+			.h2{
+				font-family: 'Anton', sans-serif;
+				font-size: 12.3rem;
+				color: $pink;
+		    margin-left: 150px;
+		    line-height: 0;
+		    margin-top: -5px;
+				span{
+					color: $white;
+				}
+			}
+
+			a.participate{
+				text-decoration: none;
+				background-color: $green;
+				border-radius: 50px;
+		    margin-top: 90px;
+		    display: block;
+		    width: 300px;
+		    height: 70px;
+		    font-size: 2.5rem;
+		    color: $white;
+		    text-transform: uppercase;
+		    text-align: center;
+        padding-top: 18px;
+        margin-left: 205px;
+        font-weight: 600;		
+
+        &:hover{
+        	background-color: $blue;
+        }
+			}
+
+			.date{
+				margin-left: 605px;
+  			margin-top: 20px;
+				.start{
+					color: $yellow;
+					font-size: 2rem;
+	  			font-weight: 600;
+				}
+
+				.number{
+					font-size: 6.8rem;
+					font-weight: 800;
+					color: $white;
+			    line-height: 50px;
+				}
+
+				.year{
+					font-weight: 100;
+					font-size: 7.5rem;
+					color: $white;
+	        line-height: 70px;
+				}
+			}
+		}
+	}
+
+
+
+
+}
+
