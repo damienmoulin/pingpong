@@ -5653,15 +5653,13 @@ body {
   background-color: #efefef; }
 
 .Menu-bosup {
-  background-color: #623f88;
+  background-color: #fff;
   height: 96px;
-  position: fixed;
   top: 0px;
   left: 0px;
   width: 100vw;
   z-index: 5; }
   .Menu-bosup a, .Menu-bosup span, .Menu-bosup strong, .Menu-bosup .zmdi {
-    color: #fff;
     font-size: 1.8rem; }
   .Menu-bosup .zmdi-account {
     font-size: 2.5rem;
@@ -5783,7 +5781,7 @@ button.switch-month:hover {
       color: #3d3d3d;
       cursor: pointer; }
       .Navigation ul li:hover, .Navigation ul li.is-active {
-        background-color: #ff8764;
+        background-color: #e84961;
         color: #fff; }
 
 .bosup .main {
@@ -5799,16 +5797,18 @@ button.switch-month:hover {
   .Board-list div {
     width: 250px;
     height: 133px;
-    border: 1px solid red;
+    border: 1px solid #e84961;
     position: relative;
     background-color: #fff; }
     .Board-list div strong {
       position: absolute;
-      font-size: 1.6rem;
+      font-size: 2.8rem;
       font-weight: bold;
       text-transform: uppercase;
       top: 35px;
-      left: 100px; }
+      right: 0px;
+      color: #e84961;
+      font-family: "Anton", sans-serif; }
     .Board-list div span {
       font-size: 4rem;
       color: #3d3d3d;
@@ -5822,33 +5822,8 @@ button.switch-month:hover {
       position: absolute;
       width: 33%;
       height: 100%;
-      background-color: red;
       top: 0px;
       left: 0px; }
-    .Board-list div:first-child {
-      border-color: #6dc7be; }
-      .Board-list div:first-child:after {
-        background-color: #6dc7be; }
-      .Board-list div:first-child strong {
-        color: #6dc7be; }
-    .Board-list div:nth-child(2) {
-      border-color: #b198dc; }
-      .Board-list div:nth-child(2):after {
-        background-color: #b198dc; }
-      .Board-list div:nth-child(2) strong {
-        color: #b198dc; }
-    .Board-list div:nth-child(3) {
-      border-color: #ff8764; }
-      .Board-list div:nth-child(3):after {
-        background-color: #ff8764; }
-      .Board-list div:nth-child(3) strong {
-        color: #ff8764; }
-    .Board-list div:nth-child(4) {
-      border-color: #56bde0; }
-      .Board-list div:nth-child(4):after {
-        background-color: #56bde0; }
-      .Board-list div:nth-child(4) strong {
-        color: #56bde0; }
 
 .Tab {
   background-color: #fff; }
@@ -5887,7 +5862,7 @@ aside {
   aside .Management {
     height: 250px;
     width: 100%;
-    background-color: #56bde0;
+    background-color: #ffc74e;
     color: #fff;
     position: relative;
     box-sizing: border-box;
