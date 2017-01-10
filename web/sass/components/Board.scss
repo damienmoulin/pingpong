@@ -1,12 +1,11 @@
 .Board {
   &-list {
     display: flex;
-    margin-top: 28px;
     margin-bottom: 23px;
     justify-content: space-between;
 
       div {
-        width: 257px;
+        width: 250px;
         height: 133px;
         border: 1px solid red;
         //margin-right: 19px;
