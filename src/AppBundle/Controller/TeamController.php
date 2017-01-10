@@ -40,7 +40,7 @@ class TeamController extends Controller
             $player->setPrivatekey($link);
 
             $em->flush();
-            
+
             return $this->redirect($this->generateUrl('team'));
         }
 
