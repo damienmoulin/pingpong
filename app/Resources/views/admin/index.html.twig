@@ -10,7 +10,7 @@
                 </div>
                 <div class="Menu-bosup--infos">
                     <i class="zmdi zmdi-account"></i>
-                    <span><strong>Bonjour</strong> Romain</span>
+                    <span><strong>Bonjour</strong>{% if app.user is not null %} {{ app.user.username }}{% endif %}</span>
                     <i class="zmdi zmdi-chevron-down"></i>
                 </div>
             </div>
@@ -31,15 +31,15 @@
             <article class="Board-list block-01">
                 <div>
                     <strong>Les structures</strong>
-                    <span>58</span>
+                    <span>{{ structures|length }}</span>
                 </div>
                 <div>
                     <strong>Participants</strong>
-                    <span>207</span>
+                    <span>{{ players|length }}</span>
                 </div>
                 <div>
                     <strong>Équipes crées</strong>
-                    <span>67</span>
+                    <span>{{ users|length }}</span>
                 </div>
                 <div>
                     <strong>Les tournois</strong>
@@ -54,51 +54,15 @@
                     <h3>Les structures</h3>
                     <a href="">Toutes les structures <i></i></a>
                 </div>
-
                 <ul class="Tab-content">
-                    <li>
-                        <strong class="Tab-company">Digital Village</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
-                    </li>
-
-                    <li>
-                        <strong class="Tab-company">Hetic</strong>
-                        <span class="Tab-participants">280 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Auxiliaris</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="wait">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Digital Village</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Digital Village</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="wait">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Digital Village</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Digital Village</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="wait">Terminé</strong></span>
-                    </li>
+                    {% for structure in structures %}
+                        <li>
+                            <strong class="Tab-company">{{ structure.name }}</strong>
+                            <span class="Tab-participants">{{ structure.players }} participants</span>
+                            <span class="Tab-team">{{ structure.teams }} équipes</span>
+                            <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
+                        </li>
+                    {% endfor %}
                 </ul>
             </article>
 

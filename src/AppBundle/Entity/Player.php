@@ -70,9 +70,16 @@ class Player
      */
     private $privatekey;
 
+    /**
+     * @var $userstructure
+     * @ORM\Column(name="userstructure", type="string", length=45, nullable=true)
+     */
+    private $userstructure;
+
     public function __construct(User $user)
     {
         $this->user = $user;
+        $this->userstructure = $user->getStructurename();
         $this->status = 2;
         $this->step = 0;
     }
@@ -241,6 +248,7 @@ class Player
     public function setUser(\AppBundle\Entity\User $user = null)
     {
         $this->user = $user;
+        $this->setUserstructure($user->getStructurename());
 
         return $this;
     }
@@ -298,5 +306,29 @@ class Player
         $this->setStatus(0);
 
         return $this;
+    }
+
+    /**
+     * Set userstructure
+     *
+     * @param string $userstructure
+     *
+     * @return Player
+     */
+    public function setUserstructure($userstructure)
+    {
+        $this->userstructure = $userstructure;
+
+        return $this;
+    }
+
+    /**
+     * Get userstructure
+     *
+     * @return string
+     */
+    public function getUserstructure()
+    {
+        return $this->userstructure;
     }
 }
