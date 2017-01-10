@@ -1,0 +1,94 @@
+.Board {
+  &-list {
+    display: flex;
+    margin-top: 28px;
+    margin-bottom: 23px;
+    justify-content: space-between;
+
+      div {
+        width: 257px;
+        height: 133px;
+        border: 1px solid red;
+        //margin-right: 19px;
+        position: relative;
+        background-color: #fff;
+
+        strong {
+          position: absolute;
+          font-size: 1.6rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          top: 35px;
+          left: 100px;
+        }
+
+        span {
+          font-size: 4rem;
+          color: #3d3d3d;
+          position: absolute;
+          left: 98px;
+          top: 49px;
+          font-weight: 200;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 33%;
+          height: 100%;
+          background-color: red;
+          top: 0px;
+          left: 0px;
+        }
+
+        &:first-child {
+          border-color: $color3;
+
+          &:after {
+            background-color: $color3;
+          }
+
+          strong {
+            color: $color3;
+          }
+        }
+
+        &:nth-child(2) {
+          border-color: $color4;
+
+          &:after {
+            background-color: $color4;
+          }
+
+          strong {
+            color: $color4;
+          }
+        }
+
+        &:nth-child(3) {
+          border-color: $color2;
+
+          &:after {
+            background-color: $color2;
+          }
+          strong {
+            color: $color2;
+          }
+        }
+
+        &:nth-child(4) {
+          border-color: $color5;
+
+          &:after {
+            background-color: $color5;
+          }
+
+          strong {
+            color: $color5;
+          }
+        }
+
+      }
+  }
+}

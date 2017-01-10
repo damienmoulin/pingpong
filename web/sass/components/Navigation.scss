@@ -1,0 +1,30 @@
+.Navigation {
+  margin-top: 96px;
+  border-bottom: 1px solid #bababa;
+  background-color: #fff;
+
+  ul {
+    padding: 0px;
+    height: 80px;
+
+    li {
+      list-style: none;
+      border-radius: 25px;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      margin-right: 35px;
+      height: 44px;
+      line-height: 44px;
+      padding: 0px 17px;
+      font-weight: bold;
+      transition: background .4s ease;
+      color: #3d3d3d;
+      cursor: pointer;
+
+      &:hover, .is-active {
+        background-color: $color2;
+        color: #fff;
+      }
+    }
+  }
+}
