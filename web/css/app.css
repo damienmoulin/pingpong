@@ -5870,30 +5870,33 @@ button.switch-month:hover {
 
 .title-text .h3 {
   font-family: 'Anton', sans-serif;
-  font-size: 5.4rem;
+  font-size: 5rem;
   font-weight: 600;
   color: #ffffff;
   margin-top: 140px;
   margin-left: 21px; }
 .title-text p {
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin-left: 20px;
   width: 71%; }
   .title-text p span {
     color: #ffffff; }
-.title-text a.more {
+.title-text a.more,
+.title-text button.more {
+  background-color: transparent;
   text-decoration: none;
   border-radius: 50px;
   border: 4px solid #ffffff;
   color: #ffffff;
-  font-size: 2.8rem;
+  font-size: 2rem;
   text-transform: uppercase;
   padding: 15px 30px;
   display: block;
   margin-top: 30px;
   margin-left: 20px;
-  width: 290px; }
-  .title-text a.more:hover {
+  width: 230px; }
+  .title-text a.more:hover,
+  .title-text button.more:hover {
     color: #0f354f;
     border: 4px solid #0f354f; }
 
@@ -6006,67 +6009,28 @@ button.switch-month:hover {
         border: 3px solid #0f354f; }
       .page-home nav .btn.inscription:hover i.face {
         color: #0f354f; }
-    .page-home nav .modal-dialog {
-      width: 100%;
-      height: 100%;
-      margin: 0; }
-      .page-home nav .modal-dialog .modal-content {
-        border-radius: 0;
-        box-shadow: none;
-        border: none; }
-        .page-home nav .modal-dialog .modal-content .modal-header {
-          padding: 0;
-          border: none; }
-          .page-home nav .modal-dialog .modal-content .modal-header a.logo-connexion {
-            width: inherit;
-            z-index: 900;
-            margin-left: 20px; }
-          .page-home nav .modal-dialog .modal-content .modal-header .close {
-            padding: 20px;
-            margin-top: -12px;
-            font-size: 6rem;
-            -webkit-transform: rotate(45deg);
-            /* Chrome, Safari, Opera */ }
-        .page-home nav .modal-dialog .modal-content .modal-body ul.nav.nav-tabs {
-          text-align: center;
-          font-size: 1.6rem;
-          border-bottom: 1px solid #131313;
-          width: 900px;
-          margin: 0 auto; }
-          .page-home nav .modal-dialog .modal-content .modal-body ul.nav.nav-tabs li {
-            float: none;
-            display: inline-block;
-            margin: 0 35px; }
-            .page-home nav .modal-dialog .modal-content .modal-body ul.nav.nav-tabs li.active {
-              border-bottom: 5px solid #0f354f;
-              font-weight: 600; }
-            .page-home nav .modal-dialog .modal-content .modal-body ul.nav.nav-tabs li a {
-              border: none;
-              text-decoration: none;
-              color: #131313;
-              text-transform: uppercase; }
-              .page-home nav .modal-dialog .modal-content .modal-body ul.nav.nav-tabs li a:hover {
-                background-color: transparent;
-                color: #0f354f; }
+    .page-home nav .modal-body {
+      margin-bottom: 100px; }
   .page-home .top-page {
-    height: 600px; }
+    height: 640px; }
     .page-home .top-page .headband-pink {
       position: absolute;
       background-color: #e84961;
       width: 300px;
-      height: 800px;
+      height: 720px;
       top: 0;
       right: 20%; }
     .page-home .top-page .content {
-      text-transform: uppercase;
       position: absolute;
-      top: 6%;
-      left: 20%; }
+      top: 4%;
+      left: 13%; }
       .page-home .top-page .content .h1 {
+        text-transform: uppercase;
         font-size: 19.3rem;
         color: #0f354f;
         font-family: 'Anton', sans-serif; }
       .page-home .top-page .content .h2 {
+        text-transform: uppercase;
         font-family: 'Anton', sans-serif;
         font-size: 12.3rem;
         color: #e84961;
@@ -6075,24 +6039,26 @@ button.switch-month:hover {
         margin-top: -5px; }
         .page-home .top-page .content .h2 span {
           color: #ffffff; }
-      .page-home .top-page .content a.participate {
+      .page-home .top-page .content button.participate {
         text-decoration: none;
         background-color: #5fd383;
+        color: #ffffff;
         border-radius: 50px;
         margin-top: 90px;
         display: block;
-        width: 300px;
-        height: 70px;
+        width: 260px;
+        height: 60px;
         font-size: 2.5rem;
-        color: #ffffff;
         text-transform: uppercase;
         text-align: center;
-        padding-top: 18px;
+        padding-top: 6px;
         margin-left: 205px;
-        font-weight: 600; }
-        .page-home .top-page .content a.participate:hover {
+        font-weight: 600;
+        outline: none; }
+        .page-home .top-page .content button.participate:hover {
           background-color: #0f354f; }
       .page-home .top-page .content .date {
+        text-transform: uppercase;
         left: 80%;
         top: 100%;
         position: absolute; }
@@ -6117,12 +6083,12 @@ button.switch-month:hover {
       margin-top: 110px; }
     .page-home .middle-page .title-text .h3 {
       font-family: 'Anton', sans-serif;
-      font-size: 5.4rem;
+      font-size: 5rem;
       font-weight: 600;
       color: #ffffff;
       margin-top: 140px; }
     .page-home .middle-page .title-text p {
-      font-size: 2.4rem;
+      font-size: 2rem;
       margin-left: 20px;
       width: 71%; }
       .page-home .middle-page .title-text p span {
@@ -6132,13 +6098,13 @@ button.switch-month:hover {
       border-radius: 50px;
       border: 4px solid #ffffff;
       color: #ffffff;
-      font-size: 2.8rem;
+      font-size: 2rem;
       text-transform: uppercase;
       padding: 15px 30px;
       display: block;
       margin-top: 30px;
       margin-left: 20px;
-      width: 290px; }
+      width: 230px; }
       .page-home .middle-page .title-text a.more:hover {
         color: #0f354f;
         border: 4px solid #0f354f; }
@@ -6148,15 +6114,15 @@ button.switch-month:hover {
       color: #5fd383;
       margin-top: 75px; }
     .page-home .bottom-page .title-text .h4 {
-      font-size: 2.8rem;
+      font-size: 2rem;
       font-weight: 600;
       color: #131313;
       margin-left: 20px; }
-    .page-home .bottom-page .title-text a.more {
+    .page-home .bottom-page .title-text button.more {
       border: 4px solid #5fd383;
       color: #5fd383;
       text-align: center; }
-      .page-home .bottom-page .title-text a.more:hover {
+      .page-home .bottom-page .title-text button.more:hover {
         color: #0f354f;
         border: 4px solid #0f354f; }
     .page-home .bottom-page img {
@@ -6167,18 +6133,19 @@ button.switch-month:hover {
     background-color: #0f354f; }
     .page-home footer ul.text {
       padding: 0;
-      margin-top: 113px; }
+      margin-top: 100px; }
       .page-home footer ul.text li {
+        margin-bottom: 10px;
         list-style: none; }
         .page-home footer ul.text li a {
           text-decoration: none;
           color: #ffffff;
-          font-size: 2.2rem; }
+          font-size: 1.6rem; }
           .page-home footer ul.text li a:hover {
             color: #e84961; }
     .page-home footer p {
       color: #ffc74e;
-      font-size: 4rem;
+      font-size: 2rem;
       font-weight: 600;
       margin-top: 80px; }
     .page-home footer ul.picto {
@@ -6191,18 +6158,107 @@ button.switch-month:hover {
         .page-home footer ul.picto li a {
           text-decoration: none;
           color: #ffffff;
-          font-size: 3.2rem; }
+          font-size: 3rem; }
           .page-home footer ul.picto li a:hover {
             color: #e84961; }
     .page-home footer .copi {
       text-align: center;
-      margin-top: 60px;
-      margin-bottom: 30px; }
+      margin-top: 30px;
+      margin-bottom: 20px; }
       .page-home footer .copi a {
-        font-size: 2rem;
+        font-size: 1.4rem;
         text-decoration: none;
         color: #ffffff; }
         .page-home footer .copi a:hover {
+          color: #e84961; }
+
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+  .modal-dialog .modal-content {
+    border-radius: 0;
+    box-shadow: none;
+    border: none; }
+    .modal-dialog .modal-content .modal-header {
+      padding: 0;
+      border: none; }
+      .modal-dialog .modal-content .modal-header a.logo-connexion {
+        width: inherit;
+        z-index: 900;
+        margin-left: 20px; }
+      .modal-dialog .modal-content .modal-header .close {
+        outline: none;
+        padding: 20px;
+        margin-top: -12px;
+        font-size: 6rem;
+        -webkit-transform: rotate(45deg);
+        /* Chrome, Safari, Opera */ }
+    .modal-dialog .modal-content .modal-body {
+      margin-top: -230px; }
+      .modal-dialog .modal-content .modal-body .form {
+        width: 700px;
+        margin: 0 auto; }
+        .modal-dialog .modal-content .modal-body .form h4 {
+          text-transform: uppercase;
+          color: #e84961;
+          font-family: 'Anton', sans-serif;
+          font-size: 4rem; }
+        .modal-dialog .modal-content .modal-body .form p {
+          font-size: 1.2rem;
+          margin-top: 10px;
+          margin-bottom: 30px; }
+        .modal-dialog .modal-content .modal-body .form form input {
+          width: 100%;
+          border: 0;
+          height: 40px;
+          margin-bottom: 20px;
+          outline: none;
+          border-bottom: 1px solid #c1c1c1; }
+        .modal-dialog .modal-content .modal-body .form form ::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          color: #131313; }
+        .modal-dialog .modal-content .modal-body .form form .checkbox {
+          padding-left: 20px; }
+          .modal-dialog .modal-content .modal-body .form form .checkbox input {
+            width: 20px;
+            height: 20px; }
+          .modal-dialog .modal-content .modal-body .form form .checkbox .check {
+            vertical-align: super;
+            margin-left: 5px;
+            text-transform: inherit; }
+        .modal-dialog .modal-content .modal-body .form form .btn-insc {
+          margin: 0 auto;
+          text-decoration: none;
+          background-color: #5fd383;
+          color: #ffffff;
+          margin-bottom: 30px;
+          border-radius: 50px;
+          display: block;
+          width: 190px;
+          height: 40px;
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          text-align: center;
+          padding-top: 8px;
+          font-weight: 600;
+          margin-top: 20px; }
+        .modal-dialog .modal-content .modal-body .form form .mdp {
+          float: right;
+          display: block;
+          text-decoration: underline;
+          color: #0f354f;
+          margin-bottom: 30px; }
+          .modal-dialog .modal-content .modal-body .form form .mdp:hover {
+            color: #e84961; }
+      .modal-dialog .modal-content .modal-body a.account {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        text-decoration: underline;
+        color: #0f354f;
+        margin-bottom: 30px; }
+        .modal-dialog .modal-content .modal-body a.account:hover {
           color: #e84961; }
 
 /*# sourceMappingURL=app.css.map */

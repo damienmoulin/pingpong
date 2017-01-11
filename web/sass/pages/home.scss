@@ -11,7 +11,7 @@
 .title-text{
 	.h3{
 		font-family: 'Anton', sans-serif;
-		font-size: 5.4rem;
+		font-size: 5rem;
 		font-weight: 600;
 		color: $white;
     margin-top: 140px;
@@ -19,7 +19,7 @@
 	}
 
 	p{
-		font-size: 2.4rem;
+		font-size: 2rem;
     margin-left: 20px;
 		width: 71%;
 		span{
@@ -27,18 +27,20 @@
 		}
 	}
 
-	a.more{
+	a.more,
+	button.more{
+		background-color: transparent;
 		text-decoration: none;
 		border-radius: 50px;
 		border: 4px solid $white;
 		color: $white;
-		font-size: 2.8rem;
+		font-size: 2rem;
     text-transform: uppercase;
  		padding: 15px 30px;
  		display: block;
     margin-top: 30px;
   	margin-left: 20px;
-  	width: 290px;
+  	width: 230px;
 
   	&:hover{
   		color: $blue;
@@ -213,92 +215,38 @@
     	}
 		}
 
-		// MODAL
-		.modal-dialog {
-	    width: 100%;
-	    height: 100%;
-	    margin: 0;
-
-	    .modal-content{
-	    	border-radius: 0;
-		    box-shadow: none;
-	  		border: none;
-
-				.modal-header{
-					padding: 0;
-					border: none;
-
-					a.logo-connexion{
-						width: inherit;
-						z-index: 900;
-						margin-left: 20px;
-					}
-					.close {
-	  				padding: 20px;
-			    	margin-top: -12px;
-			    	font-size: 6rem;
-			    	-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-					}
-				}
-
-				.modal-body{
-					ul.nav.nav-tabs{
-				    text-align: center;
-				    font-size: 1.6rem;
-		        border-bottom: 1px solid $black;
-				    width: 900px;
-				    margin: 0 auto;
-						li {
-					    float: none;
-					    display: inline-block;
-			        margin: 0 35px;
-					    &.active{
-					    	border-bottom: 5px solid $blue;
-			    	    font-weight: 600;
-					    }
-					    a{
-					    	border: none;
-					    	text-decoration: none;
-					    	color: $black;
-					    	text-transform: uppercase;
-					    	&:hover{
-					    		background-color: transparent;
-					    		color: $blue;
-					    	}
-					    }
-						}
-					}
-				}
-	    }
+		.modal-body{
+			margin-bottom: 100px;
 		}
 	}
 
 	// TOP PAGE
 	.top-page{
-    height: 600px;
+    height: 640px;
 
 		.headband-pink{
 			position: absolute;
 			background-color: $pink;
 			width: 300px;
-			height: 800px;
+			height: 720px;
 			top: 0;
       right: 20%;
 		}
 
 		.content{
-    	text-transform: uppercase;
 	    position: absolute;
- 	    top: 6%;
-	    left: 20%;
+ 	    top: 4%;
+	    left: 13%;
 
 			.h1{
+    		text-transform: uppercase;
 				font-size: 19.3rem;
 				color: $blue;
 				font-family: 'Anton', sans-serif;
 			}
 
 			.h2{
+    		text-transform: uppercase;
 				font-family: 'Anton', sans-serif;
 				font-size: 12.3rem;
 				color: $pink;
@@ -310,21 +258,22 @@
 				}
 			}
 
-			a.participate{
+			button.participate{
 				text-decoration: none;
 				background-color: $green;
-				border-radius: 50px;
+    		color: $white;
+		    border-radius: 50px;
 		    margin-top: 90px;
 		    display: block;
-		    width: 300px;
-		    height: 70px;
+		    width: 260px;
+		    height: 60px;
 		    font-size: 2.5rem;
-		    color: $white;
 		    text-transform: uppercase;
 		    text-align: center;
-        padding-top: 18px;
-        margin-left: 205px;
-        font-weight: 600;		
+		    padding-top: 6px;
+		    margin-left: 205px;
+		    font-weight: 600;
+		    outline: none;
 
         &:hover{
         	background-color: $blue;
@@ -332,6 +281,7 @@
 			}
 
 			.date{
+    		text-transform: uppercase;
 				left: 80%;
 		    top: 100%;
 		    position: absolute;
@@ -370,14 +320,14 @@
 		.title-text{
 			.h3{
 				font-family: 'Anton', sans-serif;
-				font-size: 5.4rem;
+				font-size: 5rem;
 				font-weight: 600;
 				color: $white;
 		    margin-top: 140px;
 			}
 
 			p{
-				font-size: 2.4rem;
+				font-size: 2rem;
 		    margin-left: 20px;
 	  		width: 71%;
 				span{
@@ -390,13 +340,13 @@
 				border-radius: 50px;
 				border: 4px solid $white;
 				color: $white;
-				font-size: 2.8rem;
+				font-size: 2rem;
 		    text-transform: uppercase;
 	   		padding: 15px 30px;
 	   		display: block;
 		    margin-top: 30px;
 	    	margin-left: 20px;
-	    	width: 290px;
+	    	width: 230px;
 
 	    	&:hover{
 	    		color: $blue;
@@ -416,13 +366,13 @@
 			}
 
 			.h4{
-				font-size: 2.8rem;
+				font-size: 2rem;
 				font-weight: 600;
 				color: $black;
 		    margin-left: 20px;
 			}
 
-			a.more{
+			button.more{
 				border: 4px solid $green;
 				color: $green;
 		    text-align: center;
@@ -447,13 +397,14 @@
 
 		ul.text{
 			padding: 0;
-	    margin-top: 113px;
+	    margin-top: 100px;
 			li{
+				margin-bottom: 10px;
 				list-style: none;
 				a{
 					text-decoration: none;
 					color: $white;
-					font-size: 2.2rem;
+					font-size: 1.6rem;
 
 					&:hover{
 						color: $pink;
@@ -464,7 +415,7 @@
 
 		p{
 			color: $yellow;
-			font-size: 4rem;
+			font-size: 2rem;
 			font-weight: 600;
 	    margin-top: 80px;
 		}
@@ -479,7 +430,7 @@
 				a{
 					text-decoration: none;
 					color: $white;
-					font-size: 3.2rem;
+					font-size: 3rem;
 
 					&:hover{
 						color: $pink;
@@ -491,10 +442,10 @@
 
 		.copi{
 			text-align: center;
-			margin-top: 60px;
-    	margin-bottom: 30px;
+			margin-top: 30px;
+    	margin-bottom: 20px;
 			a{
-				font-size: 2rem;
+				font-size: 1.4rem;
 				text-decoration: none;
 				color: $white;
 		   

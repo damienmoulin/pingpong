@@ -90,12 +90,12 @@
       </div>
 
       <!-- INSCRIPTION -->
-      <button type="button" class="btn inscription" data-toggle="modal" data-target="#myModal">
+      <button type="button" class="btn inscription" data-toggle="modal" data-target="#modal-connexion">
         <i class="material-icons face">face</i>
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal fade" id="modal-connexion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <!-- HEADER -->
@@ -110,28 +110,29 @@
 
             <!-- BODY -->
             <div class="modal-body">
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#connexion" aria-controls="connexion" role="tab" data-toggle="tab">Connexion</a></li>
-                <li role="presentation"><a href="#inscription" aria-controls="inscription" role="tab" data-toggle="tab">Inscription</a></li>
-              </ul>
+              <!-- CONNEXION -->
+              <div class="form">
+                <h4>Connexion</h4>
+                <p><sup>*</sup> Veuillez remplir les champs ci-dessous</p>
+                <form>
+                  <div class="col-md-12 no-gutter">
+                    <input type="email" placeholder="Email *">
+                  </div>
 
-              <!-- Tab panes -->
-              <div class="tab-content">
+                  <div class="col-md-12 no-gutter">
+                    <input type="text" placeholder="Mot de passe *">
+                    <a class="mdp" href="#">Mot de passe oublié ?</a>
+                  </div>
 
-                <!-- CONNEXION -->
-                <div role="tabpanel" class="tab-pane active" id="connexion">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptas, repellat a reprehenderit ea, magni ab recusandae illum ratione nisi. Doloribus quidem veniam molestiae rerum eius repudiandae odio quas, et
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae est blanditiis iusto voluptate deleniti inventore ipsum quidem quo facilis pariatur expedita recusandae iste nobis ullam impedit voluptates veritatis, fugit corporis?
-                </div>
+                  <div class="col-md-12 no-gutter">
+                    <button type="submit" class="btn btn-insc">Connexion</button>
+                  </div>
 
-                <!-- INSCRIPTION -->
-                <div role="tabpanel" class="tab-pane" id="inscription">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus officia magnam ex accusamus, ullam rem ratione numquam quod fugiat provident. Ea adipisci sint laboriosam, recusandae dolor aliquam voluptates eum nulla!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ea doloremque eveniet neque dicta repellendus pariatur ipsa possimus, qui excepturi ad, reiciendis amet itaque quos perferendis soluta consequatur in sapiente.
-                </div>
+                </form>
 
-                <div class="clearfix"></div>
+                <a class="account connexion" href="#">
+                  Vous avez déja un compte ? <br>Inscrivez vous !
+                </a>
               </div>
             </div>
 
@@ -151,7 +152,76 @@
           <div class="content">
             <h1 class="h1">PING PONG</h1>
             <h2 class="h2">startup <span>cup</span></h2>
-            <a href="#" class="participate">Je participe</a>
+
+            <button type="button" class="btn participate" data-toggle="modal" data-target="#modal-inscription">
+              Je participe
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modal-inscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <!-- HEADER -->
+                  <div class="modal-header">
+                    <a class="logo-connexion" href="#home">
+                      <img src="../img/logo-connexion.jpg" alt="Logo PingPongStartupcup">
+                    </a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <i class="zmdi zmdi-plus"></i>
+                    </button>
+                  </div>
+
+                  <!-- BODY -->
+                  <div class="modal-body">
+                    <!-- CONNEXION -->
+                    <div class="form">
+                      <h4>INSCRIPTION</h4>
+                      <p><sup>*</sup> Veuillez remplir les champs ci-dessous</p>
+                      <form>
+                        <div class="col-md-5 no-gutter">
+                          <input type="text" placeholder="Nom *">
+                        </div>
+
+                        <div class="col-md-5 col-md-offset-2 no-gutter">
+                          <input type="text" placeholder="Prénom *">
+                        </div>
+
+                        <div class="col-md-12 no-gutter">
+                          <input type="email" placeholder="Email *">
+                        </div>
+
+                        <div class="col-md-12 no-gutter">
+                          <input type="text" placeholder="Mot de passe *">
+                        </div>
+
+                        <div class="col-md-12 no-gutter">
+                          <input type="text" placeholder="Confirmation mot de passe *">
+                        </div>
+
+                        <div class="col-md-12 no-gutter">
+                          <div class="checkbox">
+                            <input type="checkbox"> 
+                            <div class="check">En cochant cette case je reconnais avoir pris connaissance des conditions générales d’utilisation</div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 no-gutter">
+                          <button type="submit" class="btn btn-insc">Inscription</button>
+                        </div>
+                      </form>
+
+                      <a class="account inscription" href="#">
+                        Vous avez déja un compte ? <br>Connectez vous !
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
 
             <div class="date">
               <div class="start">DéBUT TOURNOIS</div>
@@ -191,7 +261,75 @@
               <h3 class="h3">ET Que des avantages !</h3>
               <h4 class="h4">C’est un événément gratuit !</h4>
               <p>Une compétition ouverte à tous, qui se déroule sur plusieurs semaines pour plus de fun et vous offrira une visibilité online.</p>
-              <a href="#" class="more">Je participe</a>
+              <button type="button" class="btn more" data-toggle="modal" data-target="#modal-inscription">
+                Je participe
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="modal-inscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <!-- HEADER -->
+                    <div class="modal-header">
+                      <a class="logo-connexion" href="#home">
+                        <img src="../img/logo-connexion.jpg" alt="Logo PingPongStartupcup">
+                      </a>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="zmdi zmdi-plus"></i>
+                      </button>
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="modal-body">
+                      <!-- CONNEXION -->
+                      <div class="form">
+                        <h4>INSCRIPTION</h4>
+                        <p><sup>*</sup> Veuillez remplir les champs ci-dessous</p>
+                        <form>
+                          <div class="col-md-5 no-gutter">
+                            <input type="text" placeholder="Nom *">
+                          </div>
+
+                          <div class="col-md-5 col-md-offset-2 no-gutter">
+                            <input type="text" placeholder="Prénom *">
+                          </div>
+
+                          <div class="col-md-12 no-gutter">
+                            <input type="email" placeholder="Email *">
+                          </div>
+
+                          <div class="col-md-12 no-gutter">
+                            <input type="text" placeholder="Mot de passe *">
+                          </div>
+
+                          <div class="col-md-12 no-gutter">
+                            <input type="text" placeholder="Confirmation mot de passe *">
+                          </div>
+
+                          <div class="col-md-12 no-gutter">
+                            <div class="checkbox">
+                              <input type="checkbox"> 
+                              <div class="check">En cochant cette case je reconnais avoir pris connaissance des conditions générales d’utilisation</div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-12 no-gutter">
+                            <button type="submit" class="btn btn-insc">Inscription</button>
+                          </div>
+                        </form>
+
+                        <a class="account inscription" href="#">
+                          Vous avez déja un compte ? <br>Connectez vous !
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
             </div>
           </div>
 
@@ -261,7 +399,20 @@
     <script>
       $(document).ready(function () {
         $('.hamburger').on('click', function () {
-            $('.menu-1').toggleClass('menu--active');
+          $('.menu-1').toggleClass('menu--active');
+        });
+
+        $('.account.connexion').on('click', function(){
+          $('.btn.participate').trigger('click')
+        });
+
+        $('.account.inscription').on('click', function(){
+          $('#modal-inscription').css('z-index','0');
+          $('.btn.inscription').trigger('click');
+
+          $('.close').off('click').on('click', function(){
+          $('#modal-inscription').css('z-index','1050');
+          })
         });
       });
     </script>
