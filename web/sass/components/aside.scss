@@ -10,17 +10,14 @@ aside {
     box-sizing: border-box;
     padding: 26px;
 
-    span {
+    span, strong {
       font-size: 3.2rem;
       text-transform: uppercase;
       font-weight: 200;
       display: block;
+      font-family: $font2;
     }
 
-    strong {
-      font-size: 2.4rem;
-      text-transform: uppercase;
-    }
 
     a {
       color: #fff;
@@ -28,6 +25,15 @@ aside {
       bottom: 17px;
       right: 16px;
       font-size: 1.6rem;
+      text-decoration: underline;
+      margin-right: 10px;
+
+      i {
+        font-size: 2.3rem;
+        position: relative;
+        top: 5px;
+        right: -10px;
+      }
     }
   }
 
@@ -63,24 +69,24 @@ aside {
   }
 
   .Send {
-    background-color: #6dc7be;
+    background-color: $colorbo2;
 
-    border: 1px solid #6dc7be;
+    border: 1px solid  $colorbo2;
 
     &:hover {
       background-color: transparent;
-      color: #6dc7be;
+      color:  $colorbo2;
     }
   }
 
   .Planning {
-    background-color: #b198dc;
+    background-color:  $colorbo2;
 
-    border: 1px solid #b198dc;
+    border: 1px solid  $colorbo2;
 
     &:hover {
       background-color: transparent;
-      color: #b198dc;
+      color:  $colorbo2;
     }
   }
 }

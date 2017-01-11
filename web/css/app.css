@@ -5902,7 +5902,8 @@ button.switch-month:hover {
     justify-content: space-between; }
     .Tab-title h3 {
       padding: 0px;
-      margin: 0px; }
+      margin: 0px;
+      text-transform: uppercase; }
     .Tab-title a {
       color: #e84961;
       text-decoration: underline;
@@ -5985,20 +5986,25 @@ aside {
     position: relative;
     box-sizing: border-box;
     padding: 26px; }
-    aside .Management span {
+    aside .Management span, aside .Management strong {
       font-size: 3.2rem;
       text-transform: uppercase;
       font-weight: 200;
-      display: block; }
-    aside .Management strong {
-      font-size: 2.4rem;
-      text-transform: uppercase; }
+      display: block;
+      font-family: "Anton", sans-serif; }
     aside .Management a {
       color: #fff;
       position: absolute;
       bottom: 17px;
       right: 16px;
-      font-size: 1.6rem; }
+      font-size: 1.6rem;
+      text-decoration: underline;
+      margin-right: 10px; }
+      aside .Management a i {
+        font-size: 2.3rem;
+        position: relative;
+        top: 5px;
+        right: -10px; }
   aside .Calendar {
     background-color: #fff;
     height: 256px;
@@ -6023,17 +6029,17 @@ aside {
       background-color: transparent;
       cursor: pointer; }
   aside .Send {
-    background-color: #6dc7be;
-    border: 1px solid #6dc7be; }
+    background-color: #5fd383;
+    border: 1px solid #5fd383; }
     aside .Send:hover {
       background-color: transparent;
-      color: #6dc7be; }
+      color: #5fd383; }
   aside .Planning {
-    background-color: #b198dc;
-    border: 1px solid #b198dc; }
+    background-color: #5fd383;
+    border: 1px solid #5fd383; }
     aside .Planning:hover {
       background-color: transparent;
-      color: #b198dc; }
+      color: #5fd383; }
 
 .Filter {
   width: 338px;
@@ -6043,7 +6049,8 @@ aside {
     height: 55px;
     border: none;
     border-radius: 0px;
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+    padding-left: 35px; }
   .Filter span {
     position: absolute;
     right: 17px;
