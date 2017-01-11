@@ -57,9 +57,9 @@
 .calendar_content div.today {
   font-weight: bold;
   font-size: 14px;
-  color: #3c3c3c;
+  color: #fff;
   border-radius: 100%;
-  background-color: #d2c1dd;
+  background-color: $color2;
 }
 .calendar_content div.selected {
   background-color: #f0f0f0;

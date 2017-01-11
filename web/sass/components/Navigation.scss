@@ -1,18 +1,29 @@
 .Navigation {
-  margin-top: 96px;
+ // margin-top: 96px;
   border-bottom: 1px solid #bababa;
   background-color: #fff;
+
+  &-container {
+    justify-content: flex-end;
+    border-top: 1px solid #bababa;
+    
+    .messagerie {
+      color: $color2;
+    }
+  }
 
   ul {
     padding: 0px;
     height: 80px;
+    width: 74%;
+    margin-left: 26%;
 
     li {
       list-style: none;
       border-radius: 25px;
       font-size: 1.4rem;
       text-transform: uppercase;
-      margin-right: 35px;
+      margin-right: 23px;
       height: 44px;
       line-height: 44px;
       padding: 0px 17px;

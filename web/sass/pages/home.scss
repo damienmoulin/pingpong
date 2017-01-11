@@ -1,0 +1,465 @@
+
+.no-gutter{
+	padding: 0;
+}
+
+.center{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.title-text{
+	.h3{
+		font-family: 'Anton', sans-serif;
+		font-size: 5rem;
+		font-weight: 600;
+		color: $white;
+    margin-top: 140px;
+    margin-left: 21px;
+	}
+
+	p{
+		font-size: 2rem;
+    margin-left: 20px;
+		width: 71%;
+		span{
+			color: $white;
+		}
+	}
+
+	a.more,
+	button.more{
+		background-color: transparent;
+		text-decoration: none;
+		border-radius: 50px;
+		border: 4px solid $white;
+		color: $white;
+		font-size: 2rem;
+    text-transform: uppercase;
+ 		padding: 15px 30px;
+ 		display: block;
+    margin-top: 30px;
+  	margin-left: 20px;
+  	width: 230px;
+
+  	&:hover{
+  		color: $blue;
+  		border: 4px solid $blue;
+  	}
+	}
+}
+
+.modal-backdrop.fade.in{
+	display: none;
+}
+
+.modal.fade.in {
+  padding: 0!important;
+}
+
+// GENERALE
+
+.page-home{
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
+
+	// NAVBAR
+
+	nav{
+		position: fixed;
+		width: 100%;
+		z-index: 900;
+
+	  .hamburger {
+		  display: inline-block;
+		  cursor: pointer;
+		  transition: transform 0.3s;
+		  position: absolute;
+		  left: 0px;
+		  top: 20px;
+		  z-index: 999;
+
+		  i.menu{
+				margin-left: 30px;
+				color: $pink;
+				font-size: 4rem;
+				&:hover{
+					color: $green;
+				}
+		  }
+		}
+
+		.menu-1 {
+		  width: 425px;
+		  height: 100vh;
+		  background: $blue;
+		  position: fixed;
+		  top: 0px;
+		  left: -130%;
+		  transition: 0.5s;
+		  transform: translateX(100%);
+
+		  img{
+		  	float: right;
+  	    margin-top: -110px;
+		  }
+
+		  ul.navi{
+		  	padding-top: 80px;
+		  	li{
+		  		list-style: none;
+		  		margin-bottom: 10px;
+		  		a{
+		  			text-decoration: none;
+		  			color: $white;
+		  			font-size: 1.6rem;
+		  			font-weight: 600;
+
+		  			&:hover{
+		  				color: $pink;
+		  			}
+		  		}
+		  	}
+
+		  	li.bell{
+		  		a{
+		  			i{
+		  				color: $pink;
+		  			}
+		  			.label{
+		  				color: $pink;
+		  			}
+		  		}
+	  			&:hover i,
+	  			&:hover .label{
+	  				color: $green;
+	  			}
+		  	}
+		  }
+
+		  ul.contact{
+		  	margin-top: 30px;
+		  	li{
+		  		a{
+		  			font-size: 1.4rem;
+		  			text-decoration: none;
+		  			color: $white;
+		  			i{
+		  				display: inline-block;
+		  			}
+		  			.ul-contact{
+		  				display: inline-block;
+		  				margin-left: 10px;
+		  			}
+		  			&:hover{
+		  				color: $pink;
+		  			}
+		  		}
+		  	}
+		  }
+
+		  .rs{
+		  	margin-left: 40px;
+    		margin-top: 40px;
+		  	p{
+		  		display: inline-block;
+		  		font-weight: 600;
+		  		font-size: 1.4rem;
+		  		color: $yellow;
+		  	}
+
+		  	a{
+		  		text-decoration: none;
+		  		color: $white;
+		  		display: inline-block;
+		  		font-size: 1.6rem;
+		  		margin-left: 10px;
+		  		&:hover{
+		  			color: $pink;
+		  		}
+		  	}
+		  }
+		}
+
+		.menu--active {
+		  transform: translateX(0px);
+		  z-index: 900;
+      left: 0;
+		}
+
+		// INSCRIPTION
+		.btn.inscription{
+			background-color: transparent;
+			border-radius: 0;
+			border: none;
+			background-image: none;
+			display: inline-block;
+    	float: right;
+    	border: 3px solid $pink;
+      padding: 15px;
+    	margin-top: -3px;
+    	padding-top: 15px;
+    	outline: none;
+
+    	i.face{
+    		color: $pink;
+    		font-size: 4rem;
+    	}
+
+    	&:hover {
+    		border: 3px solid $blue;
+    	}
+
+    	&:hover i.face{ 
+    		color: $blue;
+    	}
+		}
+
+		.modal-body{
+			margin-bottom: 100px;
+		}
+	}
+
+	// TOP PAGE
+	.top-page{
+    height: 640px;
+
+		.headband-pink{
+			position: absolute;
+			background-color: $pink;
+			width: 300px;
+			height: 720px;
+			top: 0;
+      right: 20%;
+		}
+
+		.content{
+	    position: absolute;
+ 	    top: 4%;
+	    left: 13%;
+
+			.h1{
+    		text-transform: uppercase;
+				font-size: 19.3rem;
+				color: $blue;
+				font-family: 'Anton', sans-serif;
+			}
+
+			.h2{
+    		text-transform: uppercase;
+				font-family: 'Anton', sans-serif;
+				font-size: 12.3rem;
+				color: $pink;
+		    margin-left: 150px;
+		    line-height: 0;
+		    margin-top: -5px;
+				span{
+					color: $white;
+				}
+			}
+
+			button.participate{
+				text-decoration: none;
+				background-color: $green;
+    		color: $white;
+		    border-radius: 50px;
+		    margin-top: 90px;
+		    display: block;
+		    width: 260px;
+		    height: 60px;
+		    font-size: 2.5rem;
+		    text-transform: uppercase;
+		    text-align: center;
+		    padding-top: 6px;
+		    margin-left: 205px;
+		    font-weight: 600;
+		    outline: none;
+
+        &:hover{
+        	background-color: $blue;
+        }
+			}
+
+			.date{
+    		text-transform: uppercase;
+				left: 80%;
+		    top: 100%;
+		    position: absolute;
+				.start{
+					color: $yellow;
+					font-size: 2rem;
+	  			font-weight: 600;
+				}
+
+				.number{
+					font-size: 6.8rem;
+					font-weight: 800;
+					color: $white;
+			    line-height: 50px;
+				}
+
+				.year{
+					font-weight: 100;
+					font-size: 7.5rem;
+					color: $white;
+	        line-height: 70px;
+				}
+			}
+		}
+	}
+
+	// MIDDLE PAGE
+	.middle-page{
+		background-color: $yellow;
+		height: 465px;
+
+		img{
+			margin-top: 110px;
+		}
+
+		.title-text{
+			.h3{
+				font-family: 'Anton', sans-serif;
+				font-size: 5rem;
+				font-weight: 600;
+				color: $white;
+		    margin-top: 140px;
+			}
+
+			p{
+				font-size: 2rem;
+		    margin-left: 20px;
+	  		width: 71%;
+				span{
+					color: $white;
+				}
+			}
+
+			a.more{
+				text-decoration: none;
+				border-radius: 50px;
+				border: 4px solid $white;
+				color: $white;
+				font-size: 2rem;
+		    text-transform: uppercase;
+	   		padding: 15px 30px;
+	   		display: block;
+		    margin-top: 30px;
+	    	margin-left: 20px;
+	    	width: 230px;
+
+	    	&:hover{
+	    		color: $blue;
+	    		border: 4px solid $blue;
+	    	}
+			}
+		}
+	}
+
+	// BOTTOM PAGE
+	.bottom-page{
+		height: 460px;
+		.title-text{
+			.h3{
+				color: $green;
+				margin-top: 75px;
+			}
+
+			.h4{
+				font-size: 2rem;
+				font-weight: 600;
+				color: $black;
+		    margin-left: 20px;
+			}
+
+			button.more{
+				border: 4px solid $green;
+				color: $green;
+		    text-align: center;
+
+		  	&:hover{
+		  		color: $blue;
+		  		border: 4px solid $blue;
+		  	}
+			}
+		}
+
+		img{
+			margin-top: 115px;
+		}
+	}
+
+	// FOOTER
+	footer{
+		padding-left: 30px;
+		padding-right: 30px;
+		background-color: $blue;
+
+		ul.text{
+			padding: 0;
+	    margin-top: 100px;
+			li{
+				margin-bottom: 10px;
+				list-style: none;
+				a{
+					text-decoration: none;
+					color: $white;
+					font-size: 1.6rem;
+
+					&:hover{
+						color: $pink;
+					}
+				}
+			}
+		}
+
+		p{
+			color: $yellow;
+			font-size: 2rem;
+			font-weight: 600;
+	    margin-top: 80px;
+		}
+
+		ul.picto{
+			padding: 0;
+	    margin-top: -15px;
+			li{
+				display: inline-block;
+				list-style: none;
+		    margin: 0 30px 0 0;
+				a{
+					text-decoration: none;
+					color: $white;
+					font-size: 3rem;
+
+					&:hover{
+						color: $pink;
+					}
+				}
+			}
+		}
+
+
+		.copi{
+			text-align: center;
+			margin-top: 30px;
+    	margin-bottom: 20px;
+			a{
+				font-size: 1.4rem;
+				text-decoration: none;
+				color: $white;
+		   
+
+    		&:hover{
+    			color: $pink;
+    		}
+			}
+		}
+	}
+
+}
+
+
+
+
+

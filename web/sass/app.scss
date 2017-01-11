@@ -4,6 +4,7 @@
 
 //base
 @import "base/variables";
+@import "base/base";
 @import "base/header";
 
 //components
@@ -13,3 +14,10 @@
 @import "components/Tab";
 @import "components/aside";
 @import "components/Filter";
+@import "components/Form";
+@import "components/Accordion";
+
+
+@import "pages/home";
+@import "pages/form";
+

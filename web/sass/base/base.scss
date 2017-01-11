@@ -1,0 +1,111 @@
+
+html {
+  font-size: 62.5%; /* Generally results in 1rem -> 10px */
+  font-family: $font1;
+}
+
+body {
+  font-family: $font1;
+}
+
+.block-01 {
+  width: 1072px;
+  margin: 0 auto;
+  display: block;
+}
+
+.block-02 {
+  width: 795px;
+  display: inline-block;
+  margin-right: 22px;
+}
+
+.block-03 {
+  width: 250px;
+  display: inline-block;
+}
+
+.center {
+  display: block;
+  text-align: center;
+}
+
+.flex-align-vertical {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.pt {
+  padding-top: 88px;
+}
+
+.bosup {
+  background-color: #efefef;
+}
+
+.title-1 {
+  font-family: $font2;
+  color: $colorbo1;
+  font-size: 4rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+.sub-title {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.btn-1 {
+  height: 60px;
+  padding: 0px 30px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 60px;
+  transition: .3s ease;
+  border: 1px solid #fff;
+  margin-right: 20px;
+
+  &.whitout-margin {
+    margin: 0px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.btn-red {
+    background-color: $colorbo3;
+    border-color: $colorbo3;
+
+    &:hover {
+      color: $colorbo3;
+      background-color: transparent;
+    }
+  }
+
+  &.btn-green {
+    background-color: $colorbo2;
+    border-color: $colorbo2;
+
+    &:hover {
+      color: $colorbo2;
+      background-color: transparent;
+    }
+  }
+
+  &.btn-grey {
+    background-color: #737373;
+    border-color: #737373;
+
+    &:hover {
+      color: #737373;
+      background-color: transparent;
+    }
+  }
+}

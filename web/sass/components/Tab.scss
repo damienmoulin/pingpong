@@ -11,6 +11,19 @@
       padding: 0px;
       margin: 0px;
     }
+    
+    a {
+      color: $color2;
+      text-decoration: underline;
+      margin-right: 17px;
+
+      i {
+        font-size: 2rem;
+        position: relative;
+        right: -10px;
+        bottom: -2px;
+      }
+    }
   }
 
   &-content {
@@ -45,5 +58,71 @@
 
   &-select {
     width: 167px;
+    
+    .finish {
+      color: $color3;
+    }
+  }
+
+
+  &-01 {
+    border-top: 1px solid #eeeeee;
+    margin-top: 20px;
+    margin-bottom: 47px;
+
+    .Flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      overflow: hidden;
+      color: #131313;
+      transition: .3s ease;
+
+      &:hover, &.focus {
+        background-color: #e6e6e6;
+        cursor: pointer;
+      }
+    }
+
+    .player {
+      width: 237px;
+      font-size: 1.2em;
+      box-sizing: border-box;
+      padding-left: 50px;
+    }
+
+    .infos-player {
+      width: 500px;
+
+      strong {
+        font-size: 1.2em;
+        display: block;
+      }
+
+      span {
+        font-size: 1.2em;
+      }
+    }
+
+    .mail-player {
+      width: 215px;
+      font-size: 1.2em;
+      text-align: right;
+
+      strong {
+        font-size: 1.2rem;
+        color: #f26c4f;
+        
+        .valid {
+          color: $colorbo2;
+        }
+      }
+    }
+
+    .Accordion-more {
+      width: 67px;
+      font-size: 3rem;
+    }
   }
 }
