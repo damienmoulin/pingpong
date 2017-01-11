@@ -8,6 +8,7 @@
 
 namespace AppBundle\Controller;
 
+use Mailgun\Mailgun;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -44,5 +45,20 @@ class AdminController extends Controller
             'structures' => $structures,
             'users' => $users
         ]);
+    }
+
+    /**
+     * @Route("/mailer", name="admin_mail")
+     */
+    public function mailAction()
+    {
+        $message = new Mailgun('key-669533d09c44f75f332c453fb8cdf700');
+        $domain = "sandbox9d6a022a47aa440d8c03ee8ac68aa807.mailgun.org";
+
+        $message->sendMessage($domain, array('from'    => 'bob@example.com',
+            'to'      => 'zabaradjan@gmail.com',
+            'subject' => 'Test Email',
+            'text'    => 'Success ?'));
+        dump($message);
     }
 }
