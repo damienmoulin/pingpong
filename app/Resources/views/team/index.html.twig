@@ -2,7 +2,6 @@
 
 {% block body %}
 
-
     <!-- TODO HEADER + METTRE NOM DE LEQUIPE-->
 
     <div class="block-01 pt">
@@ -36,6 +35,9 @@
             {{ form_end(form) }}
         </section>
 
+        {% if acceptedPlayers|length == 16 %}
+            <p>Vous avez atteint la limite de 16 joueurs</p>
+        {% endif %}
 
         <h2 class="title-1">Ton équipe | {{ acceptedPlayers|length }}/16 </h2>
         <p class="sub-title">Il faut un minimum de 4 personnes dans ton équipe</p>
@@ -83,18 +85,6 @@
                 <a class="btn-1 btn-green whitout-margin" href="{{ path('contest_index', { 'tournament': user.tournament.id }) }}">Tableau du Tournoi</a>
             {% endif %}
         </div>
-
-        <br><br><br><br><br><br><br>
-
-        {% if acceptedPlayers|length >= 4 and acceptedPlayers|length %2 == 0 and user.tournament is null %}
-            <a href="{{ path('contest_start', { 'user': user.id }) }}">Lancer le Tournoi</a>
-        {% elseif user.tournament is not null %}
-            <a href="{{ path('contest_index', { 'tournament': user.tournament.id }) }}">Tableau du Tournoi</a>
-        {% endif %}
-        {% if acceptedPlayers|length == 16 %}
-            <p>Vous avez atteint la limite de 16 joueurs</p>
-        {% endif %}
-
     </div>
 
 

@@ -26,7 +26,8 @@ class AdminController extends Controller
         $users = $this->getDoctrine()->getRepository('AppBundle:User')->findAll();
         $players = $this->getDoctrine()->getRepository('AppBundle:Player')->findAll();
         $resultStructures = $this->getDoctrine()->getRepository('AppBundle:User')->findAllByStructure();
-
+        $tournaments = $this->getDoctrine()->getRepository('AppBundle:Tournament')->findAll();
+        
         $structures = [];
         foreach ($resultStructures as $resultStructure) {
             $structure = [];
@@ -43,7 +44,8 @@ class AdminController extends Controller
         return $this->render('admin/index.html.twig',[
             'players' => $players,
             'structures' => $structures,
-            'users' => $users
+            'users' => $users,
+            'tournaments' => $tournaments
         ]);
     }
 }
