@@ -6,11 +6,11 @@
         <div class="Menu-bosup">
             <div class="block-01 flex-align-vertical Menu-bosup--content">
                 <div class="Menu-bosup--logo">
-                    <a href="">Digital village logo</a>
+                    <a href=""><img src="../img/logo-bo.png" alt=""></a>
                 </div>
                 <div class="Menu-bosup--infos">
                     <i class="zmdi zmdi-account"></i>
-                    <span><strong>Bonjour</strong>{% if app.user is not null %} {{ app.user.username }}{% endif %}</span>
+                    <span><strong>Bonjour</strong>{% if app.user is not null %} {{ app.user.firstname }} {{ app.user.lastname }}{% endif %}</span>
                     <i class="zmdi zmdi-chevron-down"></i>
                 </div>
             </div>
@@ -71,9 +71,8 @@
 
             <aside class="block-03">
                 <section class="Management">
-                    <span>Gestion</span>
-                    <strong>des champions</strong>
-                    <a href="">Gérer <i></i></a>
+                    <span>Gestion<br>des champions</span>
+                    <a href="">Gérer <i class="zmdi zmdi-caret-right"></i></a>
                 </section>
 
                 <section class="Calendar">
@@ -147,10 +146,10 @@
         <section class="block-01">
             <div class="Filter">
                 <select name="" id="" class="form-control">
-                    <option value="">Trie par ordre alphabétique</option>
-                    <option value="">Trie par nombre de participants</option>
-                    <option value="">Trie parnombre d'équipes</option>
-                    <option value="">Trie par situation</option>
+                    <option value="">Tri par ordre alphabétique</option>
+                    <option value="">Tri par nombre de participants</option>
+                    <option value="">Tri parnombre d'équipes</option>
+                    <option value="">Tri par situation</option>
                 </select>
                 <span>
                     <i class="zmdi zmdi-chevron-down"></i>
@@ -221,9 +220,8 @@
                     Voir le planning
                 </section>
                 <section class="Management">
-                    <span>Gestion</span>
-                    <strong>des champions</strong>
-                    <a href="">Gérer <i></i></a>
+                    <span>Gestion des champions</span>
+                    <a href="">Gérer <i class="zmdi zmdi-caret-right"></i></a>
                 </section>
 
             </aside>
