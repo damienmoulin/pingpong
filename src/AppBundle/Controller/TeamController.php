@@ -8,6 +8,7 @@
 
 namespace AppBundle\Controller;
 
+use Mailgun\Mailgun;
 use AppBundle\Entity\Player;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -40,6 +41,15 @@ class TeamController extends Controller
 
             $link = sha1(uniqid(mt_rand(), true));
             $player->setPrivatekey($link);
+
+            $subject = '[PingPong Startup Cup] '.$user->getFirstName().' '.$user->getLastName().' vous invite à rejoindre son équipe !';
+
+            $this->forward('app.sendmail_controller:sendMailAction',
+                [
+                    'to' => $player->getEmail(),
+                    'subject' => $subject,
+                    'text' => $this->renderView('email/invitation.html.twig', [ 'user' => $user, 'player' => $player])
+                ]);
 
             $em->flush();
 
