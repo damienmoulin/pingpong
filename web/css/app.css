@@ -5711,9 +5711,14 @@ body {
   top: 0px;
   left: 0px;
   width: 100vw;
-  z-index: 5; }
+  z-index: 5;
+  border-bottom: 1px solid #bababa; }
   .Menu-bosup a, .Menu-bosup span, .Menu-bosup strong, .Menu-bosup .zmdi {
     font-size: 1.8rem; }
+  .Menu-bosup .Menu-bosup--logo img {
+    width: 203px;
+    position: relative;
+    top: 30px; }
   .Menu-bosup .zmdi-account {
     font-size: 2.5rem;
     margin-right: 20px;
@@ -5724,7 +5729,7 @@ body {
     font-size: 2rem; }
   .Menu-bosup--content {
     justify-content: space-between;
-    height: 96px; }
+    height: 79px; }
 
 .calendar, .calendar_weekdays, .calendar_content {
   width: 90%; }
@@ -5815,7 +5820,6 @@ button.switch-month:hover {
   color: #87b633; }
 
 .Navigation {
-  border-bottom: 1px solid #bababa;
   background-color: #fff; }
   .Navigation-container {
     justify-content: flex-end;
