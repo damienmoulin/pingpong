@@ -2,10 +2,12 @@
 
 {% block body %}
     <h1>Team</h1>
-    {% if user.players|length > 4 and user.players|length %2 == 0  %}
-        <button>Lancer le Tournoi</button>
+    {% if acceptedPlayers|length >= 4 and acceptedPlayers|length %2 == 0 and user.tournament is null %}
+        <a href="{{ path('contest_start', { 'user': user.id }) }}">Lancer le Tournoi</a>
+    {% elseif user.tournament is not null %}
+        <a href="{{ path('contest_index', { 'tournament': user.tournament.id }) }}">Tableau du Tournoi</a>
     {% endif %}
-    {% if user.players|length == 16 %}
+    {% if acceptedPlayers|length == 16 %}
         <p>Vous avez atteint la limite de 16 joueurs</p>
     {% endif %}
     {% if user.players is not empty %}
