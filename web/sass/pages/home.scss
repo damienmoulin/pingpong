@@ -218,6 +218,83 @@
 		.modal-body{
 			margin-bottom: 100px;
 		}
+
+		.search{
+			background-color: transparent;
+			border-radius: 0;
+			border: none;
+			background-image: none;
+			display: inline-block;
+    	float: right;
+    	border: 3px solid $pink;
+      padding: 19px;
+	    margin-top: -3px;
+	    padding-top: 16px;
+	    outline: none;
+	    margin-right: 5px;
+
+    	i{
+    		font-size: 4rem;
+    		color: $pink;
+    	}
+
+    	&:hover{
+    		border: 3px solid $blue;
+    	}
+
+    	&:hover i{ 
+    		color: $blue;
+    	}
+		}
+
+		.search-page{
+	    background-color: $blue;
+	    border: 0;
+	    border-radius: 0;
+	    box-shadow: none;
+	    height: 70px;
+      margin-left: 170px;
+  		margin-right: 253px;
+
+  		input.form-control{
+  			border: none;
+  			border-bottom: 1px solid $white;
+  			box-shadow: none;
+  			border-radius: 0;
+  			outline: none;
+  			background-color: $blue;
+		    width: 90%;
+    		display: inline;
+		    margin-left: 20px;
+        color: $white;
+  		}
+
+  		button{
+  			outline: none;
+  			color: $white;
+	  		font-size: 3rem;
+		    border-radius: 0;
+		    border: none;
+		    box-shadow: none;
+		    background-color: transparent;
+		    border-bottom: 1px solid white;
+		    line-height: 0px;
+		    vertical-align: bottom;
+		    margin-left: -11px;
+  			&:hover{
+  				background-color: transparent;
+  				color: $pink;
+  			}
+  		}
+  			
+  		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: $white;
+			  font-size: 2rem;
+			  text-transform: uppercase;
+			}
+
+		}
+
 	}
 
 	// TOP PAGE
@@ -397,7 +474,7 @@
 
 		ul.text{
 			padding: 0;
-	    margin-top: 100px;
+	    margin-top: 100 px;
 			li{
 				margin-bottom: 10px;
 				list-style: none;
