@@ -1,144 +1,271 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Ping pong</title>
-  <!-- LIB -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-  <!-- STYLES -->
-  <link rel="stylesheet" href="../css/app.css">
-  <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-</head>
-<body class="page-home">
+  <head>
+    <meta charset="UTF-8">
+    <title>pingpongstartupcup</title>
+    <!-- LIB -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../css/app.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  </head>
 
-<!-- ******* HEADER ******* -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <body class="page-home">
 
-    <!-- NAVIGATION -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- <a class="navbar-brand" href="#">Brand</a> -->
-    </div>
+    <!-- ******* HEADER ******* -->
+    <nav id="home">
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+      <!-- NAVIGATION -->
+      <div class="hamburger">
+        <i class="zmdi zmdi-menu menu"></i>
+      </div>
 
-    <!-- INSCRIPTION -->
-    <button type="button" class="btn inscription" data-toggle="modal" data-target="#myModal">
-      <i class="material-icons face">face</i>
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-           
+      <div class='menu-1'>
+        <nav>
+          <div class="col-md-12">
+            <a href="#home">
+              <img src="../img/logo-menu.png" alt="Logo pingpongstartupcup">
+            </a>
           </div>
-          <div class="modal-body">
 
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#connexion" aria-controls="connexion" role="tab" data-toggle="tab">Connexion</a></li>
-              <li role="presentation"><a href="#inscription" aria-controls="inscription" role="tab" data-toggle="tab">Inscription</a></li>
+          <div class="col-md-12">
+            <ul class="navi">
+              <li><a href='#'>Accueil</a></li>
+              <li><a href='#'>Les résultats</a></li>
+              <li><a href='#'>Mon équipe</a></li>
+              <li><a href='#'>Web Live Tv</a></li>
+              <li class="bell">
+                <a href="#">
+                  <i class="zmdi zmdi-notifications-active"></i>
+                  <div class="label">Notifications</div>
+                </a>
+              </li>
             </ul>
 
-            <!-- Tab panes -->
-            <div class="tab-content">
+            <ul class="contact">
+              <li>
+                <a href="#">
+                  <i class="zmdi zmdi-email"></i>
+                  <div class="ul-contact">Contact</div>
+                </a>
+              </li>
 
-              <!-- CONNEXION -->
-              <div role="tabpanel" class="tab-pane active" id="connexion">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptas, repellat a reprehenderit ea, magni ab recusandae illum ratione nisi. Doloribus quidem veniam molestiae rerum eius repudiandae odio quas, et
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae est blanditiis iusto voluptate deleniti inventore ipsum quidem quo facilis pariatur expedita recusandae iste nobis ullam impedit voluptates veritatis, fugit corporis?
-              </div>
+              <li>
+                <a href="#">
+                  <i class="zmdi zmdi-alert-circle-o"></i>
+                  <div class="ul-contact">A propos</div>
+                </a>
+              </li>
 
-              <!-- INSCRIPTION -->
-              <div role="tabpanel" class="tab-pane" id="inscription">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus officia magnam ex accusamus, ullam rem ratione numquam quod fugiat provident. Ea adipisci sint laboriosam, recusandae dolor aliquam voluptates eum nulla!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ea doloremque eveniet neque dicta repellendus pariatur ipsa possimus, qui excepturi ad, reiciendis amet itaque quos perferendis soluta consequatur in sapiente.
-              </div>
+              <li>
+                <a href="#">
+                  <i class="zmdi zmdi-help"></i>
+                  <div class="ul-contact">Aide</div>
+                </li>
+              </li>
 
-              <div class="clearfix"></div>
+              <li>
+                <a href="#">
+                  <i class="zmdi zmdi-power"></i>
+                  <div class="ul-contact">Déconnexion</div>
+                </a>
+              </li>
+            </ul>
+
+            <div class="rs">
+              <p>Partager l’expérience</p>
+              <a href="#">
+                <i class="zmdi zmdi-facebook"></i>
+              </a>
+
+              <a href="#">
+                <i class="zmdi zmdi-twitter"></i>
+              </a>
             </div>
-            
+          </div>
+        </nav>
+      </div>
+
+      <!-- INSCRIPTION -->
+      <button type="button" class="btn inscription" data-toggle="modal" data-target="#myModal">
+        <i class="material-icons face">face</i>
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <!-- HEADER -->
+            <div class="modal-header">
+              <a class="logo-connexion" href="#home">
+                <img src="../img/logo-connexion.jpg" alt="Logo PingPongStartupcup">
+              </a>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="zmdi zmdi-plus"></i>
+              </button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#connexion" aria-controls="connexion" role="tab" data-toggle="tab">Connexion</a></li>
+                <li role="presentation"><a href="#inscription" aria-controls="inscription" role="tab" data-toggle="tab">Inscription</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+
+                <!-- CONNEXION -->
+                <div role="tabpanel" class="tab-pane active" id="connexion">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptas, repellat a reprehenderit ea, magni ab recusandae illum ratione nisi. Doloribus quidem veniam molestiae rerum eius repudiandae odio quas, et
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae est blanditiis iusto voluptate deleniti inventore ipsum quidem quo facilis pariatur expedita recusandae iste nobis ullam impedit voluptates veritatis, fugit corporis?
+                </div>
+
+                <!-- INSCRIPTION -->
+                <div role="tabpanel" class="tab-pane" id="inscription">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus officia magnam ex accusamus, ullam rem ratione numquam quod fugiat provident. Ea adipisci sint laboriosam, recusandae dolor aliquam voluptates eum nulla!
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ea doloremque eveniet neque dicta repellendus pariatur ipsa possimus, qui excepturi ad, reiciendis amet itaque quos perferendis soluta consequatur in sapiente.
+                </div>
+
+                <div class="clearfix"></div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </nav>
+
+    <!-- TOP PAGE -->
+    <div class="top-page">
+      <div class="container">
+        <div class="row">
+          <div class="headband-pink"></div>
+          <div class="content">
+            <h1 class="h1">PING PONG</h1>
+            <h2 class="h2">startup <span>cup</span></h2>
+            <a href="#" class="participate">Je participe</a>
+
+            <div class="date">
+              <div class="start">DéBUT TOURNOIS</div>
+              <div class="number">25.03</div>
+              <div class="year">2017</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
 
-<!-- TOP PAGE -->
-<div class="top-page">
-  <div class="headband-pink"></div>
-  <div class="content">
-    <h1 class="h1">PING PONG</h1>
-    <h2 class="h2">startup <span>cup</span></h2>
-    <a href="#" class="participate">Je participe</a>
+    <!-- MIDDLE PAGE -->
+    <div class="middle-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../img/world-cup.png" alt="Coupe">
+          </div>
+          <div class="col-md-9">
 
-    <div class="date">
-      <div class="start">DéBUT TOURNOIS</div>
-      <div class="number">25.03</div>
-      <div class="year">2017</div>
+            <div class="title-text">
+              <h3 class="h3">COMMENT DEVENIR CHAMPION ?</h3>
+              <p>Le tournois se déroule en <span>trois phases</span>. Combatter tous vos adversaires pour participer à la finale et devenir le champion ! </p>
+              <a href="#" class="more">En savoir plus </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- MIDDLE PAGE -->
-<div class="middle-page">
-  <h3 class="h3">COMMENT DEVENIR CHAMPION ?</h3>
-</div>
+    <!-- BOTTOM PAGE -->
+    <div class="bottom-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="title-text">
+              <h3 class="h3">ET Que des avantages !</h3>
+              <h4 class="h4">C’est un événément gratuit !</h4>
+              <p>Une compétition ouverte à tous, qui se déroule sur plusieurs semaines pour plus de fun et vous offrira une visibilité online.</p>
+              <a href="#" class="more">Je participe</a>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <img src="../img/atomes.png" alt="Structure">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-5">
+            <a href="#home"><img src="../img/logo-footer.png" alt="Pingpong startup cup by digital village"></a>
+          </div>
+
+          <div class="col-md-7">
+            <ul class="text">
+              <li><a href="#">Partenaires</a></li>
+              <li><a href="#">Règles du tournois</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Mentions légales</a></li>
+            </ul>
+
+            <p>Invitez vos amis !</p>
+
+            <ul class="picto">
+              <li>
+                <a href="#">
+                  <i class="zmdi zmdi-twitter"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="zmdi zmdi-facebook"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="zmdi zmdi-email"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-12">
+            <div class="copi">
+              <a href="#">Copyright © pingpongstartupcup | 2017</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
 
 
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/app.js"></script>
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.hamburger').on('click', function () {
+            $('.menu-1').toggleClass('menu--active');
+        });
+      });
+    </script>
 
 
-</body>
+  </body>
 </html>
