@@ -48,7 +48,13 @@
 				}
 
 				form{
-					input{
+					input,
+					textarea.form-control{
+					    
+					    padding: 0;
+					    line-height: 45px;
+					    box-shadow: none;
+    					border-radius: 0;
 						width: 100%;
 						border: 0;
 						height: 40px;

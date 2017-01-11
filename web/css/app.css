@@ -6274,7 +6274,12 @@ button.switch-month:hover {
           font-size: 1.2rem;
           margin-top: 10px;
           margin-bottom: 30px; }
-        .modal-dialog .modal-content .modal-body .form form input {
+        .modal-dialog .modal-content .modal-body .form form input,
+        .modal-dialog .modal-content .modal-body .form form textarea.form-control {
+          padding: 0;
+          line-height: 45px;
+          box-shadow: none;
+          border-radius: 0;
           width: 100%;
           border: 0;
           height: 40px;
@@ -6347,7 +6352,7 @@ button.switch-month:hover {
     font-family: 'Anton', sans-serif; }
   .page-timer .content .text .h4 {
     text-transform: uppercase; }
-.page-timer a.team {
+.page-timer button.team {
   background-color: transparent;
   text-decoration: none;
   border-radius: 50px;
@@ -6362,9 +6367,35 @@ button.switch-month:hover {
   color: #5fd383;
   text-align: center;
   font-weight: 600; }
-  .page-timer a.team:hover {
+  .page-timer button.team:hover {
     background-color: #5fd383;
     color: #ffffff; }
+.page-timer .modal-dialog .modal-content .modal-body {
+  margin: 0;
+  padding: 0;
+  padding-left: 120px;
+  padding-right: 120px; }
+  .page-timer .modal-dialog .modal-content .modal-body .form {
+    width: 100%; }
+.page-timer .modale-timer {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #ffffff;
+  height: 570px; }
+  .page-timer .modale-timer .body-timer .h3 {
+    color: #e84961;
+    font-family: 'Anton', sans-serif;
+    font-size: 2.6rem; }
+  .page-timer .modale-timer .body-timer form .btn-insc {
+    outline: none; }
+    .page-timer .modale-timer .body-timer form .btn-insc:hover {
+      border: 4px solid #5fd383;
+      color: #5fd383;
+      background-color: #ffffff;
+      padding-top: 6px; }
+.page-timer .modal-backdrop.fade.in {
+  display: block; }
 .page-timer .timer {
   margin-left: 95px;
   margin-right: 95px;

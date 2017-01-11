@@ -182,7 +182,53 @@
             </div>
           </div>
           <div class="col-md-4">
-            <a href="#" class="team">PRÉVENIR ÉQUIPE</a>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg team" data-toggle="modal" data-target="#modale-5">
+              PRÉVENIR ÉQUIPE
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade modale-timer" id="modale-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                  <!-- HEADER -->
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <i class="zmdi zmdi-plus"></i>
+                    </button>
+                  </div>
+
+                  <!-- BODY -->
+                  <div class="modal-body body-timer">
+                    <!-- CONNEXION -->
+                    <div class="form">
+
+                      <h3 class="h3">À nous de jouer !</h3>
+
+                      <p>Envoyez un message à vos coéquipiers pour votre tounois</p>
+                     
+                      <form>
+                        <div class="col-md-12 no-gutter">
+                          <input type="text" placeholder="Lieu de rencontre * ">
+                        </div>
+
+                        <div class="col-md-12 no-gutter">
+                          <textarea class="form-control" placeholder="Message *"></textarea>
+                        </div>
+
+                        <div class="col-md-12 no-gutter">
+                          <button type="submit" class="btn btn-insc">Envoyer</button>
+                        </div>
+                        <div class="clearfix"></div>
+                      </form>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -245,43 +291,36 @@
     </script>
 
     <script>
-      
       var timer;
-
       var compareDate = new Date();
       compareDate.setDate(compareDate.getDate() + 13); 
-
       timer = setInterval(function() {
         timeBetweenDates(compareDate);
       }, 1000);
-
       function timeBetweenDates(toDate) {
         var dateEntered = toDate;
         var now = new Date();
         var difference = dateEntered.getTime() - now.getTime();
-
         if (difference <= 0) {
           clearInterval(timer);
-        
-        } else {
-          
+        } 
+        else {
           var seconds = Math.floor(difference / 1000);
           var minutes = Math.floor(seconds / 60);
           var hours = Math.floor(minutes / 60);
           var days = Math.floor(hours / 24);
-
           hours %= 24;
           minutes %= 60;
           seconds %= 60;
-
           $("#days").text(days);
           $("#hours").text(hours);
           $("#minutes").text(minutes);
           $("#seconds").text(seconds);
         }
       }
-
     </script>
+
+
 
 
   </body>
