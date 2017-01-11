@@ -25,6 +25,7 @@ class TeamController extends Controller
      */
     public function indexAction(Request $request)
     {
+
         $user = $this->get('security.token_storage')->getToken()->getUser();
 
         $player = new Player($user);
