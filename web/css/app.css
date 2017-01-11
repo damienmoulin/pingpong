@@ -6327,4 +6327,96 @@ button.switch-month:hover {
         .modal-dialog .modal-content .modal-body a.account:hover {
           color: #e84961; }
 
+.page-timer .head a.img-page {
+  float: right;
+  margin-top: -90px; }
+.page-timer .head .contest {
+  font-size: 2rem;
+  color: #737373;
+  margin-top: 185px;
+  font-weight: 600; }
+.page-timer .head .name-team {
+  font-family: 'Anton', sans-serif;
+  font-size: 6rem;
+  color: #ffc74e; }
+.page-timer .content .text {
+  margin-left: 80px; }
+  .page-timer .content .text .h3 {
+    font-size: 3rem;
+    color: #0f354f;
+    font-family: 'Anton', sans-serif; }
+  .page-timer .content .text .h4 {
+    text-transform: uppercase; }
+.page-timer a.team {
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  display: block;
+  margin-top: 30px;
+  margin-left: 70px;
+  width: 210px;
+  border: 2px solid #5fd383;
+  color: #5fd383;
+  text-align: center;
+  font-weight: 600; }
+  .page-timer a.team:hover {
+    background-color: #5fd383;
+    color: #ffffff; }
+.page-timer .timer {
+  margin-left: 95px;
+  margin-right: 95px;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  background-color: #0f354f;
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  padding-top: 30px; }
+  .page-timer .timer span {
+    font-size: 9rem;
+    color: #ffffff;
+    margin: 0 3px 0 15px;
+    display: inline-block;
+    width: 100px; }
+    .page-timer .timer span:first-child {
+      margin-left: 0; }
+  .page-timer .timer .sup {
+    display: inline-block;
+    font-size: 3rem;
+    margin: 40px 16px;
+    color: #ffffff; }
+  .page-timer .timer .infos-sup ul {
+    padding: 0; }
+    .page-timer .timer .infos-sup ul li {
+      display: inline-block;
+      color: #ffc74e;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin: 0 28px;
+      width: 100px;
+      text-align: center; }
+.page-timer .btn-home {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px; }
+  .page-timer .btn-home a {
+    display: block;
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    width: 230px;
+    border: 2px solid #ffc74e;
+    color: #ffc74e;
+    font-weight: 600;
+    margin: 0 auto; }
+    .page-timer .btn-home a:hover {
+      background-color: #ffc74e;
+      color: #ffffff; }
+
 /*# sourceMappingURL=app.css.map */

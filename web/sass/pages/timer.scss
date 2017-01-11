@@ -1,0 +1,138 @@
+.page-timer{
+
+  .head{
+    a.img-page{
+      float: right;
+      margin-top: -90px;
+    } 
+
+    .contest{
+      font-size: 2rem;
+      color: $dark-grey;
+      margin-top: 185px;
+      font-weight: 600;
+    }
+
+    .name-team{
+      font-family: 'Anton', sans-serif;
+      font-size: 6rem;
+      color: $yellow;
+    }
+  }
+
+  .content{
+    .text{
+      margin-left: 80px;
+      .h3{
+        font-size: 3rem;
+        color: $blue;
+        font-family: 'Anton', sans-serif;
+      }
+
+      .h4{
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  a.team {
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 70px;
+    width: 210px;
+    border: 2px solid #5fd383;
+    color: #5fd383;
+    text-align: center;
+    font-weight: 600;
+
+    &:hover{
+      background-color: $green;
+      color: $white;
+    }
+  }
+
+  // TIMER
+  .timer {
+    margin-left: 95px;
+    margin-right: 95px;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    background-color: $blue;
+    text-align: center;
+    margin-top: 30px;
+
+    padding-bottom: 50px;
+    padding-top: 30px;
+
+    span {
+      font-size: 9rem;
+      color: $white;
+      margin: 0 3px 0 15px;
+      display: inline-block;
+      width: 100px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .sup{
+      display: inline-block;
+      font-size: 3rem;
+      margin: 40px 16px;
+      color: $white;
+    }
+
+    .infos-sup{
+      ul{
+        padding: 0;
+        li{
+          display: inline-block;
+          color: $yellow;
+          font-size: 2rem;
+          text-transform: uppercase;
+          margin: 0 28px;
+          width: 100px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .btn-home {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+    a{
+      display: block;
+      background-color: transparent;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      width: 230px;
+      border: 2px solid $yellow;
+      color: $yellow;
+      font-weight: 600;
+      margin: 0 auto;
+
+      &:hover{
+        background-color: $yellow;
+        color: $white;
+      }
+    }
+  }
+
+
+}
+
+
+
+
