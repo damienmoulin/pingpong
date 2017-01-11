@@ -18,22 +18,22 @@ class PlayerType extends AbstractType
             ->add('email',TextType::class,
                 [
                     'label' => 'Email',
-                    'attr' => [ 'placeholder' => 'email']
+                    'attr' => [ 'placeholder' => '']
                 ])
             ->add('firstname',TextType::class,
                 [
                     'label' => 'Prénom',
-                    'attr' => [ 'placeholder' => 'prenom']
+                    'attr' => [ 'placeholder' => '']
                 ])
             ->add('lastname',TextType::class,
                 [
                     'label' => 'Nom',
-                    'attr' => [ 'placeholder' => 'nom']
+                    'attr' => [ 'placeholder' => '']
                 ])
             ->add('structure',TextType::class,
                 [
                     'label' => 'Structure',
-                    'attr' => [ 'placeholder' => 'structure']
+                    'attr' => [ 'placeholder' => '']
                 ])
         ;
     }

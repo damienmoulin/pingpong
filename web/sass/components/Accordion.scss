@@ -1,0 +1,16 @@
+.Accordion {
+  border-bottom: 1px solid #eeeeee;
+
+  &-content {
+    display: none;
+    background-color: #f4f4f4;
+    height: 90px;
+
+    &.is-visible {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 65px;
+    }
+  }
+}
