@@ -1,0 +1,34 @@
+.Gestion {
+
+  .Flex-c {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &-container {
+    width: 250px;
+    height: 230px;
+    border: 2px solid #16b77c;
+    text-align: center;
+
+    article {
+      line-height: 20px;
+      margin-top: 40px;
+    }
+
+    .number {
+      color: #e84961;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    p:not(.number) {
+      color: #0f354f;
+      text-transform: uppercase;
+      font-size: 2.4rem;
+    }
+  }
+
+}

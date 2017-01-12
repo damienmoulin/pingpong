@@ -5679,7 +5679,7 @@ body {
 .btn-1 {
   height: 60px;
   padding: 0px 30px;
-  border-radius: 20px;
+  border-radius: 30px;
   display: inline-block;
   font-size: 2rem;
   font-weight: bold;
@@ -5717,6 +5717,23 @@ body {
     .btn-1.btn-grey:hover {
       color: #737373;
       background-color: transparent; }
+
+.btn-2 {
+  height: 60px;
+  padding: 0px 30px;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 60px;
+  transition: .3s ease;
+  border: 1px solid #0f354f;
+  background-color: #0f354f;
+  cursor: default; }
+  .btn-2:hover {
+    text-decoration: none;
+    color: #fff; }
 
 .Menu-bosup {
   background-color: #fff;
@@ -6284,6 +6301,28 @@ aside {
 
 .Home-top {
   position: relative; }
+
+.Gestion .Flex-c {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px; }
+.Gestion-container {
+  width: 250px;
+  height: 230px;
+  border: 2px solid #16b77c;
+  text-align: center; }
+  .Gestion-container article {
+    line-height: 20px;
+    margin-top: 40px; }
+  .Gestion-container .number {
+    color: #e84961;
+    font-size: 2.4rem;
+    font-weight: bold; }
+  .Gestion-container p:not(.number) {
+    color: #0f354f;
+    text-transform: uppercase;
+    font-size: 2.4rem; }
 
 .modal-body {
   height: 100vh; }
