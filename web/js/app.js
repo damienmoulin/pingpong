@@ -198,4 +198,22 @@ $(document).ready(function () {
 
         slider();
     }
+
+
+    $('.hamburger').on('click', function () {
+        $('.menu-1').toggleClass('menu--active');
+    });
+
+    $('.account.connexion').on('click', function(){
+        $('.btn.participate').trigger('click')
+    });
+
+    $('.account.inscription').on('click', function(){
+        $('#modal-inscription').css('z-index','0');
+        $('.btn.inscription').trigger('click');
+
+        $('.close').off('click').on('click', function(){
+            $('#modal-inscription').css('z-index','1050');
+        })
+    });
 })

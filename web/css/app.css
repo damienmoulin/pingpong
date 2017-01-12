@@ -6282,6 +6282,12 @@ aside {
 .Slide #rangevalue {
   display: none; }
 
+.Home-top {
+  position: relative; }
+
+.modal-body {
+  height: 100vh; }
+
 .no-gutter {
   padding: 0; }
 
@@ -6315,7 +6321,8 @@ aside {
   display: block;
   margin-top: 30px;
   margin-left: 20px;
-  width: 230px; }
+  width: 230px;
+  transition: .3s ease; }
   .title-text a.more:hover,
   .title-text button.more:hover {
     color: #0f354f;
@@ -6345,7 +6352,8 @@ aside {
       .page-home nav .hamburger i.menu {
         margin-left: 30px;
         color: #e84961;
-        font-size: 4rem; }
+        font-size: 4rem;
+        transition: .3s ease; }
         .page-home nav .hamburger i.menu:hover {
           color: #5fd383; }
     .page-home nav .menu-1 {
@@ -6369,21 +6377,25 @@ aside {
             text-decoration: none;
             color: #ffffff;
             font-size: 1.6rem;
-            font-weight: 600; }
+            font-weight: 600;
+            transition: .3s ease; }
             .page-home nav .menu-1 ul.navi li a:hover {
               color: #e84961; }
-        .page-home nav .menu-1 ul.navi li.bell a i {
-          color: #e84961; }
-        .page-home nav .menu-1 ul.navi li.bell a .label {
-          color: #e84961; }
-        .page-home nav .menu-1 ul.navi li.bell:hover i, .page-home nav .menu-1 ul.navi li.bell:hover .label {
-          color: #5fd383; }
+        .page-home nav .menu-1 ul.navi li.bell {
+          transition: .3s ease; }
+          .page-home nav .menu-1 ul.navi li.bell a i {
+            color: #e84961; }
+          .page-home nav .menu-1 ul.navi li.bell a .label {
+            color: #e84961; }
+          .page-home nav .menu-1 ul.navi li.bell:hover i, .page-home nav .menu-1 ul.navi li.bell:hover .label {
+            color: #5fd383; }
       .page-home nav .menu-1 ul.contact {
         margin-top: 30px; }
         .page-home nav .menu-1 ul.contact li a {
           font-size: 1.4rem;
           text-decoration: none;
-          color: #ffffff; }
+          color: #ffffff;
+          transition: .3s ease; }
           .page-home nav .menu-1 ul.contact li a i {
             display: inline-block; }
           .page-home nav .menu-1 ul.contact li a .ul-contact {
@@ -6404,7 +6416,8 @@ aside {
           color: #ffffff;
           display: inline-block;
           font-size: 1.6rem;
-          margin-left: 10px; }
+          margin-left: 10px;
+          transition: .3s ease; }
           .page-home nav .menu-1 .rs a:hover {
             color: #e84961; }
     .page-home nav .menu--active {
@@ -6422,16 +6435,19 @@ aside {
       padding: 15px;
       margin-top: -3px;
       padding-top: 15px;
-      outline: none; }
+      outline: none;
+      transition: .3s ease; }
       .page-home nav .btn.inscription i.face {
         color: #e84961;
-        font-size: 4rem; }
+        font-size: 4rem;
+        transition: .3s ease; }
       .page-home nav .btn.inscription:hover {
         border: 3px solid #0f354f; }
       .page-home nav .btn.inscription:hover i.face {
         color: #0f354f; }
     .page-home nav .modal-body {
-      margin-bottom: 100px; }
+      margin-bottom: 100px;
+      height: 100vh; }
     .page-home nav .search {
       background-color: #ffffff;
       border-radius: 0;
@@ -6444,10 +6460,12 @@ aside {
       margin-top: -3px;
       padding-top: 16px;
       outline: none;
-      margin-right: 5px; }
+      margin-right: 5px;
+      transition: .3s ease; }
       .page-home nav .search i {
         font-size: 4rem;
-        color: #e84961; }
+        color: #e84961;
+        transition: .3s ease; }
       .page-home nav .search:hover {
         border: 3px solid #0f354f; }
       .page-home nav .search:hover i {
@@ -6459,7 +6477,8 @@ aside {
       box-shadow: none;
       height: 70px;
       margin-left: 170px;
-      margin-right: 253px; }
+      margin-right: 253px;
+      width: 70vw; }
       .page-home nav .search-page input.form-control {
         border: none;
         border-bottom: 1px solid #ffffff;
@@ -6482,7 +6501,8 @@ aside {
         border-bottom: 1px solid white;
         line-height: 0px;
         vertical-align: bottom;
-        margin-left: -11px; }
+        margin-left: -11px;
+        transition: .3s ease; }
         .page-home nav .search-page button:hover {
           background-color: transparent;
           color: #e84961; }
@@ -6503,7 +6523,7 @@ aside {
     .page-home .top-page .content {
       position: absolute;
       top: 4%;
-      left: 13%; }
+      left: 1.4%; }
       .page-home .top-page .content .h1 {
         text-transform: uppercase;
         font-size: 19.3rem;
@@ -6522,6 +6542,7 @@ aside {
       .page-home .top-page .content button.participate {
         text-decoration: none;
         background-color: #5fd383;
+        border: 4px solid #5fd383;
         color: #ffffff;
         border-radius: 50px;
         margin-top: 90px;
@@ -6535,7 +6556,8 @@ aside {
         margin-left: 205px;
         font-weight: 600;
         outline: none;
-        font-weight: 600; }
+        font-weight: 600;
+        transition: .3s ease; }
         .page-home .top-page .content button.participate:hover {
           background-color: #ffffff;
           border: 4px solid #5fd383;
@@ -6588,7 +6610,8 @@ aside {
       margin-top: 30px;
       margin-left: 20px;
       width: 230px;
-      font-weight: 600; }
+      font-weight: 600;
+      transition: .3s ease; }
       .page-home .middle-page .title-text a.more:hover {
         background-color: white;
         color: #ffc74e; }
@@ -6605,8 +6628,10 @@ aside {
     .page-home .bottom-page .title-text button.more {
       border: 4px solid #5fd383;
       color: #5fd383;
+      border: 4px solid #5fd383;
       text-align: center;
-      font-weight: 600; }
+      font-weight: 600;
+      transition: .3s ease; }
       .page-home .bottom-page .title-text button.more:hover {
         color: #ffffff;
         border: 4px solid #5fd383;
@@ -6626,7 +6651,8 @@ aside {
         .page-home footer ul.text li a {
           text-decoration: none;
           color: #ffffff;
-          font-size: 1.6rem; }
+          font-size: 1.6rem;
+          transition: .3s ease; }
           .page-home footer ul.text li a:hover {
             color: #e84961; }
     .page-home footer p {
@@ -6644,7 +6670,8 @@ aside {
         .page-home footer ul.picto li a {
           text-decoration: none;
           color: #ffffff;
-          font-size: 3rem; }
+          font-size: 3rem;
+          transition: .3s ease; }
           .page-home footer ul.picto li a:hover {
             color: #e84961; }
     .page-home footer .copi {
