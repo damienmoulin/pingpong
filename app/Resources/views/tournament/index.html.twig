@@ -1,16 +1,104 @@
-{% extends 'base.html.twig' %}
+{% extends 'tournament/base.html.twig' %}
 
 {% block body %}
-    <h1>Tournament</h1>
-    <table>
-        <thead>
+    <div class="block-01 pt">
+
+        <div class="contain-titl">
+            <h2 class="title-1">Phase 1 : sélection des champions</h2>
+            <p class="sub-title">Jouez vos matchs et désignez un vainqueur !</p>
+            <a href="#" class="btn-1 btn-green whitout-margin float-r reverse-color">Prévenir l'équipe</a>
+        </div>
+
+        <section class="Rounds">
+
+            <article class="Round-content">
+                <h3>Round <span>#1</span></h3>
+
+                <div class="Slider-content">
+                    <div class="translate-zone Rounds-items">
+                        <table class="Round-item first">
+                            <tr class="two-row">
+                                <td>Damien Moulin
+                                    <span>Sélectionner le vainceur</span></td>
+                                <td>Tatiana Jacques
+                                    <span>Sélectionner le vainceur</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="empty"></td>
+                            </tr>
+                        </table><!--
+                --><table class="Round-item two">
+                            <tr class="two-row">
+                                <td>Damien Moulin
+                                    <span>Sélectionner le vainceur</span></td>
+                                <td>Tatiana Jacques
+                                    <span>Sélectionner le vainceur</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="empty"></td>
+                            </tr>
+                        </table><!--
+                --><table class="Round-item first">
+                            <tr class="two-row">
+                                <td>Damien Moulin
+                                    <span>Sélectionner le vainceur</span></td>
+                                <td>Tatiana Jacques
+                                    <span>Sélectionner le vainceur</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="empty"></td>
+                            </tr>
+                        </table><!--
+                --><table class="Round-item two">
+                            <tr class="two-row">
+                                <td>Damien Moulin
+                                    <span>Sélectionner le vainceur</span></td>
+                                <td>Tatiana Jacques
+                                    <span>Sélectionner le vainceur</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="empty"></td>
+                            </tr>
+                        </table><!--
+                --><table class="Round-item first">
+                            <tr class="two-row">
+                                <td>Damien Moulin
+                                    <span>Sélectionner le vainceur</span></td>
+                                <td>Tatiana Jacques
+                                    <span>Sélectionner le vainceur</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="empty"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="Slide">
+                    <div class="container">
+                        <div class="slider">
+                            <input class="range" type="range" min="0" max="100" />
+                            <output id="rangevalue">50</output>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+
+        <br><br><br><br><br><br><br><br><br>
+
+        <table>
+            <thead>
             <th>Round</th>
             <th>Joueur 1</th>
             <th>Joueur 2</th>
             <th>Winner</th>
             <th></th>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             {% for match in tournament.matchs %}
                 <tr>
                     <td>{{ match.round }}</td>
@@ -24,7 +112,7 @@
                         {% endif %}
                     </td>
                     <td>
-                        {% if match.status != 0 and match.playertwo is not null%}
+                        {% if match.status != 0 and match.playertwo is not null %}
                             <a href="{{ path('contest_match_finish', { 'match' : match.id, 'player' : match.playertwo.id }) }}">{{ match.playertwo.lastname }} {{ match.playertwo.firstname }}</a>
                         {% else %}
                             {% if match.playertwo is not null %}
@@ -39,8 +127,9 @@
                     </td>
                 </tr>
             {% endfor %}
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
 
 {% block stylesheets %}
