@@ -39,8 +39,6 @@ class AdminController extends Controller
             array_push($structures, $structure);
         }
 
-        dump($structures);
-
         return $this->render('admin/index.html.twig',[
             'players' => $players,
             'structures' => $structures,
