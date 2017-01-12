@@ -9,14 +9,19 @@
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     {% endif %}
 
-    <label for="username">Email</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="email" required="required" />
+    <div class="col-md-12 no-gutter">
+        <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Email *" required="required" />
+    </div>
+    <div class="col-md-12 no-gutter">
+        <input type="password" id="password" name="_password" placeholder="Mot de passe *" required="required" />
+        <a class="mdp" href="#">Mot de passe oublié ?</a>
+    </div>
 
-    <label for="password">Mot de passe</label>
-    <input type="password" id="password" name="_password" placeholder="mot de passe" required="required" />
-
+    <!--
     <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
     <label for="remember_me">Se souvenir de moi</label>
-
-    <input type="submit" id="_submit" name="_submit" value="Connexion" />
+    -->
+    <div class="col-md-12 no-gutter">
+        <button id="_submit" type="submit" class="btn btn-insc" name="_submit">Connexion</button>
+    </div>
 </form>
