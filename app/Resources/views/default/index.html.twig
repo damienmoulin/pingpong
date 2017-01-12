@@ -130,8 +130,8 @@
 
     <!-- TOP PAGE -->
     <div class="top-page">
-        <div class="container">
-            <div class="row">
+        <div class="">
+            <div class="Home-top block-01">
                 <div class="headband-pink"></div>
                 <div class="content">
                     <h1 class="h1">PING PONG</h1>
@@ -281,24 +281,5 @@
 
 {% endblock %}
 {% block javascripts %}
-    <script>
-        $(document).ready(function () {
-            $('.hamburger').on('click', function () {
-                $('.menu-1').toggleClass('menu--active');
-            });
 
-            $('.account.connexion').on('click', function(){
-                $('.btn.participate').trigger('click')
-            });
-
-            $('.account.inscription').on('click', function(){
-                $('#modal-inscription').css('z-index','0');
-                $('.btn.inscription').trigger('click');
-
-                $('.close').off('click').on('click', function(){
-                    $('#modal-inscription').css('z-index','1050');
-                })
-            });
-        });
-    </script>
 {% endblock %}
