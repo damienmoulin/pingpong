@@ -105,19 +105,22 @@ $(document).ready(function () {
             nb1 = $(e).find('.Round-item').length;
             widthItem = $(e).find('.Round-item').width();
 
+            console.log(nb1)
+            var $slider = $(e).parent().next();
+            
             if(nb1 > 3) {
-                var SliderSize = nb * widthItem + 100;
+                var SliderSize = nb1 * widthItem + 100;
 
                 $(e).css('width', SliderSize);
 
                 $(e).find('.Round-item:nth-child(3)').addClass('scroll-right');
                 $(e).find('.Round-item:nth-child(1)').addClass('scroll-left');
 
-                var $slider = $(e).parent().next();
+
 
                 sliderInit(nb1, $slider);
             }else{
-                $('.Slide').css('display','none');
+                $slider.css('display','none');
             }
             
 
