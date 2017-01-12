@@ -14,7 +14,7 @@ use Gedmo\Mapping\Annotation\Timestampable;
 /**
  * Class Match
  * @package AppBundle\Entity
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\MatchRepository")
  * @ORM\Table(name="game")
  */
 class Match

@@ -109,9 +109,18 @@ class ContestController extends Controller
      */
     public function finishMatchAction(Match $match, Player $player)
     {
-        if ($match->getStatus() != 0) {
+        $lastRound = $this->getDoctrine()->getRepository('AppBundle:Match')->findOneBy(
+            [
+                'tournament' => $match->getTournament()->getId()
+            ],
+            [
+                'round' => 'DESC'
+            ]
+        );
 
-            $em = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getManager();
+
+        if ($match->getStatus() != 0) {
 
             $match->setWinner($player);
             $em->persist($match);
@@ -151,7 +160,59 @@ class ContestController extends Controller
 
             $em->flush();
         }
+        elseif ($match->getStatus() == 0 && ($match->getRound() == $lastRound->getRound() -1 || $match->getRound() == $lastRound->getRound() )) {
+            $lastWinner = $match->getWinner();
+            if ($match->getPlayerone() == $match->getWinner()) {
+                $match->setWinner($player);
+            }
+            elseif ($match->getPlayertwo() == $match->getWinner()) {
+                $match->setWinner($player);
+            }
+
+            $nextMatch = $this->getDoctrine()->getRepository('AppBundle:Match')->findNextRounds($match->getRound() +1 , $lastWinner);
+
+            if (count($nextMatch) > 0 ) {
+                if ($nextMatch[0]->getWinner() != null) {
+                    return $this->redirect($this->generateUrl('contest_index', [ 'tournament' => $match->getTournament()->getId() ]));
+                } else {
+                    if ($nextMatch[0]->getPlayerone() == $lastWinner) {
+                        $nextMatch[0]->setPlayerOne($player);
+                    }
+                    elseif ( $nextMatch[0]->getPlayertwo() == $lastWinner) {
+                        $nextMatch[0]->setPlayertwo($player);
+                    }
+
+                    $em->persist($nextMatch[0]);
+                }
+            }
+
+            $em->persist($match);
+
+            $em->flush();
+
+        }
 
         return $this->redirect($this->generateUrl('contest_index', [ 'tournament' => $match->getTournament()->getId() ]));
+    }
+
+    /**
+     * @param $teamname
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Route("/find/{teamname}", name="contest_find")
+     */
+    public function findTournament($teamname){
+        
+        $team = $this->getDoctrine()->getRepository('AppBundle:User')->findOneBy(
+            [
+                'teamname' => $teamname
+            ]
+        );
+
+        if ($team != null && $team->getTournament() != null) {
+            return $this->redirect($this->generateUrl('contest_index', [ 'tournament' => $team->getTournament()->getId()]));
+        }
+        else {
+            return $this->redirect($this->generateUrl('homepage'));
+        }
     }
 }
