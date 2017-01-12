@@ -20,7 +20,7 @@
                         {% set j = 1 %}
                         {% for match in tournament.matchs %}
                             {% if match.round == i %}
-                            <table class="Round-item {% if j%2 == 0 %}first{% else %}two{% endif %}">
+                                <table class="Round-item {% if j%2 == 0 %}first{% else %}two{% endif %}">
                                 <tr class="two-row">
                                     <td>
                                         {% if match.status != 0 and match.playerone is not null %}
