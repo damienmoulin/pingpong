@@ -64,9 +64,45 @@ $(document).ready(function () {
         var widthItem = 0;
         var nb = 0;
 
+        var sliderInit = function(nb, $slider) {
+
+
+            var max = parseInt(nb) - 3;
+
+            $slider.find('.range').attr('max',max);
+
+            $slider.find('.range').on('input change', function (e) {
+
+                $that = $slider.prev().find('.translate-zone .scroll-right');
+                x = $(this).val();
+
+                var translate = widthItem * x;
+                var test = parseInt(x) - 2;
+                var xInt = parseInt(x) + 3;
+
+                if( x < nb) {
+
+                    $translatezone = $slider.prev().find('.translate-zone').addClass('is-slide');
+
+                    $that.off('mousemove');
+
+                    $slider.prev().find('.translate-zone').css('transform','translate(-'+translate+'px)');
+
+                    setTimeout(function () {
+
+                        $('.is-slide .Round-item').removeClass('scroll-right')
+                        $('.is-slide .Round-item:nth-child('+xInt+')').addClass('scroll-right');
+                        goright();
+                        goleft();
+
+                    }, 300)
+                }
+
+            })
+        }
+
         $.each($('.Rounds-items'), function (i,e) {
             nb = $(e).find('.Round-item').length;
-            console.log(nb);
             widthItem = $(e).find('.Round-item').width();
 
             var SliderSize = nb * widthItem + 100;
@@ -76,43 +112,62 @@ $(document).ready(function () {
             $(e).find('.Round-item:nth-child(3)').addClass('scroll-right');
             $(e).find('.Round-item:nth-child(1)').addClass('scroll-left');
 
+            var $slider = $(e).parent().next();
+
+            sliderInit(nb, $slider);
+
         });
 
 
         var goright = function(){
             $('.translate-zone .scroll-right').on('mousemove', function (e) {
 
-                $that = $('.translate-zone .scroll-right');
-                x = $('.translate-zone .scroll-right').index();
+                $this = $(this);
+
+                $this.parent().addClass('is-drag');
+                $that = $('.translate-zone.is-drag .scroll-right');
+                x = $('.translate-zone.is-drag .scroll-right').index();
 
                 var translate = widthItem * x;
 
+                var nb = $('.translate-zone.is-drag .Round-item').length;
+
+                $('.is-drag').removeClass('is-drag');
+
                 if(e.offsetX > 300 && x < nb) {
 
+                    $this.parent().addClass('is-drag');
+                    var $that = $('.translate-zone.is-drag .scroll-right');
 
                     $that.off('mousemove');
 
-
-                    $('.translate-zone').css('transform','translate(-'+translate+'px)');
+                    $this.parent().css('transform','translate(-'+translate+'px)');
 
                     setTimeout(function () {
 
                         if( x + 1 == nb) {
-                            $('.Round-item:last-child').addClass('scroll-left');
-                            $('.Round-item:last-child').removeClass('scroll-right');
-                        }else{
+
+                            $this.last().addClass('scroll-left');
+                            $this.last().removeClass('scroll-right');
+
+                        } else {
+
                             $that.removeClass('scroll-right');
                             $that.next().next().addClass('scroll-right');
 
-                            $('.scroll-left').removeClass('scroll-left');
-                            $('.scroll-right').prev().prev().addClass('scroll-left');
+                            $('.is-drag .scroll-left').removeClass('scroll-left');
+                            $('.is-drag .scroll-right').prev().prev().addClass('scroll-left');
                         }
 
                         goright();
                         goleft();
 
                         var range = parseInt(x) - 1.1;
-                        $('.slider .range')[0].value = range;
+
+                        var slider = $this.parent().parent().next().find('.range');
+                        slider[0].value = range;
+
+                        $('.is-drag').removeClass('is-drag');
 
                     }, 300)
                 }
@@ -125,10 +180,22 @@ $(document).ready(function () {
         var goleft = function(){
             $('.translate-zone .scroll-left').on('mousemove', function (e) {
 
-                $that = $('.translate-zone .scroll-left');
-                x = $('.translate-zone .scroll-left').index();
+                $this = $(this);
+                $this.parent().addClass('is-drag');
+
+                var $that = $('.translate-zone.is-drag .scroll-left');
+                x = $('.translate-zone.is-drag .scroll-left').index();
+
+                var nb = $('.translate-zone.is-drag .Round-item').length;
+
+                $('.is-drag').removeClass('is-drag');
 
                 if(e.offsetX < 50 && x > 0) {
+
+                    $this.parent().addClass('is-drag');
+
+                    $that = $('.translate-zone.is-drag .scroll-left');
+
 
                     $that.off('mousemove');
 
@@ -138,23 +205,25 @@ $(document).ready(function () {
 
                     var translate = widthItem * x;
 
-                    $('.translate-zone').css('transform','translate('+translate+'px)');
+                    $this.parent().css('transform','translate('+translate+'px)');
 
                     setTimeout(function () {
 
                         $that.removeClass('scroll-left');
                         $that.prev().prev().addClass('scroll-left');
 
-                        $('.scroll-right').removeClass('scroll-right');
-                        $('.scroll-left').next().next().addClass('scroll-right');
+                        $('.is-drag .scroll-right').removeClass('scroll-right');
+                        $('.is-drag .scroll-left').next().next().addClass('scroll-right');
+
+                        $('.is-drag').removeClass('is-drag');
 
                         goleft();
                         goright();
 
                         var range = parseInt(x) - 1.5;
-                        $('.slider .range')[0].value = parseInt(range);
 
-
+                        var slider = $this.parent().parent().next().find('.range');
+                        slider[0].value = parseInt(range);
                     }, 300)
                 }
             });
@@ -162,37 +231,6 @@ $(document).ready(function () {
 
         goleft();
 
-
-        var slider = function () {
-
-            var max = parseInt(nb) - 3;
-            $('.slider .range').attr('max',max);
-            $('.slider .range').on('input change', function (e) {
-                $that = $('.translate-zone .scroll-right');
-                x = $(this).val();
-                
-                var translate = widthItem * x;
-                var test = parseInt(x) - 2;
-                var xInt = parseInt(x) + 3;
-
-                if( x < nb) {
-                    $that.off('mousemove');
-
-                    $('.translate-zone').css('transform','translate(-'+translate+'px)');
-
-                    setTimeout(function () {
-                        $('.Round-item').removeClass('scroll-right')
-                        $('.Round-item:nth-child('+xInt+')').addClass('scroll-right');
-                        goright();
-                        goleft();
-
-                    }, 300)
-                }
-
-            })
-        }
-
-        slider();
     }
 
 
