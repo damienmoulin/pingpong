@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>pingpongstartupcup</title>
+    <!-- LIB -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../css/app.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  </head>
+
+  <body class="page-home page-presentation">
+
+    <!-- TOP PAGE -->
+    <div class="top-page">
+      <div class="container">
+        <div class="row">
+          <div class="headband-pink"></div>
+          <div class="content">
+            <h1 class="h1">PING PONG</h1>
+            <h2 class="h2">startup <span>cup</span></h2>
+            <div class="front">
+              <p>Front office</p>
+              <p>Back Office</p>
+            </div>
+
+            <div class="date">
+              <p>Chloé Andrault</p>
+              <p>Tatianna Jacques</p>
+              <p>Alexa Cuellar</p>
+              <p>Damien Moulin</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.hamburger').on('click', function () {
+          $('.menu-1').toggleClass('menu--active');
+        });
+
+        $('.account.connexion').on('click', function(){
+          $('.btn.participate').trigger('click')
+        });
+
+        $('.account.inscription').on('click', function(){
+          $('#modal-inscription').css('z-index','0');
+          $('.btn.inscription').trigger('click');
+
+          $('.close').off('click').on('click', function(){
+          $('#modal-inscription').css('z-index','1050');
+          })
+        });
+      });
+    </script>
+
+
+  </body>
+</html>

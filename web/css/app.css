@@ -6501,4 +6501,27 @@ button.switch-month:hover {
           background-color: #ffffff;
           padding-top: 12px; }
 
+.page-presentation .top-page .content {
+  top: 4%;
+  left: 15%; }
+  .page-presentation .top-page .content .h2 {
+    margin-left: 142px;
+    margin-top: 13px; }
+  .page-presentation .top-page .content .date {
+    left: 81%;
+    top: 100%;
+    width: 150px; }
+    .page-presentation .top-page .content .date p {
+      color: #ffffff;
+      text-align: center;
+      font-size: 16px; }
+  .page-presentation .top-page .content .front {
+    margin-top: 60px;
+    margin-left: 140px; }
+    .page-presentation .top-page .content .front p {
+      color: #0f354f;
+      font-size: 4rem;
+      font-weight: 600;
+      text-transform: uppercase; }
+
 /*# sourceMappingURL=app.css.map */
