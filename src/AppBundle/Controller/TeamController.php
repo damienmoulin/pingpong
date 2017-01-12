@@ -109,7 +109,7 @@ class TeamController extends Controller
 
         return $this->redirect($this->generateUrl('team'));
     }
-
+    
     /**
      * @param $key
      * @return renderView
