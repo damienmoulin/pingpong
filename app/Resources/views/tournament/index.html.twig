@@ -11,70 +11,51 @@
 
         <section class="Rounds">
 
+            {% set i = 1 %}
+            {% for i in 1..lastround.round %}
             <article class="Round-content">
-                <h3>Round <span>#1</span></h3>
-
+                <h3>Round <span>#{{ i }}</span></h3>
                 <div class="Slider-content">
                     <div class="translate-zone Rounds-items">
-                        <table class="Round-item first">
-                            <tr class="two-row">
-                                <td>Damien Moulin
-                                    <span>Désigner le vainceur</span></td>
-                                <td>Tatiana Jacques
-                                    <span>Désigner le vainceur</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="empty"></td>
-                            </tr>
-                        </table><!--
-                --><table class="Round-item two">
-                            <tr class="two-row">
-                                <td>Damien Moulin
-                                    <span>Désigner le vainceur</span></td>
-                                <td>Tatiana Jacques
-                                    <span>Désigner le vainceur</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="empty"></td>
-                            </tr>
-                        </table><!--
-                --><table class="Round-item first">
-                            <tr class="two-row">
-                                <td>Damien Moulin
-                                    <span>Désigner le vainceur</span></td>
-                                <td>Tatiana Jacques
-                                    <span>Désigner le vainceur</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="empty"></td>
-                            </tr>
-                        </table><!--
-                --><table class="Round-item two">
-                            <tr class="two-row">
-                                <td>Damien Moulin
-                                    <span>Désigner le vainceur</span></td>
-                                <td>Tatiana Jacques
-                                    <span>Désigner le vainceur</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="empty"></td>
-                            </tr>
-                        </table><!--
-                --><table class="Round-item first">
-                            <tr class="two-row">
-                                <td>Damien Moulin
-                                    <span>Désigner le vainceur</span></td>
-                                <td>Tatiana Jacques
-                                    <span>Désigner le vainceur</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="empty"></td>
-                            </tr>
-                        </table>
+                        {% set j = 1 %}
+                        {% for match in tournament.matchs %}
+                            {% if match.round == i %}
+                            <table class="Round-item {% if j%2 == 0 %}first{% else %}two{% endif %}">
+                                <tr class="two-row">
+                                    <td>
+                                        {% if match.status != 0 and match.playerone is not null %}
+                                            <a href="{{ path('contest_match_finish', { 'match' : match.id, 'player' : match.playerone.id }) }}">{{ match.playerone.lastname }} {{ match.playerone.firstname }}</a>
+                                        {% else %}
+                                            {% if match.playerone is not null %}
+                                                {{ match.playerone.lastname }} {{ match.playerone.firstname }}
+                                            {% endif %}
+                                        {% endif %}
+                                        <span>Désigner le vainceur</span>
+                                    </td>
+                                    <td>
+                                        {% if match.status != 0 and match.playertwo is not null %}
+                                            <a href="{{ path('contest_match_finish', { 'match' : match.id, 'player' : match.playertwo.id }) }}">{{ match.playertwo.lastname }} {{ match.playertwo.firstname }}</a>
+                                        {% else %}
+                                            {% if match.playertwo is not null %}
+                                                {{ match.playertwo.lastname }} {{ match.playertwo.firstname }}
+                                            {% endif %}
+                                        {% endif %}
+                                        <span>Désigner le vainceur</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="empty">
+                                        {% if match.winner is not null %}
+                                            {{ match.winner.lastname }} {{ match.winner.firstname }}
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            </table>
+                            {% set j = j+1 %}
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-
-
                 <div class="Slide">
                     <div class="container">
                         <div class="slider">
@@ -84,52 +65,11 @@
                     </div>
                 </div>
             </article>
-
-        </section>
-
-
-        <br><br><br><br><br><br><br><br><br>
-
-        <table>
-            <thead>
-            <th>Round</th>
-            <th>Joueur 1</th>
-            <th>Joueur 2</th>
-            <th>Winner</th>
-            <th></th>
-            </thead>
-            <tbody>
-            {% for match in tournament.matchs %}
-                <tr>
-                    <td>{{ match.round }}</td>
-                    <td>
-                        {% if match.status != 0 and match.playerone is not null %}
-                            <a href="{{ path('contest_match_finish', { 'match' : match.id, 'player' : match.playerone.id }) }}">{{ match.playerone.lastname }} {{ match.playerone.firstname }}</a>
-                        {% else %}
-                            {% if match.playerone is not null %}
-                                {{ match.playerone.lastname }} {{ match.playerone.firstname }}
-                            {% endif %}
-                        {% endif %}
-                    </td>
-                    <td>
-                        {% if match.status != 0 and match.playertwo is not null %}
-                            <a href="{{ path('contest_match_finish', { 'match' : match.id, 'player' : match.playertwo.id }) }}">{{ match.playertwo.lastname }} {{ match.playertwo.firstname }}</a>
-                        {% else %}
-                            {% if match.playertwo is not null %}
-                                {{ match.playertwo.lastname }} {{ match.playertwo.firstname }}
-                            {% endif %}
-                        {% endif %}
-                    </td>
-                    <td>
-                        {% if match.winner is not null %}
-                            {{ match.winner.lastname }} {{ match.winner.firstname }}
-                        {% endif %}
-                    </td>
-                </tr>
+            {% set i = i+1 %}
             {% endfor %}
-            </tbody>
-        </table>
+        </section>
     </div>
+
 {% endblock %}
 
 {% block stylesheets %}
