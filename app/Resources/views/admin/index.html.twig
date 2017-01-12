@@ -268,28 +268,41 @@
 
 
                 <div class="Flex-c">
-                    <div class="Gestion-container"
-                         style="background-image: url('../img/podium1.png'); background-size: cover;">
-                        <article class="">
-                            <p class="number">50</p>
-                            <p>Participants</p>
-                        </article>
+                    <div class="c">
+                        <div class="Gestion-container"
+                             style="background-image: url('../img/podium1.png'); background-size: cover;">
+                            <article class="">
+                                <p class="number">50</p>
+                                <p>Participants</p>
+                            </article>
+                        </div>
+
+                        <a class="btn-1 btn-green whitout-margin reverse-color choose" href="#" data-val="50">Choisir</a>
                     </div>
 
-                    <div class="Gestion-container"
-                         style="background-image: url('../img/podium2.png'); background-size: cover;">
-                        <article class="">
-                            <p class="number">100</p>
-                            <p>Participants</p>
-                        </article>
+
+                    <div class="c">
+                        <div class="Gestion-container"
+                             style="background-image: url('../img/podium2.png'); background-size: cover;">
+                            <article class="">
+                                <p class="number">100</p>
+                                <p>Participants</p>
+                            </article>
+                        </div>
+
+                        <a class="btn-1 btn-green whitout-margin reverse-color choose" href="#" data-val="100">Choisir</a>
                     </div>
 
-                    <div class="Gestion-container"
-                         style="background-image: url('../img/podium3.png'); background-size: cover;">
-                        <article class="">
-                            <p class="number">150</p>
-                            <p>Participants</p>
-                        </article>
+                    <div class="c">
+                        <div class="Gestion-container"
+                             style="background-image: url('../img/podium3.png'); background-size: cover;">
+                            <article class="">
+                                <p class="number">150</p>
+                                <p>Participants</p>
+                            </article>
+                        </div>
+
+                        <a class="btn-1 btn-green whitout-margin reverse-color choose" href="#" data-val="150">Choisir</a>
                     </div>
 
                     <div class="Gestion-container last">
@@ -300,7 +313,6 @@
 
                             <form action="" class="Form-01">
                                 <div class="form_control group">
-
                                     <input id="nbpart" name="nbpart" type="number">
                                     <span class="highlight"></span><span class="bar"></span>
                                     <label id="nbpart" name="nbpart">Nombres de participants</label>
@@ -315,7 +327,10 @@
         </section>
 
         <div class="center">
-            <a class="btn-1 btn-green whitout-margin" href="">Lancer le Tournoi</a>
+            <form action="">
+                <input type="hidden" id="nbpartf" name="nbpart" value="0">
+                <input type="submit" class="btn-1 btn-green whitout-margin" value="Lancer le Tournoi">
+            </form>
         </div>
     </section><!-- end main-->
 

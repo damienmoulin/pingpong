@@ -216,4 +216,69 @@ $(document).ready(function () {
             $('#modal-inscription').css('z-index','1050');
         })
     });
+
+
+    $('.Gestion .choose').on('mouseover', function(){
+
+        if($(this).prev().hasClass('is-choose')){
+
+        }else{
+            $(this).prev().addClass('is-active');
+        }
+
+        return false;
+    })
+
+    $('.Gestion .choose').on('mouseout', function(){
+
+        if($(this).prev().hasClass('is-choose')){
+
+        }else {
+            $(this).prev().removeClass('is-active');
+        }
+        return false;
+    })
+
+    $('.Gestion .choose').on('click', function(e){
+        
+        $(e).preventDefault;
+        $('.Gestion-container').removeClass('is-active is-choose');
+
+
+        $(this).prev().addClass('is-active is-choose');
+
+
+        var val = $(this).data('val');
+        $('#nbpartf').attr("value",val);
+
+        $('.Gestion .choose').off('mouseout');
+        $('.Gestion .choose').off('mouseover');
+
+        setTimeout(function(){
+            $('.Gestion .choose').on('mouseover', function(){
+
+                if($(this).prev().hasClass('is-choose')){
+
+                }else{
+                    $(this).prev().addClass('is-active');
+                }
+
+                return false;
+            })
+
+            $('.Gestion .choose').on('mouseout', function(){
+
+                if($(this).prev().hasClass('is-choose')){
+
+                }else {
+                    $(this).prev().removeClass('is-active');
+                }
+                return false;
+            })
+        }, 700);
+
+        return false;
+        
+    })
+
 })
