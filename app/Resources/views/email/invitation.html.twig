@@ -1,0 +1,10 @@
+<body>
+<p>
+{{ user.firstname }} {{ user.lastname }} vous invite à rejoindre l’équipe “{{ user.teamname }}” pour le championnat de PingPong Startup Cup !
+Devenez le champion !
+La première phase du tournois débutera le 25.03.2017, préparez vous !
+</p>
+<a href="http://127.0.0.1:8000/team/accept/{{ player.privatekey }}">Accepter l'invitation</a>
+
+<a href="http://127.0.0.1:8000/team/decline/{{ player.privatekey }}">Refuser l'invitation</a>
+</body>

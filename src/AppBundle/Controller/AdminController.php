@@ -8,6 +8,7 @@
 
 namespace AppBundle\Controller;
 
+use Mailgun\Mailgun;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,7 +26,8 @@ class AdminController extends Controller
         $users = $this->getDoctrine()->getRepository('AppBundle:User')->findAll();
         $players = $this->getDoctrine()->getRepository('AppBundle:Player')->findAll();
         $resultStructures = $this->getDoctrine()->getRepository('AppBundle:User')->findAllByStructure();
-
+        $tournaments = $this->getDoctrine()->getRepository('AppBundle:Tournament')->findAll();
+        
         $structures = [];
         foreach ($resultStructures as $resultStructure) {
             $structure = [];
@@ -37,12 +39,11 @@ class AdminController extends Controller
             array_push($structures, $structure);
         }
 
-        dump($structures);
-
         return $this->render('admin/index.html.twig',[
             'players' => $players,
             'structures' => $structures,
-            'users' => $users
+            'users' => $users,
+            'tournaments' => $tournaments
         ]);
     }
 }

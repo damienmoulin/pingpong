@@ -8,6 +8,7 @@
 
 namespace AppBundle\Controller;
 
+use Mailgun\Mailgun;
 use AppBundle\Entity\Player;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -24,6 +25,7 @@ class TeamController extends Controller
      */
     public function indexAction(Request $request)
     {
+
         $user = $this->get('security.token_storage')->getToken()->getUser();
 
         $player = new Player($user);
@@ -34,12 +36,21 @@ class TeamController extends Controller
 
         $form->handleRequest($request);
 
-        if ($form->isValid() && count($user->getPlayers()) < $this->container->getParameter('participants')) {
+        if ($form->isValid() && count($acceptedPlayers) < $this->container->getParameter('participants')) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($player);
 
             $link = sha1(uniqid(mt_rand(), true));
             $player->setPrivatekey($link);
+
+            $subject = '[PingPong Startup Cup] '.$user->getFirstName().' '.$user->getLastName().' vous invite à rejoindre son équipe !';
+
+            $this->forward('app.sendmail_controller:sendMailAction',
+                [
+                    'to' => $player->getEmail(),
+                    'subject' => $subject,
+                    'text' => $this->renderView('email/invitation.html.twig', [ 'user' => $user, 'player' => $player])
+                ]);
 
             $em->flush();
 
@@ -51,6 +62,52 @@ class TeamController extends Controller
             'user' => $user,
             'acceptedPlayers' => $acceptedPlayers
         ]);
+    }
+
+    /**
+     * @param Player $player
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Route("/stop/{player}", name="team_stop_invitation")
+     */
+    public function stopInvitationAction(Player $player)
+    {
+        if ($player->getStatus() == 2) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($player);
+
+            $em->flush();
+
+            $subject = '[PingPong Startup Cup] '.$player->getUser()->getFirstName().' '.$player->getUser()->getLastName().' a annulé votre participation au sein de son équipe !';
+
+            $this->forward('app.sendmail_controller:sendMailAction',
+                [
+                    'to' => $player->getEmail(),
+                    'subject' => $subject,
+                    'text' => $this->renderView('email/stop.html.twig', [ 'user' => $player->getUser()])
+                ]);
+
+        }
+
+        return $this->redirect($this->generateUrl('team'));
+    }
+
+    /**
+     * @param Player $player
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Route("/invitation/{player}", name="team_re_invitation")
+     */
+    public function reInvitationAction(Player $player)
+    {
+        $subject = '[PingPong Startup Cup] L\'invitation de '.$player->getUser()->getFirstName().' '.$player->getUser()->getLastName().' n\'a toujours pas reçu de réponse !';
+
+        $this->forward('app.sendmail_controller:sendMailAction',
+            [
+                'to' => $player->getEmail(),
+                'subject' => $subject,
+                'text' => $this->renderView('email/re_invitation.html.twig', [ 'user' => $player->getUser(), 'player' => $player])
+            ]);
+
+        //return $this->redirect($this->generateUrl('team'));
     }
 
     /**

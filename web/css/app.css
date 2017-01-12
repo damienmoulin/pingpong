@@ -5760,12 +5760,12 @@ body {
 
 .calendar_weekdays div {
   display: inline-block;
+  width: 26px;
+  max-width: 26px;
   vertical-align: top; }
 
 .calendar_weekdays div, .calendar_content div {
-  width: 26px;
-  height: 26px;
-  max-width: 26px;
+  max-width: 30px;
   overflow: hidden;
   text-align: center;
   background-color: transparent;
@@ -5773,12 +5773,15 @@ body {
   font-size: 1.3rem; }
 
 .calendar_content {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%; }
 
 .calendar_content div {
+  width: 30px;
+  height: 26px;
   border: 1px solid transparent;
   float: left; }
 
