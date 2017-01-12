@@ -5,6 +5,8 @@
     font-family: $font1;
     text-transform: uppercase;
 
+    margin-top: 60px;
+
     span {
       color: $color5;
     }
@@ -24,7 +26,8 @@
         color: #fff;
 
         &:hover {
-          text-transform: none;
+          text-decoration: none !important;
+          text-transform: uppercase;
         }
       }
 
@@ -47,7 +50,7 @@
 
       .two-row {
         td {
-          &:hover {
+          &:hover:not(.invit) {
             background-color: $color5;
             color: $colorbo1;
             cursor: pointer;
@@ -59,6 +62,13 @@
             }
           }
         }
+      }
+
+      td[colspan="2"]{
+        background-image: url('../img/trophee.svg');
+        background-repeat: no-repeat;
+        background-size: 11%;
+        background-position: 28px 17px;
       }
 
       span {

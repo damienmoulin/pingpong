@@ -6237,7 +6237,8 @@ aside {
   color: #0f354f;
   font-size: 4rem;
   font-family: "Open Sans", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-top: 60px; }
   .Rounds h3 span {
     color: #ffc74e; }
 .Rounds .Round-item {
@@ -6250,7 +6251,8 @@ aside {
     .Rounds .Round-item tbody a {
       color: #fff; }
       .Rounds .Round-item tbody a:hover {
-        text-transform: none; }
+        text-decoration: none !important;
+        text-transform: uppercase; }
     .Rounds .Round-item tbody td {
       width: 178px;
       height: 65px;
@@ -6263,14 +6265,19 @@ aside {
       overflow: hidden; }
       .Rounds .Round-item tbody td:last-child {
         border-right: 0px; }
-    .Rounds .Round-item tbody .two-row td:hover {
+    .Rounds .Round-item tbody .two-row td:hover:not(.invit) {
       background-color: #ffc74e;
       color: #0f354f;
       cursor: pointer;
       font-weight: bold; }
-      .Rounds .Round-item tbody .two-row td:hover span {
+      .Rounds .Round-item tbody .two-row td:hover:not(.invit) span {
         color: #0f354f;
         font-weight: normal; }
+    .Rounds .Round-item tbody td[colspan="2"] {
+      background-image: url("../img/trophee.svg");
+      background-repeat: no-repeat;
+      background-size: 11%;
+      background-position: 28px 17px; }
     .Rounds .Round-item tbody span {
       text-transform: none;
       font-size: 1.4rem;
