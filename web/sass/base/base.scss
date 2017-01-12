@@ -126,10 +126,16 @@ body {
     background-color: #737373;
     border-color: #737373;
 
-    &:hover {
+    &:not(.no-hover):hover {
       color: #737373;
       background-color: transparent;
     }
+
+    &.no-hover {
+      pointer-events: none;
+    }
+
+
   }
 }
 
