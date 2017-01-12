@@ -6353,6 +6353,7 @@ button.switch-month:hover {
   .page-timer .content .text .h4 {
     text-transform: uppercase; }
 .page-timer button.team {
+  outline: none;
   background-color: transparent;
   text-decoration: none;
   border-radius: 50px;
