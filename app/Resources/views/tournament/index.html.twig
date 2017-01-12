@@ -35,7 +35,7 @@
                             {% if match.round == i %}
                                 <table class="invit Round-item {% if j%2 == 0 %}first{% else %}two{% endif %}">
                                 <tr class="two-row">
-                                    <td>
+                                    <td {% if match.playerone is null %}class="empty"{% endif %}>
                                         {% if match.playerone is not null and is_granted("ROLE_USER") %}
                                             <a href="{{ path('contest_match_finish', { 'match' : match.id, 'player' : match.playerone.id }) }}">{{ match.playerone.lastname }} {{ match.playerone.firstname }}</a>
                                         {% else %}
@@ -45,7 +45,7 @@
                                         {% endif %}
                                         <span>Désigner le vainceur</span>
                                     </td>
-                                    <td>
+                                    <td {% if match.playerone is null %}class="empty"{% endif %}>
                                         {% if match.playertwo is not null and is_granted("ROLE_USER") %}
                                             <a href="{{ path('contest_match_finish', { 'match' : match.id, 'player' : match.playertwo.id }) }}">{{ match.playertwo.lastname }} {{ match.playertwo.firstname }}</a>
                                         {% else %}
@@ -57,11 +57,14 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="empty">
-                                        {% if match.winner is not null %}
-                                            {{ match.winner.lastname }} {{ match.winner.firstname }}
-                                        {% endif %}
-                                    </td>
+                                    {% if match.winner is not null %}
+                                        <td colspan="2">
+                                                {{ match.winner.lastname }} {{ match.winner.firstname }}
+                                        </td>
+                                    {% else %}
+                                        <td colspan="2" class="empty">
+                                        </td>
+                                    {% endif %}
                                 </tr>
                             </table>
                             {% set j = j+1 %}
@@ -86,7 +89,7 @@
     <br><br>
 
     <div class="center">
-            <a class="btn-1 btn-grey whitout-margin no-hover" href="">terminer le tournoi</a>
+            <a class="btn-1 {% if tournament.status ==0 %} btn-green {% else %}btn-grey no-hover{% endif %} whitout-margin " href="">terminer le tournoi</a>
     </div>
     <!-- TODO BACK mettre btn-green si c'est ok pour terminer le tournois et enlever le btn-grey et le no-hover-->
 
