@@ -63,6 +63,16 @@
     .finish {
       color: $color3;
     }
+
+    .started {
+      color: $colorbo1;
+    }
+
+    .selection {
+      color: $colorbo3;
+    }
+
+
   }
 
 
@@ -115,7 +125,7 @@
         font-size: 1.2rem;
         color: #f26c4f;
         
-        .valid {
+        &.valid {
           color: $colorbo2;
         }
       }

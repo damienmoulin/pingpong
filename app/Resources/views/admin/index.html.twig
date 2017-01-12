@@ -62,7 +62,7 @@
                                 <strong class="Tab-company">{{ user.teamname }}</strong>
                                 <span class="Tab-participants">{{ user.players|length }} participants invités</span>
                                 <span class="Tab-team">{{ user.structurename }}</span>
-                                <span class="Tab-select">Statut du tournoi
+                                <span class="Tab-select">Statut du tournoi<br>
                                         {% if user.tournament == null %}
                                             <strong class="selection">Pré-selections</strong>
                                         {% elseif user.tournament.status == 1 %}
@@ -79,7 +79,7 @@
                 <br/><br/>
                 <article class="Tab">
                     <div class="Tab-title flex-align-vertical">
-                        <h3>Les Teams</h3>
+                        <h3>Les tournois</h3>
                         <a href="">Tous les tournois <i class="zmdi zmdi-caret-right"></i></a>
                     </div>
                     <ul class="Tab-content">
