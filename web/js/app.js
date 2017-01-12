@@ -73,7 +73,7 @@ $(document).ready(function () {
             $('.translate-zone').css('width', SliderSize);
 
             $(e).find('.Round-item:nth-child(3)').addClass('scroll-right');
-            $(e).find('.Round-item:nth-child(1)').addClass('scroll-left');
+            $(e).find('.Round-item:nth-child(1)').addClass('scroll-left'); 
 
         });
 
