@@ -63,13 +63,13 @@
                                 <span class="Tab-participants">{{ user.players|length }} participants invités</span>
                                 <span class="Tab-team">{{ user.structurename }}</span>
                                 <span class="Tab-select">Statut du tournoi<br>
-                                        {% if user.tournament == null %}
-                                            <strong class="selection">Pré-selections</strong>
+                                    {% if user.tournament == null %}
+                                        <strong class="selection">Pré-selections</strong>
                                         {% elseif user.tournament.status == 1 %}
-                                            <strong class="started">Tournoi en cours</strong>
-                                        {% elseif user.tournament.status == 0 %}
-                                            <strong class="finish">Tournoi terminé</strong>
-                                        {% endif %}
+                                        <strong class="started">Tournoi en cours</strong>
+                                    {% elseif user.tournament.status == 0 %}
+                                        <strong class="finish">Tournoi terminé</strong>
+                                    {% endif %}
                                     </strong>
                             </span>
                             </li>
@@ -148,7 +148,7 @@
                             <div>10</div>
                             <div>11</div>
                             <div>12</div>
-                            <div  class="today">13</div>
+                            <div class="today">13</div>
                             <div>14</div>
                             <div>15</div>
                             <div>16</div>
@@ -268,35 +268,55 @@
 
 
                 <div class="Flex-c">
-                    <div class="Gestion-container">
-                        <article class="">
-                            <p class="number">50</p>
-                            <p>Participants</p>
-                        </article>
+                    <div class="c">
+                        <div class="Gestion-container"
+                             style="background-image: url('../img/podium1.png'); background-size: cover;">
+                            <article class="">
+                                <p class="number">50</p>
+                                <p>Participants</p>
+                            </article>
+                        </div>
+
+                        <a class="btn-1 btn-green whitout-margin reverse-color choose" href="#" data-val="50">Choisir</a>
                     </div>
 
-                    <div class="Gestion-container">
-                        <article class="">
-                            <p class="number">100</p>
-                            <p>Participants</p>
-                        </article>
+
+                    <div class="c">
+                        <div class="Gestion-container"
+                             style="background-image: url('../img/podium2.png'); background-size: cover;">
+                            <article class="">
+                                <p class="number">100</p>
+                                <p>Participants</p>
+                            </article>
+                        </div>
+
+                        <a class="btn-1 btn-green whitout-margin reverse-color choose" href="#" data-val="100">Choisir</a>
                     </div>
 
-                    <div class="Gestion-container">
-                        <article class="">
-                            <p class="number">150</p>
-                            <p>Participants</p>
-                        </article>
+                    <div class="c">
+                        <div class="Gestion-container"
+                             style="background-image: url('../img/podium3.png'); background-size: cover;">
+                            <article class="">
+                                <p class="number">150</p>
+                                <p>Participants</p>
+                            </article>
+                        </div>
+
+                        <a class="btn-1 btn-green whitout-margin reverse-color choose" href="#" data-val="150">Choisir</a>
                     </div>
 
-                    <div class="Gestion-container">
+                    <div class="Gestion-container last">
                         <article class="">
                             <strong>
-                                Entrez un nombre de participants
+                                Entrez<br>un nombre<br>de participants
                             </strong>
 
-                            <form action="">
-                                <input type="text">
+                            <form action="" class="Form-01">
+                                <div class="form_control group">
+                                    <input id="nbpart" name="nbpart" type="number">
+                                    <span class="highlight"></span><span class="bar"></span>
+                                    <label id="nbpart" name="nbpart">Nombres de participants</label>
+                                </div>
                             </form>
                         </article>
                     </div>
@@ -307,7 +327,10 @@
         </section>
 
         <div class="center">
-            <a class="btn-1 btn-green whitout-margin" href="">Lancer le Tournoi</a>
+            <form action="">
+                <input type="hidden" id="nbpartf" name="nbpart" value="0">
+                <input type="submit" class="btn-1 btn-green whitout-margin" value="Lancer le Tournoi">
+            </form>
         </div>
     </section><!-- end main-->
 

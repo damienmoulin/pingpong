@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -5685,10 +5686,11 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  line-height: 60px;
+  line-height: 54px;
   transition: .3s ease;
-  border: 1px solid #fff;
-  margin-right: 20px; }
+  border: 3px solid #fff;
+  margin-right: 20px;
+  box-sizing: border-box; }
   .btn-1.whitout-margin {
     margin: 0px; }
   .btn-1:hover {
@@ -5700,16 +5702,19 @@ body {
       color: #e84961;
       background-color: transparent; }
   .btn-1.btn-green {
-    background-color: #5fd383;
-    border-color: #5fd383; }
+    background-color: #16b77c;
+    border-color: #16b77c; }
     .btn-1.btn-green.reverse-color {
-      color: #5fd383;
+      color: #16b77c;
       background-color: transparent; }
       .btn-1.btn-green.reverse-color:hover {
         border-color: #0f354f;
-        color: #0f354f; }
+        color: #0f354f;
+        text-decoration: none; }
+      .btn-1.btn-green.reverse-color:focus {
+        text-decoration: none; }
     .btn-1.btn-green:hover {
-      color: #5fd383;
+      color: #16b77c;
       background-color: transparent; }
   .btn-1.btn-grey {
     background-color: #737373;
@@ -5726,11 +5731,12 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  line-height: 60px;
+  line-height: 54px;
   transition: .3s ease;
-  border: 1px solid #0f354f;
+  border: 3px solid #0f354f;
   background-color: #0f354f;
-  cursor: default; }
+  cursor: default;
+  box-sizing: border-box; }
   .btn-2:hover {
     text-decoration: none;
     color: #fff; }
@@ -5787,7 +5793,8 @@ body {
   text-align: center;
   background-color: transparent;
   color: #6f6f6f;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  line-height: 24px; }
 
 .calendar_content {
   display: flex;
@@ -5890,7 +5897,7 @@ button.switch-month:hover {
   .Board-list div {
     width: 250px;
     height: 133px;
-    border: 1px solid #5fd383;
+    border: 1px solid #16b77c;
     position: relative;
     background-color: #fff; }
     .Board-list div strong {
@@ -6008,7 +6015,7 @@ button.switch-month:hover {
         font-size: 1.2rem;
         color: #f26c4f; }
         .Tab-01 .mail-player strong.valid {
-          color: #5fd383; }
+          color: #16b77c; }
     .Tab-01 .Accordion-more {
       width: 67px;
       font-size: 3rem; }
@@ -6066,17 +6073,17 @@ aside {
       background-color: transparent;
       cursor: pointer; }
   aside .Send {
-    background-color: #5fd383;
-    border: 1px solid #5fd383; }
+    background-color: #16b77c;
+    border: 1px solid #16b77c; }
     aside .Send:hover {
       background-color: transparent;
-      color: #5fd383; }
+      color: #16b77c; }
   aside .Planning {
-    background-color: #5fd383;
-    border: 1px solid #5fd383; }
+    background-color: #16b77c;
+    border: 1px solid #16b77c; }
     aside .Planning:hover {
       background-color: transparent;
-      color: #5fd383; }
+      color: #16b77c; }
 
 .Filter {
   width: 338px;
@@ -6138,9 +6145,9 @@ aside {
     transform: scale(0.75);
     left: -2px;
     /* font-size: 14px; */
-    color: #5fd383; }
+    color: #16b77c; }
   .Form-01 input:focus {
-    color: #5fd383; }
+    color: #16b77c; }
   .Form-01 .bar {
     position: relative;
     display: block;
@@ -6151,7 +6158,7 @@ aside {
     width: 0;
     bottom: 0px;
     position: absolute;
-    background: #5fd383;
+    background: #16b77c;
     transition: all 0.2s ease; }
   .Form-01 .bar:before {
     left: 50%; }
@@ -6180,8 +6187,8 @@ aside {
     width: 48px;
     height: 48px;
     border-radius: 100%;
-    background-color: #5fd383;
-    border: 1px solid #5fd383;
+    background-color: #16b77c;
+    border: 1px solid #16b77c;
     color: #fff;
     font-size: 4rem;
     line-height: 42px;
@@ -6190,7 +6197,7 @@ aside {
     transition: .3s ease; }
     .Form-01 input[type="submit"]:hover {
       background-color: #fff;
-      color: #5fd383; }
+      color: #16b77c; }
 
 .Accordion {
   border-bottom: 1px solid #eeeeee; }
@@ -6306,12 +6313,34 @@ aside {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 30px; }
+  margin-bottom: 60px; }
+.Gestion .c {
+  text-align: center; }
+  .Gestion .c .btn-1 {
+    margin-top: 20px; }
 .Gestion-container {
   width: 250px;
   height: 230px;
   border: 2px solid #16b77c;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+  .Gestion-container:not(.last):after {
+    content: '✓';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #16b77c;
+    top: 0px;
+    left: 0px;
+    transition: .4s ease;
+    opacity: 0;
+    text-align: center;
+    font-size: 18rem;
+    color: #fff;
+    line-height: 220px; }
+  .Gestion-container.is-active:after {
+    opacity: .8; }
   .Gestion-container article {
     line-height: 20px;
     margin-top: 40px; }
@@ -6323,6 +6352,36 @@ aside {
     color: #0f354f;
     text-transform: uppercase;
     font-size: 2.4rem; }
+  .Gestion-container.last {
+    background-color: #16b77c;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: left; }
+    .Gestion-container.last strong {
+      margin-left: 25px;
+      margin-bottom: 45px;
+      display: block; }
+    .Gestion-container.last input {
+      background-color: transparent;
+      border: 0px;
+      -webkit-appearance: normal;
+      outline: none;
+      border-bottom: 1px solid #fff;
+      margin-left: 25px;
+      color: #fff;
+      font-style: italic; }
+    .Gestion-container.last label {
+      margin-left: 25px;
+      color: #fff;
+      font-style: italic;
+      font-size: 1.4rem;
+      text-transform: none; }
+    .Gestion-container.last input:focus ~ label, .Gestion-container.last input.used ~ label {
+      top: -20px;
+      left: -17px;
+      /* font-size: 14px; */
+      color: #fff; }
 
 .modal-body {
   height: 100vh; }

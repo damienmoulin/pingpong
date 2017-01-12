@@ -73,10 +73,11 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  line-height: 60px;
+  line-height: 54px;
   transition: .3s ease;
-  border: 1px solid #fff;
+  border: 3px solid #fff;
   margin-right: 20px;
+  box-sizing: border-box;
 
   &.whitout-margin {
     margin: 0px;
@@ -107,6 +108,11 @@ body {
       &:hover {
         border-color: $colorbo1;
         color: $colorbo1;
+        text-decoration: none;
+      }
+
+      &:focus {
+        text-decoration: none;
       }
     }
 
@@ -136,11 +142,12 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  line-height: 60px;
+  line-height: 54px;
   transition: .3s ease;
-  border: 1px solid $colorbo1;
+  border: 3px solid $colorbo1;
   background-color: $colorbo1;
   cursor: default;
+  box-sizing: border-box;
 
   &:hover {
     text-decoration: none;

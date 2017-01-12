@@ -4,7 +4,15 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+  }
+
+  .c {
+    text-align: center;
+
+    .btn-1 {
+      margin-top: 20px;
+    }
   }
 
   &-container {
@@ -12,6 +20,30 @@
     height: 230px;
     border: 2px solid #16b77c;
     text-align: center;
+    position: relative;
+
+
+    &:not(.last):after {
+      content:'✓';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #16b77c;
+      top: 0px;
+      left: 0px;
+      transition: .4s ease;
+      opacity: 0;
+      text-align: center;
+      font-size: 18rem;
+      color: #fff;
+      line-height: 220px;
+    }
+
+    &.is-active:after {
+      opacity:  .8;
+    }
+
 
     article {
       line-height: 20px;
@@ -28,6 +60,46 @@
       color: #0f354f;
       text-transform: uppercase;
       font-size: 2.4rem;
+    }
+
+    &.last {
+      background-color: #16b77c;
+      color: #fff;
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-align: left;
+
+      strong {
+        margin-left: 25px;
+        margin-bottom: 45px;
+        display: block;
+      }
+
+      input {
+        background-color: transparent;
+        border: 0px;
+        -webkit-appearance: normal;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        margin-left: 25px;
+        color:#fff;
+        font-style: italic;
+      }
+
+      label {
+        margin-left: 25px;
+        color:#fff;
+        font-style: italic;
+        font-size: 1.4rem;
+        text-transform: none;
+      }
+
+      input:focus ~ label, input.used ~ label {
+        top: -20px;
+        left: -17px;
+        /* font-size: 14px; */
+        color: #fff;
+      }
     }
   }
 
