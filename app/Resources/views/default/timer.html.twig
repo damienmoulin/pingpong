@@ -1,8 +1,8 @@
-{% extends 'default/base.html.twig' %}
+{% extends 'default/base_timer.html.twig' %}
 
 {% block body %}
-    <!-- ******* HEADER ******* -->
     <nav>
+
         <!-- NAVIGATION -->
         <div class="hamburger">
             <i class="zmdi zmdi-menu menu"></i>
@@ -49,8 +49,9 @@
                             <a href="#">
                                 <i class="zmdi zmdi-help"></i>
                                 <div class="ul-contact">Aide</div>
-                            </a>
                         </li>
+                        </li>
+
                         <li>
                             <a href="#">
                                 <i class="zmdi zmdi-power"></i>
@@ -98,7 +99,7 @@
                 <div class="modal-content">
                     <!-- HEADER -->
                     <div class="modal-header">
-                        <a class="logo-connexion" href="/">
+                        <a class="logo-connexion" href="#home">
                             <img src="../img/logo-connexion.jpg" alt="Logo PingPongStartupcup">
                         </a>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -112,7 +113,21 @@
                         <div class="form">
                             <h4>Connexion</h4>
                             <p><sup>*</sup> Veuillez remplir les champs ci-dessous</p>
-                            {{ render(url('fos_user_security_login')) }}
+                            <form>
+                                <div class="col-md-12 no-gutter">
+                                    <input type="email" placeholder="Email *">
+                                </div>
+
+                                <div class="col-md-12 no-gutter">
+                                    <input type="text" placeholder="Mot de passe *">
+                                    <a class="mdp" href="#">Mot de passe oublié ?</a>
+                                </div>
+
+                                <div class="col-md-12 no-gutter">
+                                    <button type="submit" class="btn btn-insc">Connexion</button>
+                                </div>
+
+                            </form>
 
                             <a class="account connexion" href="#">
                                 Vous avez déja un compte ? <br>Inscrivez vous !
@@ -128,153 +143,111 @@
         </div>
     </nav>
 
-    <!-- TOP PAGE -->
-    <div class="top-page">
-        <div class="container">
-            <div class="row">
-                <div class="headband-pink"></div>
-                <div class="content">
-                    <h1 class="h1">PING PONG</h1>
-                    <h2 class="h2">startup <span>cup</span></h2>
+    <!-- PAGE -->
 
-                    <button type="button" class="btn participate" data-toggle="modal" data-target="#modal-inscription">
-                        Je participe
+    <div class="head">
+        <div class="col-md-4">
+            <a class="img-page" href="#home">
+                <img src="../img/logo-pages.png" alt="Logo PingPongStartupcup">
+            </a>
+        </div>
+        <div class="col-md-8">
+            <div class="contest">Tournois</div>
+            <div class="name-team">HETICLAND</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="text">
+                        <h3 class="h3">LA PHASE 1 COMMENCE DANS :</h3>
+                        <h4 class="h4">SELECTIONS DES CHAMPIONS</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg team" data-toggle="modal" data-target="#modale-5">
+                        PRÉVENIR ÉQUIPE
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="modal-inscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal fade modale-timer" id="modale-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
+
                                 <!-- HEADER -->
                                 <div class="modal-header">
-                                    <a class="logo-connexion" href="/">
-                                        <img src="../img/logo-connexion.jpg" alt="Logo PingPongStartupcup">
-                                    </a>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <i class="zmdi zmdi-plus"></i>
                                     </button>
                                 </div>
 
                                 <!-- BODY -->
-                                <div class="modal-body">
+                                <div class="modal-body body-timer">
                                     <!-- CONNEXION -->
                                     <div class="form">
-                                        <h4>INSCRIPTION</h4>
-                                        <p><sup>*</sup> Veuillez remplir les champs ci-dessous</p>
-                                            {{ render(url('fos_user_registration_register')) }}
-                                        <a class="account inscription" href="#">
-                                            Vous avez déja un compte ? <br>Connectez vous !
-                                        </a>
+
+                                        <h3 class="h3">À nous de jouer !</h3>
+
+                                        <p>Envoyez un message à vos coéquipiers pour votre tounois</p>
+
+                                        <form>
+                                            <div class="col-md-12 no-gutter">
+                                                <input type="text" placeholder="Lieu de rencontre * ">
+                                            </div>
+
+                                            <div class="col-md-12 no-gutter">
+                                                <textarea class="form-control" placeholder="Message *"></textarea>
+                                            </div>
+
+                                            <div class="col-md-12 no-gutter">
+                                                <button type="submit" class="btn btn-insc">Envoyer</button>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </form>
+
                                     </div>
                                 </div>
 
-                                <div class="clearfix"></div>
                             </div>
-                            <div class="clearfix"></div>
                         </div>
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <div class="date">
-                        <div class="start">DéBUT TOURNOIS</div>
-                        <div class="number">25.03</div>
-                        <div class="year">2017</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- MIDDLE PAGE -->
-    <div class="middle-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="../img/world-cup.png" alt="Coupe">
-                </div>
-                <div class="col-md-9">
+    <div class="container">
+        <div class="row">
+            <div class="timer">
+                <span id="days"></span>
+                <div class="sup">:</div>
 
-                    <div class="title-text">
-                        <h3 class="h3">COMMENT DEVENIR CHAMPION ?</h3>
-                        <p>Le tournois se déroule en <span>trois phases</span>. Combatter tous vos adversaires pour participer à la finale et devenir le champion ! </p>
-                        <a href="#" class="more">En savoir plus </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                <span id="hours"></span>
+                <div class="sup">:</div>
 
-    <!-- BOTTOM PAGE -->
-    <div class="bottom-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="title-text">
-                        <h3 class="h3">ET Que des avantages !</h3>
-                        <h4 class="h4">C’est un événément gratuit !</h4>
-                        <p>Une compétition ouverte à tous, qui se déroule sur plusieurs semaines pour plus de fun et vous offrira une visibilité online.</p>
-                        <button type="button" class="btn more" data-toggle="modal" data-target="#modal-inscription">
-                            Je participe
-                        </button>
-                    </div>
-                </div>
+                <span id="minutes"></span>
+                <div class="sup">:</div>
 
-                <div class="col-md-3">
-                    <img src="../img/atomes.png" alt="Structure">
-                </div>
-            </div>
-        </div>
-    </div>
+                <span id="seconds"></span>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-5">
-                    <a href="/"><img src="../img/logo-footer.png" alt="Pingpong startup cup by digital village"></a>
-                </div>
-
-                <div class="col-md-7">
-                    <ul class="text">
-                        <li><a href="#">Partenaires</a></li>
-                        <li><a href="#">Règles du tournois</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                    </ul>
-
-                    <p>Invitez vos amis !</p>
-
-                    <ul class="picto">
-                        <li>
-                            <a href="#">
-                                <i class="zmdi zmdi-twitter"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="zmdi zmdi-facebook"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="zmdi zmdi-email"></i>
-                            </a>
-                        </li>
+                <div class="infos-sup">
+                    <ul>
+                        <li class="days-1">Jours</li>
+                        <li class="hours-1">Heures</li>
+                        <li class="minutes-1">Minutes</li>
+                        <li class="seconds-1">Secondes</li>
                     </ul>
                 </div>
-
-                <div class="col-md-12">
-                    <div class="copi">
-                        <a href="#">Copyright © pingpongstartupcup | 2017</a>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </footer>
+    </div>
+
+    <div class="btn-home">
+        <a href="/" >Revenir à l’accueil</a>
+    </div>
 {% endblock %}
 
 {% block stylesheets %}
@@ -300,5 +273,33 @@
                 })
             });
         });
+
+        var timer;
+        var compareDate = new Date();
+        compareDate.setDate(compareDate.getDate() + 13);
+        timer = setInterval(function() {
+            timeBetweenDates(compareDate);
+        }, 1000);
+        function timeBetweenDates(toDate) {
+            var dateEntered = toDate;
+            var now = new Date();
+            var difference = dateEntered.getTime() - now.getTime();
+            if (difference <= 0) {
+                clearInterval(timer);
+            }
+            else {
+                var seconds = Math.floor(difference / 1000);
+                var minutes = Math.floor(seconds / 60);
+                var hours = Math.floor(minutes / 60);
+                var days = Math.floor(hours / 24);
+                hours %= 24;
+                minutes %= 60;
+                seconds %= 60;
+                $("#days").text(days);
+                $("#hours").text(hours);
+                $("#minutes").text(minutes);
+                $("#seconds").text(seconds);
+            }
+        }
     </script>
 {% endblock %}
