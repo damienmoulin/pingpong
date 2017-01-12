@@ -1,3 +1,7 @@
+.second-part{
+	margin-top: 50px;
+}
+
 // MODAL
 .modal-dialog {
   width: 100%;
@@ -107,6 +111,19 @@
 		  			&:hover{
 		  				color: $pink;
 		  			}
+					}
+				}
+
+				form.form-2{
+					.radio {
+						label{
+							padding: 0;
+							p{
+								vertical-align: top;
+						    margin-top: 14px;
+		    				margin-left: 10px;
+		    			}
+						}
 					}
 				}
 			}

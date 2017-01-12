@@ -67,7 +67,7 @@ body {
 .btn-1 {
   height: 60px;
   padding: 0px 30px;
-  border-radius: 20px;
+  border-radius: 30px;
   display: inline-block;
   font-size: 2rem;
   font-weight: bold;
@@ -124,5 +124,26 @@ body {
       color: #737373;
       background-color: transparent;
     }
+  }
+}
+
+
+.btn-2 {
+  height: 60px;
+  padding: 0px 30px;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 60px;
+  transition: .3s ease;
+  border: 1px solid $colorbo1;
+  background-color: $colorbo1;
+  cursor: default;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
   }
 }
