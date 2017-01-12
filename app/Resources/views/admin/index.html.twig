@@ -18,8 +18,9 @@
             <section class="Navigation block-01">
                 <ul class="Navigation-container flex-align-vertical">
                     <li data-tab="tabBord" class="is-active">Tableau de bord</li>
-                    <li data-tab="listeParticipants">Liste des participants</li>
-                    <li data-tab="gestionChampions">Gestion des champions</li>
+                    <li data-tab="listeParticipants">Les participants</li>
+                    <li data-tab="listeTournoi">Les tournois</li>
+                    <li data-tab="gestionChampions">Gestion</li>
                     <li data-tab="messagerie" class="messagerie">Messagerie</li>
                 </ul>
             </section>
@@ -224,6 +225,68 @@
                         </li>
                     {% endfor %}
 
+                </ul>
+            </article>
+
+            <aside class="block-03">
+
+                <section class="aside-small Send">
+                    <i class="zmdi zmdi-email"></i>
+                    Envoyer message
+                </section>
+                <section class="aside-small Planning">
+                    <i class="zmdi zmdi-calendar-alt"></i>
+                    Voir le planning
+                </section>
+                <section class="Management">
+                    <span>Gestion des champions</span>
+                    <a href="">Gérer <i class="zmdi zmdi-caret-right"></i></a>
+                </section>
+
+            </aside>
+
+        </section>
+    </section><!-- end main-->
+
+    <section class="main" data-uri="listeTournoi">
+        <section class="block-01">
+            <div class="Filter">
+                <select name="" id="" class="form-control">
+                    <option value="">Tri par ordre alphabétique</option>
+                    <option value="">Tri par nombre de participants</option>
+                    <option value="">Tri parnombre d'équipes</option>
+                    <option value="">Tri par situation</option>
+                </select>
+                <span>
+                    <i class="zmdi zmdi-chevron-down"></i>
+                </span>
+            </div>
+
+            <article class="Tab block-02">
+                <div class="Tab-title flex-align-vertical">
+                    <h3>Les tournois</h3>
+                    <a href="">Tous les tournois <i class="zmdi zmdi-caret-right"></i></a>
+                </div>
+                <ul class="Tab-content">
+                    {% for tournament in tournaments %}
+                        <li>
+                            <strong class="Tab-company">{{ tournament.user.teamname }}</strong>
+                            <span class="Tab-participants">{{ tournament.user.players|length }} participants</span>
+                                <span class="Tab-team">
+                                    {% if tournament.status == 1 %}
+                                        En cours
+                                    {% else %}
+                                        Terminé
+                                    {% endif %}
+                                </span>
+                            <span class="Tab-select">
+                                {% if tournament.status == 0 %}
+                                    Vainqueur<br>
+                                    <strong class="finish">{{ tournament.winner.firstname }} {{ tournament.winner.lastname }}</strong>
+                                {% endif %}
+                            </span>
+                        </li>
+                    {% endfor %}
                 </ul>
             </article>
 
