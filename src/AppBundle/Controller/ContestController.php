@@ -86,8 +86,18 @@ class ContestController extends Controller
     public function indexAction(Tournament $tournament)
     {
 
+        $lastRound = $this->getDoctrine()->getRepository('AppBundle:Match')->findOneBy(
+            [
+                'tournament' => $tournament->getId()
+            ],
+            [
+                'round' => 'DESC'
+            ]
+        );
+
         return $this->render(':tournament:index.html.twig', [
-            'tournament' => $tournament
+            'tournament' => $tournament,
+            'lastround' => $lastRound
         ]);
     }
 

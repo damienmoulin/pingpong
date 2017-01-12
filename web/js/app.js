@@ -66,11 +66,12 @@ $(document).ready(function () {
 
         $.each($('.Rounds-items'), function (i,e) {
             nb = $(e).find('.Round-item').length;
+            console.log(nb);
             widthItem = $(e).find('.Round-item').width();
 
             var SliderSize = nb * widthItem + 100;
 
-            $('.translate-zone').css('width', SliderSize);
+            $(e).css('width', SliderSize);
 
             $(e).find('.Round-item:nth-child(3)').addClass('scroll-right');
             $(e).find('.Round-item:nth-child(1)').addClass('scroll-left');
