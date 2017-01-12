@@ -28,6 +28,10 @@ class TeamController extends Controller
 
         $user = $this->get('security.token_storage')->getToken()->getUser();
 
+        if ($user->getTournament() != null) {
+            return $this->redirect($this->generateUrl('contest_index', [ 'tournament' => $user->getTournament()->getId()]));
+        }
+
         $player = new Player($user);
 
         $acceptedPlayers = $this->getAcceptedPlayersAction($player->getUser());
@@ -109,7 +113,7 @@ class TeamController extends Controller
 
         return $this->redirect($this->generateUrl('team'));
     }
-    
+
     /**
      * @param $key
      * @return renderView
