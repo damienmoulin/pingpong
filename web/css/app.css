@@ -5766,6 +5766,26 @@ body {
     justify-content: space-between;
     height: 79px; }
 
+.head {
+  margin-left: 31px;
+  display: flex;
+  align-items: flex-end; }
+  .head img {
+    height: 369px; }
+  .head div {
+    position: relative;
+    top: 17px;
+    margin-left: 30px; }
+  .head span {
+    color: #737373;
+    font-size: 2.5rem;
+    display: block; }
+  .head strong {
+    font-size: 6rem;
+    color: #ffc74e;
+    text-transform: uppercase;
+    font-family: "Anton", sans-serif; }
+
 .calendar, .calendar_weekdays, .calendar_content {
   width: 90%; }
 
@@ -6874,7 +6894,13 @@ aside {
           text-align: center;
           padding-top: 8px;
           font-weight: 600;
-          margin-top: 20px; }
+          margin-top: 20px;
+          outline: none;
+          transition: .3s ease;
+          border: 1px solid #5fd383; }
+          .modal-dialog .modal-content .modal-body .form form .btn-insc:hover {
+            background-color: transparent;
+            color: #5fd383; }
         .modal-dialog .modal-content .modal-body .form form .mdp {
           float: right;
           display: block;
