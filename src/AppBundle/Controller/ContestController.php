@@ -194,4 +194,25 @@ class ContestController extends Controller
 
         return $this->redirect($this->generateUrl('contest_index', [ 'tournament' => $match->getTournament()->getId() ]));
     }
+
+    /**
+     * @param $teamname
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Route("/find/{teamname}", name="contest_find")
+     */
+    public function findTournament($teamname){
+        
+        $team = $this->getDoctrine()->getRepository('AppBundle:User')->findOneBy(
+            [
+                'teamname' => $teamname
+            ]
+        );
+
+        if ($team->getTournament() != null) {
+            return $this->redirect($this->generateUrl('contest_index', [ 'tournament' => $team->getTournament()->getId()]));
+        }
+        else {
+            return $this->redirect($this->generateUrl('homepage'));
+        }
+    }
 }

@@ -275,6 +275,10 @@ $(document).ready(function () {
 
         return false;
         
-    })
+    });
 
+    $('.find_t').on('click', function(){
+        var teamname = $('input.find_tournament').val();
+        $(location).attr('href', Routing.generate('contest_find', { teamname: teamname}));
+    })
 })
