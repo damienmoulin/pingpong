@@ -1,8 +1,49 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="Inscription" />
+    <div class="col-md-5 no-gutter">
+        {{ form_widget(form.firstname) }}
+    </div>
+
+    <div class="col-md-5 col-md-offset-2 no-gutter">
+        {{ form_widget(form.lastname) }}
+    </div>
+
+    <div class="col-md-12 no-gutter">
+        {{ form_widget(form.email) }}
+    </div>
+
+    <div class="col-md-12 no-gutter">
+        {{ form_widget(form.plainPassword.first) }}
+    </div>
+
+    <div class="col-md-12 no-gutter">
+        {{ form_widget(form.plainPassword.second) }}
+    </div>
+
+    <div class="col-md-12 no-gutter">
+        {{ form_widget(form.structuretype) }}
+    </div>
+
+    <div class="col-md-12 no-gutter">
+        {{ form_widget(form.structurename) }}
+    </div>
+
+    <div class="col-md-12 no-gutter">
+        {{ form_widget(form.phonenumber) }}
+    </div>
+
+    <div class="col-md-12 no-gutter">
+        {{ form_widget(form.teamname) }}
+    </div>
+    <div class="col-md-12 no-gutter">
+        <div class="checkbox">
+            <input type="checkbox">
+            <div class="check">En cochant cette case je reconnais avoir pris connaissance des conditions générales d’utilisation</div>
+        </div>
+    </div>
+
+    <div class="col-md-12 no-gutter">
+        <button type="submit" class="btn btn-insc">Inscription</button>
     </div>
 {{ form_end(form) }}
