@@ -170,14 +170,10 @@ $(document).ready(function () {
             $('.slider .range').on('input change', function (e) {
                 $that = $('.translate-zone .scroll-right');
                 x = $(this).val();
-
-                console.log(x);
-
+                
                 var translate = widthItem * x;
                 var test = parseInt(x) - 2;
                 var xInt = parseInt(x) + 3;
-
-                console.log(xInt)
 
                 if( x < nb) {
                     $that.off('mousemove');

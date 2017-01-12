@@ -1,5 +1,5 @@
-.second-part{
-	margin-top: 50px;
+.second-part {
+  margin-top: 50px;
 }
 
 // MODAL
@@ -8,138 +8,146 @@
   height: 100%;
   margin: 0;
 
-  .modal-content{
-  	border-radius: 0;
+  .modal-content {
+    border-radius: 0;
     box-shadow: none;
-		border: none;
+    border: none;
 
-		.modal-header{
-			padding: 0;
-			border: none;
+    .modal-header {
+      padding: 0;
+      border: none;
 
-			a.logo-connexion{
-				width: inherit;
-				z-index: 900;
-				margin-left: 20px;
-			}
-			.close {
-				outline: none;
-				padding: 20px;
-	    	margin-top: -12px;
-	    	font-size: 6rem;
-	    	-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-			}
-		}
+      a.logo-connexion {
+        width: inherit;
+        z-index: 900;
+        margin-left: 20px;
+      }
+      .close {
+        outline: none;
+        padding: 20px;
+        margin-top: -12px;
+        font-size: 6rem;
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+      }
+    }
 
-		.modal-body{
-	    margin-top: -230px;
+    .modal-body {
+      margin-top: -230px;
 
-    	.form{
-				width: 700px;
-				margin: 0 auto;
+      .form {
+        width: 700px;
+        margin: 0 auto;
 
-				h4{
-					text-transform: uppercase;
-					color: $pink;
-					font-family: 'Anton', sans-serif;
-					font-size: 4rem;
-				}
+        h4 {
+          text-transform: uppercase;
+          color: $pink;
+          font-family: 'Anton', sans-serif;
+          font-size: 4rem;
+        }
 
-				p{
-					font-size: 1.2rem;
-					margin-top: 10px;
-					margin-bottom: 30px;
-				}
+        p {
+          font-size: 1.2rem;
+          margin-top: 10px;
+          margin-bottom: 30px;
+        }
 
-				form{
-					input,
-					textarea.form-control{
-					    
-					    padding: 0;
-					    line-height: 45px;
-					    box-shadow: none;
-    					border-radius: 0;
-						width: 100%;
-						border: 0;
-						height: 40px;
-						margin-bottom: 20px;
-						outline: none;
-						border-bottom: 1px solid $grey;
-					}
+        form {
+          input,
+          textarea.form-control {
 
-					::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-					  color: $black;
-					}
+            padding: 0;
+            line-height: 45px;
+            box-shadow: none;
+            border-radius: 0;
+            width: 100%;
+            border: 0;
+            height: 40px;
+            margin-bottom: 20px;
+            outline: none;
+            border-bottom: 1px solid $grey;
+          }
 
-					.checkbox{
-				    padding-left: 20px;
-						input{
-							width: 20px;
-							height: 20px;
-						}
-						.check{
-							vertical-align: super;
-							margin-left: 5px;
-							text-transform: inherit;
-						}
-					}
+          ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $black;
+          }
 
-					.btn-insc{
-				    margin: 0 auto;
-						text-decoration: none;
-						background-color: $green;
-			    	color: $white;
-				    margin-bottom: 30px;
-						border-radius: 50px;
-				    display: block;
-				    width: 190px;
-				    height: 40px;
-				    font-size: 1.6rem;
-				    text-transform: uppercase;
-				    text-align: center;
-				    padding-top: 8px;
-				    font-weight: 600;
-				    margin-top: 20px;
-					}
+          .checkbox {
+            padding-left: 20px;
+            input {
+              width: 20px;
+              height: 20px;
+            }
+            .check {
+              vertical-align: super;
+              margin-left: 5px;
+              text-transform: inherit;
+            }
+          }
 
-					.mdp{
-						float: right;
-		    		display: block;
-		  			text-decoration: underline;
-		  			color: $blue;
-		  			margin-bottom: 30px;
-		  			&:hover{
-		  				color: $pink;
-		  			}
-					}
-				}
+          .btn-insc {
+            margin: 0 auto;
+            text-decoration: none;
+            background-color: $green;
+            color: $white;
+            margin-bottom: 30px;
+            border-radius: 50px;
+            display: block;
+            width: 190px;
+            height: 40px;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            text-align: center;
+            padding-top: 8px;
+            font-weight: 600;
+            margin-top: 20px;
+            outline: none;
+            transition: .3s ease;
+            border: 1px solid $green;
 
-				form.form-2{
-					.radio {
-						label{
-							padding: 0;
-							p{
-								vertical-align: top;
-						    margin-top: 14px;
-		    				margin-left: 10px;
-		    			}
-						}
-					}
-				}
-			}
+            &:hover {
+              background-color: transparent;
+              color: $green;
+            }
+          }
 
-			a.account{
-  			text-align: center;
-    		margin: 0 auto;
-    		display: block;
-  			text-decoration: underline;
-  			color: $blue;
-  			margin-bottom: 30px;
-  			&:hover{
-  				color: $pink;
-  			}
-    	}
-		}
+          .mdp {
+            float: right;
+            display: block;
+            text-decoration: underline;
+            color: $blue;
+            margin-bottom: 30px;
+            &:hover {
+              color: $pink;
+            }
+          }
+        }
+
+        form.form-2 {
+          .radio {
+            label {
+              padding: 0;
+              p {
+                vertical-align: top;
+                margin-top: 14px;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      a.account {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        text-decoration: underline;
+        color: $blue;
+        margin-bottom: 30px;
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
   }
 }
 
