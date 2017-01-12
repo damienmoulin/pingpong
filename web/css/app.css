@@ -6725,6 +6725,9 @@ aside {
         .page-home footer .copi a:hover {
           color: #e84961; }
 
+.second-part {
+  margin-top: 50px; }
+
 .modal-dialog {
   width: 100%;
   height: 100%;
@@ -6809,6 +6812,12 @@ aside {
           margin-bottom: 30px; }
           .modal-dialog .modal-content .modal-body .form form .mdp:hover {
             color: #e84961; }
+        .modal-dialog .modal-content .modal-body .form form.form-2 .radio label {
+          padding: 0; }
+          .modal-dialog .modal-content .modal-body .form form.form-2 .radio label p {
+            vertical-align: top;
+            margin-top: 14px;
+            margin-left: 10px; }
       .modal-dialog .modal-content .modal-body a.account {
         text-align: center;
         margin: 0 auto;
@@ -6840,6 +6849,7 @@ aside {
   .page-timer .content .text .h4 {
     text-transform: uppercase; }
 .page-timer button.team {
+  outline: none;
   background-color: transparent;
   text-decoration: none;
   border-radius: 50px;
@@ -6936,5 +6946,46 @@ aside {
     .page-timer .btn-home a:hover {
       background-color: #ffc74e;
       color: #ffffff; }
+
+.page-confirm .confirm {
+  height: 500px; }
+  .page-confirm .confirm .content {
+    text-align: center;
+    margin-left: -340px; }
+    .page-confirm .confirm .content .h1 {
+      color: #e84961;
+      font-family: 'Anton', sans-serif;
+      font-size: 3.2rem;
+      margin-top: 130px; }
+    .page-confirm .confirm .content p {
+      font-size: 1.6rem; }
+      .page-confirm .confirm .content p span {
+        font-weight: 600; }
+    .page-confirm .confirm .content .btn-team {
+      margin: 0 auto;
+      text-align: center; }
+      .page-confirm .confirm .content .btn-team a {
+        text-decoration: none;
+        background-color: #5fd383;
+        color: #ffffff;
+        border-radius: 50px;
+        display: block;
+        width: 200px;
+        height: 50px;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        outline: none;
+        font-weight: 600;
+        padding-top: 14px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px; }
+        .page-confirm .confirm .content .btn-team a:hover {
+          border: 2px solid #5fd383;
+          color: #5fd383;
+          background-color: #ffffff;
+          padding-top: 12px; }
 
 /*# sourceMappingURL=app.css.map */
