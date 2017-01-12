@@ -263,7 +263,7 @@
                 <div class="contain-titl">
                     <h2 class="title-1">QUI POUR LA FINALE ?</h2>
                     <p class="sub-title">Choisissez le nombre de participants pour la finale </p>
-                    <a href="#" class="btn-2 float-r">Total : 50 équipes</a>
+                    <a href="#" class="btn-2 float-r">Total : {{ finishedtournaments|length }} équipes</a>
                 </div>
 
 
@@ -272,7 +272,7 @@
                         <div class="Gestion-container"
                              style="background-image: url('../img/podium1.png'); background-size: cover;">
                             <article class="">
-                                <p class="number">50</p>
+                                <p class="number">{{ finishedtournaments|length }}</p>
                                 <p>Participants</p>
                             </article>
                         </div>
@@ -285,7 +285,7 @@
                         <div class="Gestion-container"
                              style="background-image: url('../img/podium2.png'); background-size: cover;">
                             <article class="">
-                                <p class="number">100</p>
+                                <p class="number">{{ finishedtournaments|length*2 }}</p>
                                 <p>Participants</p>
                             </article>
                         </div>
@@ -297,7 +297,7 @@
                         <div class="Gestion-container"
                              style="background-image: url('../img/podium3.png'); background-size: cover;">
                             <article class="">
-                                <p class="number">150</p>
+                                <p class="number">{{ finishedtournaments|length*3 }}</p>
                                 <p>Participants</p>
                             </article>
                         </div>

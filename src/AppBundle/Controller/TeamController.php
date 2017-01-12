@@ -27,6 +27,9 @@ class TeamController extends Controller
     {
 
         $user = $this->get('security.token_storage')->getToken()->getUser();
+        if ($user == 'anon.') {
+            return $this->redirect($this->generateUrl('homepage'));
+        }
 
         if ($user->getTournament() != null) {
             return $this->redirect($this->generateUrl('contest_index', [ 'tournament' => $user->getTournament()->getId()]));
