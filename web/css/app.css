@@ -6238,6 +6238,9 @@ button.switch-month:hover {
         .page-home footer .copi a:hover {
           color: #e84961; }
 
+.second-part {
+  margin-top: 50px; }
+
 .modal-dialog {
   width: 100%;
   height: 100%;
@@ -6322,6 +6325,12 @@ button.switch-month:hover {
           margin-bottom: 30px; }
           .modal-dialog .modal-content .modal-body .form form .mdp:hover {
             color: #e84961; }
+        .modal-dialog .modal-content .modal-body .form form.form-2 .radio label {
+          padding: 0; }
+          .modal-dialog .modal-content .modal-body .form form.form-2 .radio label p {
+            vertical-align: top;
+            margin-top: 14px;
+            margin-left: 10px; }
       .modal-dialog .modal-content .modal-body a.account {
         text-align: center;
         margin: 0 auto;
