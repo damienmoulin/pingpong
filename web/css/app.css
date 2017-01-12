@@ -5719,9 +5719,11 @@ body {
   .btn-1.btn-grey {
     background-color: #737373;
     border-color: #737373; }
-    .btn-1.btn-grey:hover {
+    .btn-1.btn-grey:not(.no-hover):hover {
       color: #737373;
       background-color: transparent; }
+    .btn-1.btn-grey.no-hover {
+      pointer-events: none; }
 
 .btn-2 {
   height: 60px;
