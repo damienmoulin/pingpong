@@ -5873,7 +5873,7 @@ button.switch-month:hover {
   .Board-list div {
     width: 250px;
     height: 133px;
-    border: 1px solid #e84961;
+    border: 1px solid #5fd383;
     position: relative;
     background-color: #fff; }
     .Board-list div strong {
@@ -5952,6 +5952,10 @@ button.switch-month:hover {
     width: 167px; }
     .Tab-select .finish {
       color: #5fd383; }
+    .Tab-select .started {
+      color: #0f354f; }
+    .Tab-select .selection {
+      color: #e84961; }
   .Tab-01 {
     border-top: 1px solid #eeeeee;
     margin-top: 20px;
@@ -5986,7 +5990,7 @@ button.switch-month:hover {
       .Tab-01 .mail-player strong {
         font-size: 1.2rem;
         color: #f26c4f; }
-        .Tab-01 .mail-player strong .valid {
+        .Tab-01 .mail-player strong.valid {
           color: #5fd383; }
     .Tab-01 .Accordion-more {
       width: 67px;
