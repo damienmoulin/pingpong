@@ -2,137 +2,14 @@
 
 {% block body %}
     <div class="page-home">
-        <nav>
-            <!-- NAVIGATION -->
-            <div class="hamburger">
-                <i class="zmdi zmdi-menu menu"></i>
-            </div>
-
-            <div class='menu-1'>
-                <nav>
-                    <div class="col-md-12">
-                        <a href="/">
-                            <img src="../img/logo-menu.png" alt="Logo pingpongstartupcup">
-                        </a>
-                    </div>
-
-                    <div class="col-md-12">
-                        <ul class="navi">
-                            <li><a href='#'>Accueil</a></li>
-                            <li><a href='#'>Les résultats</a></li>
-                            <li><a href='#'>Mon équipe</a></li>
-                            <li><a href='#'>Web Live Tv</a></li>
-                            <li class="bell">
-                                <a href="#">
-                                    <i class="zmdi zmdi-notifications-active"></i>
-                                    <div class="label">Notifications</div>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <ul class="contact">
-                            <li>
-                                <a href="#">
-                                    <i class="zmdi zmdi-email"></i>
-                                    <div class="ul-contact">Contact</div>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="zmdi zmdi-alert-circle-o"></i>
-                                    <div class="ul-contact">A propos</div>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="zmdi zmdi-help"></i>
-                                    <div class="ul-contact">Aide</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="zmdi zmdi-power"></i>
-                                    <div class="ul-contact">Déconnexion</div>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <div class="rs">
-                            <p>Partager l’expérience</p>
-                            <a href="#">
-                                <i class="zmdi zmdi-facebook"></i>
-                            </a>
-
-                            <a href="#">
-                                <i class="zmdi zmdi-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-
-            <!-- INSCRIPTION -->
-            <button type="button" class="btn inscription" data-toggle="modal" data-target="#modal-connexion">
-                <i class="material-icons face">face</i>
-            </button>
-
-            <!-- Modal -->
-
-            <button class="btn search" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                <i class="zmdi zmdi-search"></i>
-            </button>
-
-            <div class="collapse" id="collapseExample">
-                <div class="well search-page">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Rechercher une équipe...">
-                        <button type="submit" class="btn btn-default"><i class="zmdi zmdi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="modal-connexion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <!-- HEADER -->
-                        <div class="modal-header">
-                            <a class="logo-connexion" href="/">
-                                <img src="../img/logo-connexion.jpg" alt="Logo PingPongStartupcup">
-                            </a>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <i class="zmdi zmdi-plus"></i>
-                            </button>
-                        </div>
-
-                        <!-- BODY -->
-                        <div class="modal-body">
-                            <!-- CONNEXION -->
-                            <div class="form">
-                                <h4>Connexion</h4>
-                                <p><sup>*</sup> Veuillez remplir les champs ci-dessous</p>
-                                {{ render(url('fos_user_security_login')) }}
-
-                                <a class="account connexion" href="#">
-                                    Vous avez déja un compte ? <br>Inscrivez vous !
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </nav>
+        <!-- ******* HEADER ******* -->
+        {{ include('nav.html.twig') }}
 
         <div class="head">
             <img src="../img/logo_pingPong_FO.svg" alt="">
             <div>
                 <span>Équipe</span>
-                <strong>Hetiland</strong>
+                <strong>{{ tournament.user.teamname }}</strong>
             </div>
         </div>
     </div>

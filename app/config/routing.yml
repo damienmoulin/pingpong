@@ -7,7 +7,7 @@ fos_user:
 
 fos_js_routing:
      resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
-     
+
 fos_user_registration_confirmed:
     path: /registration/confirmed
     defaults: { _controller: AppBundle:Team:index }
