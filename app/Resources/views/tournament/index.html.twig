@@ -159,7 +159,7 @@
                                 <table class="invit Round-item {% if j%2 == 0 %}first{% else %}two{% endif %}">
                                 <tr class="two-row">
                                     <td>
-                                        {% if match.status != 0 and match.playerone is not null and is_granted("ROLE_USER") %}
+                                        {% if match.playerone is not null and is_granted("ROLE_USER") %}
                                             <a href="{{ path('contest_match_finish', { 'match' : match.id, 'player' : match.playerone.id }) }}">{{ match.playerone.lastname }} {{ match.playerone.firstname }}</a>
                                         {% else %}
                                             {% if match.playerone is not null %}
@@ -169,7 +169,7 @@
                                         <span>Désigner le vainceur</span>
                                     </td>
                                     <td>
-                                        {% if match.status != 0 and match.playertwo is not null and is_granted("ROLE_USER") %}
+                                        {% if match.playertwo is not null and is_granted("ROLE_USER") %}
                                             <a href="{{ path('contest_match_finish', { 'match' : match.id, 'player' : match.playertwo.id }) }}">{{ match.playertwo.lastname }} {{ match.playertwo.firstname }}</a>
                                         {% else %}
                                             {% if match.playertwo is not null %}
