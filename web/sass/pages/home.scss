@@ -19,6 +19,7 @@
     color: $white;
     margin-top: 140px;
     margin-left: 21px;
+    text-transform: uppercase;
   }
 
   p {
@@ -112,13 +113,19 @@
 
       ul.navi {
         padding-top: 80px;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
         li {
           list-style: none;
           margin-bottom: 10px;
+
           a {
             text-decoration: none;
             color: $white;
-            font-size: 1.6rem;
+            font-size: 2.0rem;
             font-weight: 600;
             transition: .3s ease;
 
@@ -148,11 +155,17 @@
 
       ul.contact {
         margin-top: 30px;
+        list-style: none;
+        position: fixed;
+        bottom: 60px;
+
         li {
           a {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             text-decoration: none;
             color: $white;
+
+
             i {
               display: inline-block;
             }
@@ -173,6 +186,9 @@
       .rs {
         margin-left: 40px;
         margin-top: 40px;
+        position: fixed;
+        bottom: 1px;
+
         p {
           display: inline-block;
           font-weight: 600;
@@ -324,20 +340,20 @@
 
   // TOP PAGE
   .top-page {
-    height: 640px;
+    height: 90vh;
 
     .headband-pink {
       position: absolute;
       background-color: $pink;
       width: 300px;
-      height: 720px;
+      height: 98vh;
       top: 0;
       right: 20%;
     }
 
     .content {
       position: absolute;
-      top: 4%;
+      top: 20%;
       left: 1.4%;
 
       .h1 {
@@ -387,31 +403,7 @@
         }
       }
 
-      .date {
-        text-transform: uppercase;
-        left: 80%;
-        top: 100%;
-        position: absolute;
-        .start {
-          color: $yellow;
-          font-size: 2rem;
-          font-weight: 600;
-        }
 
-        .number {
-          font-size: 6.8rem;
-          font-weight: 800;
-          color: $white;
-          line-height: 50px;
-        }
-
-        .year {
-          font-weight: 100;
-          font-size: 7.5rem;
-          color: $white;
-          line-height: 70px;
-        }
-      }
     }
   }
 
@@ -479,6 +471,7 @@
         font-weight: 600;
         color: $black;
         margin-left: 20px;
+        margin-bottom: 20px;
       }
 
       button.more {

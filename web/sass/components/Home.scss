@@ -1,5 +1,32 @@
 .Home {
   &-top {
     position: relative;
+    height: 90vh;
+
+    .date {
+      text-transform: uppercase;
+      left: 21%;
+      top: 77%;
+      position: absolute;
+      .start {
+        color: $yellow;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .number {
+        font-size: 6.8rem;
+        font-weight: 800;
+        color: $white;
+        line-height: 50px;
+      }
+
+      .year {
+        font-weight: 100;
+        font-size: 7.5rem;
+        color: $white;
+        line-height: 70px;
+      }
+    }
   }
 }

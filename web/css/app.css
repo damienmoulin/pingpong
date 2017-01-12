@@ -6307,7 +6307,27 @@ aside {
   display: none; }
 
 .Home-top {
-  position: relative; }
+  position: relative;
+  height: 90vh; }
+  .Home-top .date {
+    text-transform: uppercase;
+    left: 21%;
+    top: 77%;
+    position: absolute; }
+    .Home-top .date .start {
+      color: #ffc74e;
+      font-size: 2rem;
+      font-weight: 600; }
+    .Home-top .date .number {
+      font-size: 6.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 50px; }
+    .Home-top .date .year {
+      font-weight: 100;
+      font-size: 7.5rem;
+      color: #ffffff;
+      line-height: 70px; }
 
 .Gestion .Flex-c {
   display: flex;
@@ -6399,7 +6419,8 @@ aside {
   font-weight: 600;
   color: #ffffff;
   margin-top: 140px;
-  margin-left: 21px; }
+  margin-left: 21px;
+  text-transform: uppercase; }
 .title-text p {
   font-size: 2rem;
   margin-left: 20px;
@@ -6467,14 +6488,18 @@ aside {
         float: right;
         margin-top: -110px; }
       .page-home nav .menu-1 ul.navi {
-        padding-top: 80px; }
+        padding-top: 80px;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
         .page-home nav .menu-1 ul.navi li {
           list-style: none;
           margin-bottom: 10px; }
           .page-home nav .menu-1 ul.navi li a {
             text-decoration: none;
             color: #ffffff;
-            font-size: 1.6rem;
+            font-size: 2.0rem;
             font-weight: 600;
             transition: .3s ease; }
             .page-home nav .menu-1 ul.navi li a:hover {
@@ -6488,9 +6513,12 @@ aside {
           .page-home nav .menu-1 ul.navi li.bell:hover i, .page-home nav .menu-1 ul.navi li.bell:hover .label {
             color: #5fd383; }
       .page-home nav .menu-1 ul.contact {
-        margin-top: 30px; }
+        margin-top: 30px;
+        list-style: none;
+        position: fixed;
+        bottom: 60px; }
         .page-home nav .menu-1 ul.contact li a {
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           text-decoration: none;
           color: #ffffff;
           transition: .3s ease; }
@@ -6503,7 +6531,9 @@ aside {
             color: #e84961; }
       .page-home nav .menu-1 .rs {
         margin-left: 40px;
-        margin-top: 40px; }
+        margin-top: 40px;
+        position: fixed;
+        bottom: 1px; }
         .page-home nav .menu-1 .rs p {
           display: inline-block;
           font-weight: 600;
@@ -6610,17 +6640,17 @@ aside {
         font-size: 2rem;
         text-transform: uppercase; }
   .page-home .top-page {
-    height: 640px; }
+    height: 90vh; }
     .page-home .top-page .headband-pink {
       position: absolute;
       background-color: #e84961;
       width: 300px;
-      height: 720px;
+      height: 98vh;
       top: 0;
       right: 20%; }
     .page-home .top-page .content {
       position: absolute;
-      top: 4%;
+      top: 20%;
       left: 1.4%; }
       .page-home .top-page .content .h1 {
         text-transform: uppercase;
@@ -6660,25 +6690,6 @@ aside {
           background-color: #ffffff;
           border: 4px solid #5fd383;
           color: #5fd383; }
-      .page-home .top-page .content .date {
-        text-transform: uppercase;
-        left: 80%;
-        top: 100%;
-        position: absolute; }
-        .page-home .top-page .content .date .start {
-          color: #ffc74e;
-          font-size: 2rem;
-          font-weight: 600; }
-        .page-home .top-page .content .date .number {
-          font-size: 6.8rem;
-          font-weight: 800;
-          color: #ffffff;
-          line-height: 50px; }
-        .page-home .top-page .content .date .year {
-          font-weight: 100;
-          font-size: 7.5rem;
-          color: #ffffff;
-          line-height: 70px; }
   .page-home .middle-page {
     background-color: #ffc74e;
     height: 465px; }
@@ -6722,7 +6733,8 @@ aside {
       font-size: 2rem;
       font-weight: 600;
       color: #131313;
-      margin-left: 20px; }
+      margin-left: 20px;
+      margin-bottom: 20px; }
     .page-home .bottom-page .title-text button.more {
       border: 4px solid #5fd383;
       color: #5fd383;
@@ -7046,5 +7058,28 @@ aside {
           color: #5fd383;
           background-color: #ffffff;
           padding-top: 12px; }
+
+.page-presentation .top-page .content {
+  top: 4%;
+  left: 15%; }
+  .page-presentation .top-page .content .h2 {
+    margin-left: 142px;
+    margin-top: 13px; }
+  .page-presentation .top-page .content .date {
+    left: 81%;
+    top: 100%;
+    width: 150px; }
+    .page-presentation .top-page .content .date p {
+      color: #ffffff;
+      text-align: center;
+      font-size: 16px; }
+  .page-presentation .top-page .content .front {
+    margin-top: 60px;
+    margin-left: 140px; }
+    .page-presentation .top-page .content .front p {
+      color: #0f354f;
+      font-size: 4rem;
+      font-weight: 600;
+      text-transform: uppercase; }
 
 /*# sourceMappingURL=app.css.map */

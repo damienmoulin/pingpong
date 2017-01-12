@@ -1,0 +1,30 @@
+.page-presentation .top-page .content {
+	top: 4%;
+	left: 15%;
+	.h2{
+		margin-left: 142px;
+	  margin-top: 13px;
+	}
+	.date {
+    left: 81%;
+    top: 100%;
+    width: 150px;
+		p{
+			color: $white;
+			text-align: center;
+			font-size: 16px;
+		}
+	}
+
+	.front{
+    margin-top: 60px;
+    margin-left: 140px;
+		p{
+			color: $blue;
+			font-size: 4rem;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+
+}
