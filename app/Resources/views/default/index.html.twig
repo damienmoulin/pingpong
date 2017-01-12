@@ -1,7 +1,282 @@
-{% extends 'base.html.twig' %}
+{% extends 'default/base.html.twig' %}
 
 {% block body %}
-<h1>Accueil</h1>
+    <!-- ******* HEADER ******* -->
+    <nav>
+        <!-- NAVIGATION -->
+        <div class="hamburger">
+            <i class="zmdi zmdi-menu menu"></i>
+        </div>
+
+        <div class='menu-1'>
+            <nav>
+                <div class="col-md-12">
+                    <a href="/">
+                        <img src="../img/logo-menu.png" alt="Logo pingpongstartupcup">
+                    </a>
+                </div>
+
+                <div class="col-md-12">
+                    <ul class="navi">
+                        <li><a href='#'>Accueil</a></li>
+                        <li><a href='#'>Les résultats</a></li>
+                        <li><a href='#'>Mon équipe</a></li>
+                        <li><a href='#'>Web Live Tv</a></li>
+                        <li class="bell">
+                            <a href="#">
+                                <i class="zmdi zmdi-notifications-active"></i>
+                                <div class="label">Notifications</div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="contact">
+                        <li>
+                            <a href="#">
+                                <i class="zmdi zmdi-email"></i>
+                                <div class="ul-contact">Contact</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="zmdi zmdi-alert-circle-o"></i>
+                                <div class="ul-contact">A propos</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="zmdi zmdi-help"></i>
+                                <div class="ul-contact">Aide</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="zmdi zmdi-power"></i>
+                                <div class="ul-contact">Déconnexion</div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="rs">
+                        <p>Partager l’expérience</p>
+                        <a href="#">
+                            <i class="zmdi zmdi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="zmdi zmdi-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- INSCRIPTION -->
+        <button type="button" class="btn inscription" data-toggle="modal" data-target="#modal-connexion">
+            <i class="material-icons face">face</i>
+        </button>
+
+        <!-- Modal -->
+
+        <button class="btn search" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <i class="zmdi zmdi-search"></i>
+        </button>
+
+        <div class="collapse" id="collapseExample">
+            <div class="well search-page">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Rechercher une équipe...">
+                    <button type="submit" class="btn btn-default"><i class="zmdi zmdi-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-connexion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- HEADER -->
+                    <div class="modal-header">
+                        <a class="logo-connexion" href="/">
+                            <img src="../img/logo-connexion.jpg" alt="Logo PingPongStartupcup">
+                        </a>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="zmdi zmdi-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="modal-body">
+                        <!-- CONNEXION -->
+                        <div class="form">
+                            <h4>Connexion</h4>
+                            <p><sup>*</sup> Veuillez remplir les champs ci-dessous</p>
+                            {{ render(url('fos_user_security_login')) }}
+
+                            <a class="account connexion" href="#">
+                                Vous avez déja un compte ? <br>Inscrivez vous !
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+
+    <!-- TOP PAGE -->
+    <div class="top-page">
+        <div class="container">
+            <div class="row">
+                <div class="headband-pink"></div>
+                <div class="content">
+                    <h1 class="h1">PING PONG</h1>
+                    <h2 class="h2">startup <span>cup</span></h2>
+
+                    <button type="button" class="btn participate" data-toggle="modal" data-target="#modal-inscription">
+                        Je participe
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-inscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <!-- HEADER -->
+                                <div class="modal-header">
+                                    <a class="logo-connexion" href="/">
+                                        <img src="../img/logo-connexion.jpg" alt="Logo PingPongStartupcup">
+                                    </a>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="zmdi zmdi-plus"></i>
+                                    </button>
+                                </div>
+
+                                <!-- BODY -->
+                                <div class="modal-body">
+                                    <!-- CONNEXION -->
+                                    <div class="form">
+                                        <h4>INSCRIPTION</h4>
+                                        <p><sup>*</sup> Veuillez remplir les champs ci-dessous</p>
+                                            {{ render(url('fos_user_registration_register')) }}
+                                        <a class="account inscription" href="#">
+                                            Vous avez déja un compte ? <br>Connectez vous !
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="date">
+                        <div class="start">DéBUT TOURNOIS</div>
+                        <div class="number">25.03</div>
+                        <div class="year">2017</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MIDDLE PAGE -->
+    <div class="middle-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="../img/world-cup.png" alt="Coupe">
+                </div>
+                <div class="col-md-9">
+
+                    <div class="title-text">
+                        <h3 class="h3">COMMENT DEVENIR CHAMPION ?</h3>
+                        <p>Le tournois se déroule en <span>trois phases</span>. Combatter tous vos adversaires pour participer à la finale et devenir le champion ! </p>
+                        <a href="#" class="more">En savoir plus </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM PAGE -->
+    <div class="bottom-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="title-text">
+                        <h3 class="h3">ET Que des avantages !</h3>
+                        <h4 class="h4">C’est un événément gratuit !</h4>
+                        <p>Une compétition ouverte à tous, qui se déroule sur plusieurs semaines pour plus de fun et vous offrira une visibilité online.</p>
+                        <button type="button" class="btn more" data-toggle="modal" data-target="#modal-inscription">
+                            Je participe
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <img src="../img/atomes.png" alt="Structure">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-5">
+                    <a href="/"><img src="../img/logo-footer.png" alt="Pingpong startup cup by digital village"></a>
+                </div>
+
+                <div class="col-md-7">
+                    <ul class="text">
+                        <li><a href="#">Partenaires</a></li>
+                        <li><a href="#">Règles du tournois</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                    </ul>
+
+                    <p>Invitez vos amis !</p>
+
+                    <ul class="picto">
+                        <li>
+                            <a href="#">
+                                <i class="zmdi zmdi-twitter"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="zmdi zmdi-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="zmdi zmdi-email"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="copi">
+                        <a href="#">Copyright © pingpongstartupcup | 2017</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
     {{ render(url('fos_user_registration_register')) }}
 
     {{ render(url('fos_user_security_login')) }}
@@ -9,4 +284,26 @@
 
 {% block stylesheets %}
 
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            $('.hamburger').on('click', function () {
+                $('.menu-1').toggleClass('menu--active');
+            });
+
+            $('.account.connexion').on('click', function(){
+                $('.btn.participate').trigger('click')
+            });
+
+            $('.account.inscription').on('click', function(){
+                $('#modal-inscription').css('z-index','0');
+                $('.btn.inscription').trigger('click');
+
+                $('.close').off('click').on('click', function(){
+                    $('#modal-inscription').css('z-index','1050');
+                })
+            });
+        });
+    </script>
 {% endblock %}
