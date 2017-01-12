@@ -5760,12 +5760,12 @@ body {
 
 .calendar_weekdays div {
   display: inline-block;
-  width: 26px;
-  max-width: 26px;
   vertical-align: top; }
 
 .calendar_weekdays div, .calendar_content div {
-  max-width: 30px;
+  width: 26px;
+  height: 26px;
+  max-width: 26px;
   overflow: hidden;
   text-align: center;
   background-color: transparent;
@@ -5773,15 +5773,12 @@ body {
   font-size: 1.3rem; }
 
 .calendar_content {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%; }
 
 .calendar_content div {
-  width: 30px;
-  height: 26px;
   border: 1px solid transparent;
   float: left; }
 
@@ -6221,7 +6218,8 @@ aside {
         font-weight: normal; }
     .Rounds .Round-item tbody span {
       text-transform: none;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      font-weight: normal;
       position: absolute;
       bottom: -100px;
       left: 23px;
@@ -6234,7 +6232,8 @@ aside {
     background-color: #b4b4b4 !important; }
 
 .Slider-content {
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 30px; }
 
 .translate-zone {
   transition: .8s ease; }
@@ -6243,6 +6242,7 @@ aside {
   display: flex;
   width: 103%;
   margin: auto;
+  margin-top: 20px;
   text-alignt: center;
   margin-left: -16px; }
 .Slide .slider {
@@ -6263,12 +6263,14 @@ aside {
 .Slide input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   width: 70px;
-  height: 20px;
+  height: 10px;
   background-color: #ffc74e;
   border-radius: 30px;
   box-shadow: 0px 0px 3px #ffc74e;
   transition: all 0.5s ease;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative;
+  bottom: 1px; }
 .Slide input[type="range"]::-webkit-slider-thumb:hover {
   background-color: #5690c1; }
 .Slide input[type="range"]::-webkit-slider-thumb:active {

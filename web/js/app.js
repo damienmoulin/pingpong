@@ -73,24 +73,16 @@ $(document).ready(function () {
             $('.translate-zone').css('width', SliderSize);
 
             $(e).find('.Round-item:nth-child(3)').addClass('scroll-right');
-            $(e).find('.Round-item:nth-child(1)').addClass('scroll-left'); 
+            $(e).find('.Round-item:nth-child(1)').addClass('scroll-left');
 
         });
 
 
-        var goright = function(y){
+        var goright = function(){
             $('.translate-zone .scroll-right').on('mousemove', function (e) {
 
                 $that = $('.translate-zone .scroll-right');
-
-                console.log(y);
-
-                if(y =! 0){
-                    x = y;
-
-                }else{
-                    x = $('.translate-zone .scroll-right').index();
-                }
+                x = $('.translate-zone .scroll-right').index();
 
                 var translate = widthItem * x;
 
@@ -118,6 +110,9 @@ $(document).ready(function () {
                         goright();
                         goleft();
 
+                        var range = parseInt(x) - 1.1;
+                        $('.slider .range')[0].value = range;
+
                     }, 300)
                 }
             });
@@ -126,16 +121,11 @@ $(document).ready(function () {
         goright();
 
 
-        var goleft = function(y){
+        var goleft = function(){
             $('.translate-zone .scroll-left').on('mousemove', function (e) {
 
                 $that = $('.translate-zone .scroll-left');
-
-                if(y =! 0){
-                    x = y;
-                }else {
-                    x = $('.translate-zone .scroll-left').index();
-                }
+                x = $('.translate-zone .scroll-left').index();
 
                 if(e.offsetX < 50 && x > 0) {
 
@@ -160,6 +150,10 @@ $(document).ready(function () {
                         goleft();
                         goright();
 
+                        var range = parseInt(x) - 1.5;
+                        $('.slider .range')[0].value = parseInt(range);
+
+
                     }, 300)
                 }
             });
@@ -170,11 +164,34 @@ $(document).ready(function () {
 
         var slider = function () {
 
-            $('.slider .range').attr('max',nb);
-
+            var max = parseInt(nb) - 3;
+            $('.slider .range').attr('max',max);
             $('.slider .range').on('input change', function (e) {
-                goright($(this).val());
-                console.log('lol');
+                $that = $('.translate-zone .scroll-right');
+                x = $(this).val();
+
+                console.log(x);
+
+                var translate = widthItem * x;
+                var test = parseInt(x) - 2;
+                var xInt = parseInt(x) + 3;
+
+                console.log(xInt)
+
+                if( x < nb) {
+                    $that.off('mousemove');
+
+                    $('.translate-zone').css('transform','translate(-'+translate+'px)');
+
+                    setTimeout(function () {
+                        $('.Round-item').removeClass('scroll-right')
+                        $('.Round-item:nth-child('+xInt+')').addClass('scroll-right');
+                        goright();
+                        goleft();
+
+                    }, 300)
+                }
+
             })
         }
 
