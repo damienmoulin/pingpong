@@ -51,23 +51,62 @@
         </section>
 
         <section class="block-01">
-            <article class="Tab block-02">
-                <div class="Tab-title flex-align-vertical">
-                    <h3>Les structures</h3>
-                    <a href="">Toutes les structures <i class="zmdi zmdi-caret-right"></i></a>
-                </div>
-                <ul class="Tab-content">
-                    {% for structure in structures %}
-                        <li>
-                            <strong class="Tab-company">{{ structure.name }}</strong>
-                            <span class="Tab-participants">{{ structure.players }} participants</span>
-                            <span class="Tab-team">{{ structure.teams }} équipes</span>
-                            <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong>
+            <div class="block-02">
+                <article class="Tab">
+                    <div class="Tab-title flex-align-vertical">
+                        <h3>Les Teams</h3>
+                        <a href="">Tous les teams <i class="zmdi zmdi-caret-right"></i></a>
+                    </div>
+                    <ul class="Tab-content">
+                        {% for user in users %}
+                            <li>
+                                <strong class="Tab-company">{{ user.teamname }}</strong>
+                                <span class="Tab-participants">{{ user.players|length }} participants invités</span>
+                                <span class="Tab-team">{{ user.structurename }}</span>
+                                <span class="Tab-select">Statut du tournoi
+                                        {% if user.tournament == null %}
+                                            <strong class="selection">Pré-selections</strong>
+                                        {% elseif user.tournament.status == 1 %}
+                                            <strong class="started">Tournoi en cours</strong>
+                                        {% elseif user.tournament.status == 0 %}
+                                            <strong class="finish">Tournoi terminé</strong>
+                                        {% endif %}
+                                    </strong>
                             </span>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </article>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </article>
+                <br/><br/>
+                <article class="Tab">
+                    <div class="Tab-title flex-align-vertical">
+                        <h3>Les Teams</h3>
+                        <a href="">Tous les tournois <i class="zmdi zmdi-caret-right"></i></a>
+                    </div>
+                    <ul class="Tab-content">
+                        {% for tournament in tournaments %}
+                            <li>
+                                <strong class="Tab-company">{{ tournament.user.teamname }}</strong>
+                                <span class="Tab-participants">{{ tournament.user.players|length }} participants</span>
+                                <span class="Tab-team">
+                                    {% if tournament.status == 1 %}
+                                        En cours
+                                    {% else %}
+                                        Terminé
+                                    {% endif %}
+                                </span>
+                            <span class="Tab-select">
+                                {% if tournament.status == 0 %}
+                                    Vainqueur<br>
+                                    <strong class="finish">{{ tournament.winner.firstname }} {{ tournament.winner.lastname }}</strong>
+                                {% endif %}
+                            </span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </article>
+                <br/><br/>
+            </div>
 
             <aside class="block-03">
                 <section class="Management">
@@ -171,49 +210,21 @@
                 <ul class="Tab-content">
                     {% for player in players %}
                         <li>
-                            <strong class="Tab-company">Digital Village</strong>
-                            <span class="Tab-participants">28 participants</span>
-                            <span class="Tab-team">2 équipes</span>
-                            <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
+                            <strong class="Tab-company">{{ player.firstname }} {{ player.lastname }}</strong>
+                            <span class="Tab-participants">{{ player.email }}</span>
+                            <span class="Tab-team">{{ player.structure }}</span>
+                            <span class="Tab-select">Statut<br>
+                                {% if player.status == 2 %}
+                                    <strong class="finish">Invitation en cours</strong>
+                                {% elseif player.status == 1 %}
+                                    <strong class="finish">Accepté</strong>
+                                {% else %}
+                                    <strong class="finish">Refusé</strong>
+                                {% endif %}
+                            </span>
                         </li>
                     {% endfor %}
 
-                    <li>
-                        <strong class="Tab-company">Hetic</strong>
-                        <span class="Tab-participants">280 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Auxiliaris</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="wait">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Digital Village</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Digital Village</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="wait">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Digital Village</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="finish">Terminé</strong></span>
-                    </li>
-                    <li>
-                        <strong class="Tab-company">Digital Village</strong>
-                        <span class="Tab-participants">28 participants</span>
-                        <span class="Tab-team">2 équipes</span>
-                        <span class="Tab-select">Sélection des champions <strong class="wait">Terminé</strong></span>
-                    </li>
                 </ul>
             </article>
 
