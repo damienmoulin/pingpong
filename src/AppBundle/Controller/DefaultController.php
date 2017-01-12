@@ -18,4 +18,13 @@ class DefaultController extends Controller
         return $this->render('default/index.html.twig', [
         ]);
     }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/timer", name="timer")
+     */
+    public function timerAction()
+    {
+        return $this->render('default/timer.html.twig');
+    }
 }

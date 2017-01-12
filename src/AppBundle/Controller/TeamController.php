@@ -28,6 +28,10 @@ class TeamController extends Controller
 
         $user = $this->get('security.token_storage')->getToken()->getUser();
 
+        if ($user->getTournament() != null) {
+            return $this->redirect($this->generateUrl('contest_index', [ 'tournament' => $user->getTournament()->getId()]));
+        }
+
         $player = new Player($user);
 
         $acceptedPlayers = $this->getAcceptedPlayersAction($player->getUser());
@@ -107,7 +111,7 @@ class TeamController extends Controller
                 'text' => $this->renderView('email/re_invitation.html.twig', [ 'user' => $player->getUser(), 'player' => $player])
             ]);
 
-        //return $this->redirect($this->generateUrl('team'));
+        return $this->redirect($this->generateUrl('team'));
     }
 
     /**
@@ -124,17 +128,20 @@ class TeamController extends Controller
 
         $acceptedPlayers = $this->getAcceptedPlayersAction($player->getUser());
 
+        $title = 'Dommage';
         $message = 'Vous avez déja refusé l\'invitation , vous ne pouvez plus accepter de participer';
 
         if (($player != null) && ($player->getStatus() != 0) && ($player->getUser()->getTournament() == null) && ( count($acceptedPlayers) < $this->container->getParameter('participants'))) {
             $player->accept();
             $this->flush($player);
 
+            $title = 'Félicitations';
             $message = 'Vous avez accepté de participer au tournoi';
         }
 
         return $this->render('team/confirm_decline.html.twig', [
-            'message' => $message
+            'message' => $message,
+            'title' => $title
         ]);
     }
 
@@ -150,7 +157,8 @@ class TeamController extends Controller
                 'privatekey' => $key
             ]);
 
-        $message = 'Vous avez déja accepter l\'invitation , vous ne pouvez plus refuser de participer';
+        $title = 'Dommage';
+        $message = 'Vous avez déja accepté l\'invitation , vous ne pouvez plus refuser de participer';
 
         if (($player != null) && ($player->getStatus() != 1) && ($player->getUser()->getTournament() == null)) {
             $player->decline();
@@ -159,6 +167,7 @@ class TeamController extends Controller
         }
 
         return $this->render('team/confirm_decline.html.twig',[
+            'title' => $title,
             'message' => $message
         ]);
     }
