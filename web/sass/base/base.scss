@@ -36,6 +36,12 @@ body {
   height: 100%;
 }
 
+.float-r {
+  float: right;
+  position: relative;
+  top: -80px;
+}
+
 .pt {
   padding-top: 88px;
 }
@@ -50,6 +56,7 @@ body {
   font-size: 4rem;
   padding: 0px;
   margin: 0px;
+  text-transform: uppercase;
 }
 
 .sub-title {
@@ -92,6 +99,16 @@ body {
   &.btn-green {
     background-color: $colorbo2;
     border-color: $colorbo2;
+
+    &.reverse-color {
+      color: $colorbo2;
+      background-color: transparent;
+
+      &:hover {
+        border-color: $colorbo1;
+        color: $colorbo1;
+      }
+    }
 
     &:hover {
       color: $colorbo2;
