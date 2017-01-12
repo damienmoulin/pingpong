@@ -160,7 +160,7 @@ class ContestController extends Controller
 
             $em->flush();
         }
-        elseif ($match->getStatus() == 0 && ($match->getRound() == $lastRound->getRound() -1 || $match->getRound() == $lastRound->getRound() )) {
+        elseif ( $match->getTournament()->getStatus() != 0 && $match->getStatus() == 0 && ($match->getRound() == $lastRound->getRound() -1 || $match->getRound() == $lastRound->getRound() )) {
             $lastWinner = $match->getWinner();
             if ($match->getPlayerone() == $match->getWinner()) {
                 $match->setWinner($player);
