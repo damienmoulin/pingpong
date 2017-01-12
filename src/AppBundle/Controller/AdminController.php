@@ -28,6 +28,12 @@ class AdminController extends Controller
         $resultStructures = $this->getDoctrine()->getRepository('AppBundle:User')->findAllByStructure();
         $tournaments = $this->getDoctrine()->getRepository('AppBundle:Tournament')->findAll();
         
+        $finishedTournaments = $this->getDoctrine()->getRepository('AppBundle:Tournament')->findBy(
+            [
+                'status' => 0
+            ]
+        );
+        
         $structures = [];
         foreach ($resultStructures as $resultStructure) {
             $structure = [];
@@ -43,7 +49,8 @@ class AdminController extends Controller
             'players' => $players,
             'structures' => $structures,
             'users' => $users,
-            'tournaments' => $tournaments
+            'tournaments' => $tournaments,
+            'finishedtournaments' => $finishedTournaments
         ]);
     }
 }

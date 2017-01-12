@@ -208,7 +208,7 @@ class ContestController extends Controller
             ]
         );
 
-        if ($team->getTournament() != null) {
+        if ($team != null && $team->getTournament() != null) {
             return $this->redirect($this->generateUrl('contest_index', [ 'tournament' => $team->getTournament()->getId()]));
         }
         else {
