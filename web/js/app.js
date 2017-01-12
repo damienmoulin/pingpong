@@ -50,11 +50,11 @@ $(document).ready(function () {
 
 
     if($('.Round-item ').length) {
-        $('.Round-item .two-row td').on('mouseover', function () {
+        $('.Round-item .two-row td:not(.invit)').on('mouseover', function () {
             $(this).find('span').css('bottom','4px');
         });
 
-        $('.Round-item .two-row td').on('mouseout', function () {
+        $('.Round-item .two-row td:not(.invit)').on('mouseout', function () {
             $(this).find('span').css('bottom','-100px');
         })
     }
@@ -107,7 +107,7 @@ $(document).ready(function () {
 
             console.log(nb1)
             var $slider = $(e).parent().next();
-            
+
             if(nb1 > 3) {
                 var SliderSize = nb1 * widthItem + 100;
 

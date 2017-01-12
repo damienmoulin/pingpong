@@ -6265,12 +6265,12 @@ aside {
       overflow: hidden; }
       .Rounds .Round-item tbody td:last-child {
         border-right: 0px; }
-    .Rounds .Round-item tbody .two-row td:hover {
+    .Rounds .Round-item tbody .two-row td:hover:not(.invit) {
       background-color: #ffc74e;
       color: #0f354f;
       cursor: pointer;
       font-weight: bold; }
-      .Rounds .Round-item tbody .two-row td:hover span {
+      .Rounds .Round-item tbody .two-row td:hover:not(.invit) span {
         color: #0f354f;
         font-weight: normal; }
     .Rounds .Round-item tbody td[colspan="2"] {

@@ -50,7 +50,7 @@
 
       .two-row {
         td {
-          &:hover {
+          &:hover:not(.invit) {
             background-color: $color5;
             color: $colorbo1;
             cursor: pointer;
