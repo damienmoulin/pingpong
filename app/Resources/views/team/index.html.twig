@@ -66,12 +66,13 @@
                     </div>
                     <div class="mail-player">
                         <span>{{ player.email }}</span><br/>
-                        <strong class="status valid">
                             {% if player.status  == 1%}
-                                Activé
+                               <strong class="status valid">Activé
                             {% elseif player.status == 0 %}
+                               <strong class="status ">
                                 Refusé
                             {% else %}
+                                <strong class="status">
                                 En attente
                             {% endif %}
                         </strong>
