@@ -23,7 +23,7 @@ class MailerController extends Controller
         $message->sendMessage($domain,
             array(
                 'from'    => 'ping@pong.com',
-                'to'      => 'zabaradjan@gmail.com',
+                'to'      => $to,
                 'subject' => $subject,
                 'html'    => $text
             ));
