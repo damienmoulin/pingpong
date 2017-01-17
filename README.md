@@ -17,3 +17,7 @@ go to /
 sass --watch web/sass/app.scss:web/css/app.css`
 ``
 
+##Routes
+
+Front Office : /
+Back Office : /admin
